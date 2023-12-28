@@ -3,7 +3,7 @@ Video playlist UI Design like Skillshare With Vanilla JavaScript
 */
 
 :root {
-    --primary : linear-gradient(to bottom right, #0a0057, #3f00ee);
+    --primary : linear-gradient(to bottom right, #d1cbc1, #7e7e7e);
     --secondary : gold;
     --text : #fff;
 }
@@ -67,7 +67,7 @@ body {
 .video-playlist .videos::-webkit-scrollbar {
     width: .4rem;
     border-radius: .4rem;
-    background-color: #0005;
+    background-color: #efece1;
 }
 
 .video-playlist .videos::-webkit-scrollbar-thumb {
