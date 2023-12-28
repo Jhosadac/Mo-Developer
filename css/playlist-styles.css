@@ -24,7 +24,7 @@ body {
     align-items: center;
 }
 
-.container {
+.container-video {
     width: 100vw;
 
     display: grid;
@@ -36,7 +36,7 @@ body {
 }
 
 @media screen and (max-width: 990px) {
-    .container {
+    .container-video {
         grid-template-columns: 1fr;
     }
 }
