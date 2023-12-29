@@ -26,9 +26,9 @@ body {
 
 .container-video {
     width: 100vw;
-
+    height:500px;
     display: grid;
-    grid-template-columns: 50% 40%;
+    grid-template-columns: auto auto;
     gap: 1rem;
     
     padding: .5rem 1rem;
