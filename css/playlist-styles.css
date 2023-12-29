@@ -21,7 +21,7 @@ body {
     color: var(--text);
 
     display: flex;
-    align-items: center;
+    align-items: left;
 }
 
 .container-video {
