@@ -14,14 +14,6 @@ Video playlist UI Design like Skillshare With Vanilla JavaScript
     box-sizing: border-box;
 }
 
-body {
-    min-height: 100vh;
-    background-image: var(--primary);
-    font-family: sans-serif;
-    color: var(--text);
-
-    display: flex;
-}
 
 .container-video {
     width: 100vw;
