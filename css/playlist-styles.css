@@ -69,7 +69,7 @@ Video playlist UI Design like Skillshare With Vanilla JavaScript
     background-color: #efece1;
 }
 
-.video-playlist .video {
+.video-playlist .videos .video {
     position: relative;
     width: 100%;
     height: 4rem;
@@ -84,24 +84,6 @@ Video playlist UI Design like Skillshare With Vanilla JavaScript
 
     border-radius: .5rem;
 }
-
-.videos {
-    position: relative;
-    width: 100%;
-    height: 4rem;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 0 0rem;
-    margin-top: .1rem;
-    cursor: pointer;
-
-    border-radius: .5rem;
-}
-
-
 
 .video-playlist .videos .video:hover {
     background-color: #0003;
