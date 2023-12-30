@@ -19,7 +19,7 @@ Video playlist UI Design like Skillshare With Vanilla JavaScript
     width: 100vw;
     height:500px;
     display: grid;
-    grid-template-columns: 730px auto;
+    grid-template-columns: 800px auto;
     gap: 1rem;
     
     padding: .5rem 1rem;
