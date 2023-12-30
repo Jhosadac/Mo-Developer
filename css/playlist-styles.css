@@ -58,12 +58,12 @@ Video playlist UI Design like Skillshare With Vanilla JavaScript
 .video-playlist .videos::-webkit-scrollbar {
     width: .4rem;
     border-radius: .4rem;
-    background-color: #efece1;
+    background-color: #fff;
 }
 
 .video-playlist .videos::-webkit-scrollbar-thumb {
     border-radius: .4rem;
-    background-color: #fff;
+    background-color: #efece1;
 }
 
 .video-playlist .videos .video {
