@@ -41,7 +41,10 @@ Video playlist UI Design like Skillshare With Vanilla JavaScript
     margin-top: 1rem;
 }
 
-.video-playlist .title {
+.video-playlist{
+    padding-left: 0rem;
+}
+.title{
     padding-left: 1rem;
 }
 
