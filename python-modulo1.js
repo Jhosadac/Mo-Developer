@@ -6,7 +6,7 @@ let data = [
     {
         'id': 'a1',
         'title': 'Strings-1',
-        'name': 'Arreglos.mp4',
+        'name': 'Strings-1.mp4',
         'duration': '15:00',
     },
     {
