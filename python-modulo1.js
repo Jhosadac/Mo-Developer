@@ -18,7 +18,7 @@ let data = [
     {
         'id': 'a3',
         'title': 'String Formating',
-        'name': 'String Formating'.mp4',
+        'name': 'String Formating.mp4',
         'duration': '15:00',
     },
 ];
