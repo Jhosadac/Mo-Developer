@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Course playlist</title>
+        <!-- Mo's icon -->
+        <link rel="icon" type="image/x-icon" href="assets/Mo.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- main styles -->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- playlist styles -->
+        <link rel="stylesheet" href="css/playlist-styles.css">
+</head>
+
+
+<body>
+
+	<!-- Navegador-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#!">ML Josh</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about-us.html">Acerca de</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+	
+
+	<!-- Main -->
+    <div class="container-video">
+        <section class="main-video">
+            <video src="R-modulo3-videos/Plot.mp4" controls autoplay muted></video>
+            <h3 class="title">Plot</h3>
+        </section>
+
+        <section class="video-playlist">
+            <h3 class="title">Play-List</h3>
+            <p>10 lessions &nbsp; . &nbsp; 50m 48s</p>
+	    <div class="videos">
+
+            </div>
+        </section>
+    </div>
+
+	<!-- Python table -->
+
+	<div class="python-table">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Ejercicio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ejercicio 1 -->
+                <tr>
+                    <th scope="row">1</th>
+                    <td style="text-align: center;"><input type="checkbox" onchange="controlarProgreso(this)"></td>
+                    <td>Descripción del ejercicio 1</td>
+                </tr>
+                <!-- Repetir bloques de tr para cada ejercicio (hasta 10) -->
+                <!-- Ejercicio 2 -->
+                <tr>
+                    <th scope="row">2</th>
+                    <td style="text-align: center;"><input type="checkbox" onchange="controlarProgreso(this)"></td>
+                    <td>Descripción del ejercicio 2</td>
+                </tr>
+                <!-- ... Repetir hasta 10 ejercicios ... -->
+            </tbody>
+        </table>
+        <progress style="width:80%;" id="barraProgreso" value="0" max="100"></progress>
+    </div>
+
+    <script>
+        function controlarProgreso(checkbox) {
+            const barraProgreso = document.getElementById("barraProgreso");
+            if (checkbox.checked) {
+                barraProgreso.value += 50; // Incrementar el valor de la barra (ajusta según tus necesidades)
+            } else {
+                barraProgreso.value -= 50; // Disminuir el valor de la barra al desmarcar el checkbox
+            }
+        }
+    </script>
+	
+
+	<!-- Footer-->
+        <footer class="py-5 bg-dark" style="margin-top: 8rem;">
+            <div class="container px-5 d-flex justify-content-between">
+                <!-- Lado izquierdo con correo y número de WhatsApp -->
+                <div>
+                    <p class="m-0 text-center text-white">jhosadacmolina25@gmail.com</p>
+                    <p class="m-0 text-center text-white"> <i class="bi bi-whatsapp"></i> 920 755 504</p>
+                </div>
+
+                
+                <div>
+                     <p class="m-0 text-center text-white"> Síguenos </p>
+                        <ul class="social-icons">
+                         <li><a href="https://www.facebook.com/jhosadac.molina.9"><i class="bi bi-facebook"></i></a></li>
+                         <li><a href="https://www.linkedin.com/in/jhosadac08/"><i class="bi bi-linkedin"></i></a></li>
+                         <li><a href="https://www.instagram.com/jhosadacml/"><i class="bi bi-instagram"></i></a></li>
+                         <li><a href=""><i class="bi bi-discord"></i></a></li>
+                        </ul>
+                </div>
+        </div>
+        </footer>
+
+    <script src="js/R-modulo3.js"></script>
+</body>
+
+</html>
