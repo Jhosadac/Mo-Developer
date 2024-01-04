@@ -204,6 +204,15 @@ font-size: 1.5rem;
   
   .nav-li .nav-a:hover {
     background-color: rgb(15, 11, 31);
+  }
+  
+  .dot {
+    height: 15px;
+    width: 15px;
+    background-color: rgb(246, 245, 250);
+    border-radius: 50%;
+    display: inline-block;
+  }
 
 hr {
   margin: 1rem 0;
