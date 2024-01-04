@@ -156,12 +156,12 @@ font-size: 1.5rem;
 }
 
 .logo{
-  color: rgb(255,255,255);
   display: flex;
   align-items: center;
   margin: 1rem;
   font-size: 1.8rem;
   font-family: 'Concert One', sans-serif;
+  color: rgb(14, 32, 49);
 }
 
 .D-logo{
