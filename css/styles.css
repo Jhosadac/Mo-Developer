@@ -208,7 +208,7 @@ font-size: 1.5rem;
   }
 
 .mySlides {display: none}
-.img-slide {vertical-align: middle;border-radius: 30px; height:200px;}
+.img-slide {vertical-align: middle;border-radius: 30px; height:350px;}
 
 /* Slideshow container */
 .slideshow-container {
@@ -226,7 +226,7 @@ font-size: 1.5rem;
 
 .boxcourse-container {
 	box-shadow: 0 30px 60px 0 rgba(141, 139, 139, 0.2); 
-    border-radius: 30px; 				 height:200px;
+    border-radius: 30px; 				 height:350px;
 }
 
 /* Next & previous buttons */
