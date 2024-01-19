@@ -311,11 +311,13 @@ font-size: 1.5rem;
       width: 160px;
       position: fixed;
       z-index: 1;
-      top: 85px; /* Ajusta la posición para evitar superposición con la barra de navegación */
+      top: 83px; /* Ajusta la posición para evitar superposición con la barra de navegación */
       left: 0;
       background-color: #f7f8fa;
       overflow-x: hidden;
       padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
       text-decoration: none;
       font-size: 12px;
       color: #818181;
