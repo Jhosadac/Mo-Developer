@@ -311,7 +311,7 @@ font-size: 1.5rem;
       width: 160px;
       position: fixed;
       z-index: 1;
-      top: 48px; /* Ajusta la posición para evitar superposición con la barra de navegación */
+      top: 58px; /* Ajusta la posición para evitar superposición con la barra de navegación */
       left: 0;
       background-color: #111;
       overflow-x: hidden;
