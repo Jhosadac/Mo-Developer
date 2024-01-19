@@ -4065,6 +4065,9 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+   width: 100%;
+  z-index: 1000;
+  top: 0;
 }
 
 
