@@ -29,36 +29,81 @@
             </div>
         </nav>
 
-      <!-- Lista de cursos -->
-	<ol class="list-group list-group-numbered">
-        <!--Primer curso -->
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-          <div class="ms-2 me-auto">
-            <div class="fw-bold"> <p><a href="python-modulo1.html" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Modulo I</a></p> </div>
-            Free
-          </div>
-          <span class="badge bg-primary rounded-pill">10</span>
-        </li>
 
-<!--Segundo curso-->
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-          <div class="ms-2 me-auto">
-            <div class="fw-bold"> <p><a href="python-modulo2.html" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Modulo II</a></p> </div>
-            Free
-          </div>
-          <span class="badge bg-primary rounded-pill">10</span>
-        </li>
+	     <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <!-- Add more links as needed -->
+  </div>
 
-<!--Tercer curso-->
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-          <div class="ms-2 me-auto">
-            <div class="fw-bold"> <p><a href="python-modulo3.html" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Modulo III</a></p> </div>
-            Free
-          </div>
-          <span class="badge bg-primary rounded-pill">10</span>
-        </li>
+  <div class="course-wrapper">
+    <div class="sidenav">
+    
+    <div class="section-bar">
+      <button class="accordion">Section 1</button>
+      <div class="panel"> 
+        <p>Teoria</p>
+      </div>
+      
+       <button class="accordion">Section 2</button>
+      <div class="panel"> 
+        <p>Teoria</p>
+      </div>
+       <button class="accordion">Section 3</button>
+      <div class="panel"> 
+        <p>Teoria</p>
+      </div>
+       <button class="accordion">Section 4</button>
+      <div class="panel"> 
+        <p>Teoria</p>
+      </div>
+      
+       <button class="accordion">Section 5</button>
+      <div class="panel"> 
+        <p>Teoria</p>
+      </div>
+      
+       <button class="accordion">Section 6</button>
+      <div class="panel"> 
+        <p>Teoria</p>
+      </div>
+      
+       <button class="accordion">Section 7</button>
+      <div class="panel"> 
+        <p>Teoria</p>
+      </div>
+      
+       <button class="accordion">Section 8</button>
+      <div class="panel"> 
+        <p>Teoria</p>
+      </div>
+      
+      <button class="accordion">Section 9</button>
+      <div class="panel"> 
+        <p>Teoria</p>
+      </div>
+      
+      <button class="accordion">Section 10</button>
+      <div class="panel"> 
+        <p>Teoria</p>
+      </div>
+      
+      </div>
+    </div>
 
-      </ol>
+    <div class="course-main">
+     
+     	<h2>Sidebar</h2>
+  <p>This sidebar is of full height (100%) and always shown.</p>
+  <p>Scroll down the page to see the result.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        
+    </div>
+  </div>
         
         
         <footer class="py-5 bg-dark">
@@ -82,5 +127,21 @@
         </div>
         </footer>
 
+	     <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
     </body>
 </html>
