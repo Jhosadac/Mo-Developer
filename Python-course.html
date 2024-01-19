@@ -31,70 +31,254 @@
         </nav>
 	    
 
-  <div class="course-wrapper">
+
+
+	    <div class="course-wrapper">
     <div class="sidenav">
     
     <div class="section-bar">
-      <button class="accordion"  style="border-top-left-radius: 20px; border-top-right-radius: 20px;">Section 1</button>
-      <div class="panel"> 
-        <p>Teoria</p>
-      </div>
+      <button class="accordion" onclick="togglePanel('sec1')" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">Section 1</button>
+      <button class="panel sec1" onclick="openCity(event, 'Section1-t')" id="defaultOpen">Teoria</button>
+      <button class="panel sec1" onclick="openCity(event, 'Section1-v')">Video</button>
+      <button class="panel sec1" onclick="openCity(event, 'Section1-e')">Ejercicio</button>
       
-       <button class="accordion">Section 2</button>
-      <div class="panel"> 
-        <p>Teoria</p>
-      </div>
-       <button class="accordion">Section 3</button>
-      <div class="panel"> 
-        <p>Teoria</p>
-      </div>
-       <button class="accordion">Section 4</button>
-      <div class="panel"> 
-        <p>Teoria</p>
-      </div>
+
+       <button class="accordion" onclick="togglePanel('sec2')">Section 2</button>
+      <button class="panel sec2" onclick="openCity(event, 'Section2-t')" id="defaultOpen">Teoria</button>
+      <button class="panel sec2" onclick="openCity(event, 'Section2-v')">Video</button>
+      <button class="panel sec2" onclick="openCity(event, 'Section2-e')">Ejercicio</button>
+
+
+     <button class="accordion" onclick="togglePanel('sec3')">Section 3</button>
+      <button class="panel sec3" onclick="openCity(event, 'Section3-t')" id="defaultOpen">Teoria</button>
+      <button class="panel sec3" onclick="openCity(event, 'Section3-v')">Video</button>
+      <button class="panel sec3" onclick="openCity(event, 'Section3-e')">Ejercicio</button>
+
+
+      <button class="accordion" onclick="togglePanel('sec4')">Section 4</button>
+      <button class="panel sec4" onclick="openCity(event, 'Section4-t')" id="defaultOpen">Teoria</button>
+      <button class="panel sec4" onclick="openCity(event, 'Section4-v')">Video</button>
+      <button class="panel sec4" onclick="openCity(event, 'Section4-e')">Ejercicio</button>
+
       
-       <button class="accordion">Section 5</button>
-      <div class="panel"> 
-        <p>Teoria</p>
-      </div>
+       <button class="accordion" onclick="togglePanel('sec5')">Section 5</button>
+      <button class="panel sec5" onclick="openCity(event, 'Section5-t')" id="defaultOpen">Teoria</button>
+      <button class="panel sec5" onclick="openCity(event, 'Section5-v')">Video</button>
+      <button class="panel sec5" onclick="openCity(event, 'Section5-e')">Ejercicio</button>
+
       
-       <button class="accordion">Section 6</button>
-      <div class="panel"> 
-        <p>Teoria</p>
-      </div>
+       <button class="accordion" onclick="togglePanel('sec6')">Section 6</button>
+      <button class="panel sec6" onclick="openCity(event, 'Section6-t')" id="defaultOpen">Teoria</button>
+      <button class="panel sec6" onclick="openCity(event, 'Section6-v')">Video</button>
+      <button class="panel sec6" onclick="openCity(event, 'Section6-e')">Ejercicio</button>
+
       
-       <button class="accordion">Section 7</button>
-      <div class="panel"> 
-        <p>Teoria</p>
-      </div>
+      <button class="accordion" onclick="togglePanel('sec7')">Section 7</button>
+      <button class="panel sec7" onclick="openCity(event, 'Section7-t')" id="defaultOpen">Teoria</button>
+      <button class="panel sec7" onclick="openCity(event, 'Section7-v')">Video</button>
+      <button class="panel sec7" onclick="openCity(event, 'Section7-e')">Ejercicio</button>
+
       
-       <button class="accordion">Section 8</button>
-      <div class="panel"> 
-        <p>Teoria</p>
-      </div>
+       <button class="accordion" onclick="togglePanel('sec8')">Section 8</button>
+      <button class="panel sec8" onclick="openCity(event, 'Section8-t')" id="defaultOpen">Teoria</button>
+      <button class="panel sec8" onclick="openCity(event, 'Section8-v')">Video</button>
+      <button class="panel sec8" onclick="openCity(event, 'Section8-e')">Ejercicio</button>
+
       
-      <button class="accordion">Section 9</button>
-      <div class="panel"> 
-        <p>Teoria</p>
-      </div>
+      <button class="accordion" onclick="togglePanel('sec9')">Section 2</button>
+      <button class="panel sec9" onclick="openCity(event, 'Section9-t')" id="defaultOpen">Teoria</button>
+      <button class="panel sec9" onclick="openCity(event, 'Section9-v')">Video</button>
+      <button class="panel sec9" onclick="openCity(event, 'Section9-e')">Ejercicio</button>
+
       
-      <button class="accordion" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">Section 10</button>
-      <div class="panel"> 
-        <p>Teoria</p>
-      </div>
+      <button class="accordion" onclick="togglePanel('sec10')" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">Section 10</button>
+      <button class="panel sec10" onclick="openCity(event, 'Section10-t')" id="defaultOpen">Teoria</button>
+      <button class="panel sec10" onclick="openCity(event, 'Section10-v')">Video</button>
+      <button class="panel sec10" onclick="openCity(event, 'Section10-e')">Ejercicio</button>
+
       
       </div>
     </div>
 
     <div class="course-main">
      
-     	<h2>Sidebar</h2>
-  <p>This sidebar is of full height (100%) and always shown.</p>
-  <p>Scroll down the page to see the result.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+     	<!-- Contenido de la seccion 1 -->
+    <div id="Section1-t" class="tabcontent">
+      <h3>Theory 1</h3>
+      <p>Heres is going to be the theory</p>
+    </div>
+    
+    <div id="Section1-v" class="tabcontent">
+      <h3>Video 1</h3>
+      <p>Here is going to be the videos</p>
+    </div>
+    
+    <div id="Section1-e" class="tabcontent">
+      <h3>Exercises 1</h3>
+      <p>Here is going to be the exercises</p>
+    </div>
+	
+
+
+    <!-- Contenido de la seccion 2 -->
+    	<div id="Section2-t" class="tabcontent">
+      <h3>Theory 2</h3>
+      <p>Heres is going to be the theory</p>
+    </div>
+    
+    <div id="Section2-v" class="tabcontent">
+      <h3>Video 2</h3>
+      <p>Here is going to be the videos</p>
+    </div>
+    
+    <div id="Section2-e" class="tabcontent">
+      <h3>Exercises 2</h3>
+      <p>Here is going to be the exercises</p>
+    </div>
+    
+    
+
+
+    <!-- Contenido de la seccion 3 -->
+   
+   	<div id="Section3-t" class="tabcontent">
+      <h3>Theory 3</h3>
+      <p>Heres is going to be the theory</p>
+    </div>
+    
+    <div id="Section3-v" class="tabcontent">
+      <h3>Video 3</h3>
+      <p>Here is going to be the videos</p>
+    </div>
+    
+    <div id="Section3-e" class="tabcontent">
+      <h3>Exercises 3</h3>
+      <p>Here is going to be the exercises</p>
+    </div>
+
+
+
+<!-- Contenido de la seccion 4 -->
+    <div id="Section4-t" class="tabcontent">
+      <h3>Theory 4</h3>
+      <p>Heres is going to be the theory</p>
+    </div>
+    
+    <div id="Section4-v" class="tabcontent">
+      <h3>Video 4</h3>
+      <p>Here is going to be the videos</p>
+    </div>
+    
+    <div id="Section4-e" class="tabcontent">
+      <h3>Exercises 4</h3>
+      <p>Here is going to be the exercises</p>
+    </div>
+	
+    <!-- Contenido de la seccion 5 -->
+    	<div id="Section5-t" class="tabcontent">
+      <h3>Theory 5</h3>
+      <p>Heres is going to be the theory</p>
+    </div>
+    
+    <div id="Section5-v" class="tabcontent">
+      <h3>Video 5</h3>
+      <p>Here is going to be the videos</p>
+    </div>
+    
+    <div id="Section5-e" class="tabcontent">
+      <h3>Exercises 5</h3>
+      <p>Here is going to be the exercises</p>
+    </div>
+    
+    
+    <!-- Contenido de la seccion 6 -->
+   
+   	<div id="Section6-t" class="tabcontent">
+      <h3>Theory 6</h3>
+      <p>Heres is going to be the theory</p>
+    </div>
+    
+    <div id="Section6-v" class="tabcontent">
+      <h3>Video 6</h3>
+      <p>Here is going to be the videos</p>
+    </div>
+    
+    <div id="Section6-e" class="tabcontent">
+      <h3>Exercises 6</h3>
+      <p>Here is going to be the exercises</p>
+    </div>
+
+
+
+<!-- Contenido de la seccion 7 -->
+    <div id="Section7-t" class="tabcontent">
+      <h3>Theory 7</h3>
+      <p>Heres is going to be the theory</p>
+    </div>
+    
+    <div id="Section7-v" class="tabcontent">
+      <h3>Video 1</h3>
+      <p>Here is going to be the videos</p>
+    </div>
+    
+    <div id="Section7-e" class="tabcontent">
+      <h3>Exercises 1</h3>
+      <p>Here is going to be the exercises</p>
+    </div>
+	
+    <!-- Contenido de la seccion 8 -->
+    	<div id="Section8-t" class="tabcontent">
+      <h3>Theory 8</h3>
+      <p>Heres is going to be the theory</p>
+    </div>
+    
+    <div id="Section8-v" class="tabcontent">
+      <h3>Video 8</h3>
+      <p>Here is going to be the videos</p>
+    </div>
+    
+    <div id="Section8-e" class="tabcontent">
+      <h3>Exercises 8</h3>
+      <p>Here is going to be the exercises</p>
+    </div>
+    
+    
+    <!-- Contenido de la seccion 9 -->
+   
+   	<div id="Section9-t" class="tabcontent">
+      <h3>Theory 9</h3>
+      <p>Heres is going to be the theory</p>
+    </div>
+    
+    <div id="Section9-v" class="tabcontent">
+      <h3>Video 9</h3>
+      <p>Here is going to be the videos</p>
+    </div>
+    
+    <div id="Section9-e" class="tabcontent">
+      <h3>Exercises 9</h3>
+      <p>Here is going to be the exercises</p>
+    </div>
+
+ <!-- Contenido de la seccion 10 -->
+   
+   	<div id="Section10-t" class="tabcontent">
+      <h3>Theory 10</h3>
+      <p>Heres is going to be the theory</p>
+    </div>
+    
+    <div id="Section10-v" class="tabcontent">
+      <h3>Video 10</h3>
+      <p>Here is going to be the videos</p>
+    </div>
+    
+    <div id="Section10-e" class="tabcontent">
+      <h3>Exercises 10</h3>
+      <p>Here is going to be the exercises</p>
+    </div>
+
+
+
 
 	     <footer class="py-5 bg-dark">
 	    <div class="container px-5 d-flex justify-content-between">
@@ -121,23 +305,47 @@
     </div>
 
   </div>
+	    
         
 
-	     <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
-        }
-      });
+	    
+<script>
+  function togglePanel(panelClass) {
+    var panels = document.getElementsByClassName("panel");
+    for (var i = 0; i < panels.length; i++) {
+      if (panels[i].classList.contains(panelClass)) {
+        panels[i].style.display = panels[i].style.display === "block" ? "none" : "block";
+      } else {
+        panels[i].style.display = "none";
+      }
     }
-  </script>
+  }
+  
+</script>
+
+<script>
+
+  function openCity(evt, Sections) {
+    var tabcontent = document.getElementsByClassName("tabcontent");
+    for (var i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    var tablinks = document.getElementsByClassName("tablinks");
+    for (var i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(Sections).style.display = "block";
+    evt.currentTarget.className += " active";
+
+    // Update location based on the selected city
+   
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
+	    
     </body>
 </html>
