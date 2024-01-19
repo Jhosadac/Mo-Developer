@@ -301,6 +301,80 @@ font-size: 1.5rem;
   margin-left: calc(0.5 * var(--bs-gutter-x));
 }
 
+.course-wrapper {
+      display: flex;
+      margin-top: 50px;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 160px;
+      position: fixed;
+      z-index: 1;
+      top: 48px; /* Ajusta la posición para evitar superposición con la barra de navegación */
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+      padding: 8px;
+      text-decoration: none;
+      font-size: 12px;
+      color: #818181;
+      display: block;
+      border-radius: 25px;
+      margin: 10px;
+    }
+
+    .sidenav:hover {
+      color: #f1f1f1;
+    }
+
+    .course-main {
+      margin-left: 190px;
+      font-size: 28px;
+      padding: 0px 10px;
+    }
+
+    .section-bar {
+      overflow-y: scroll;
+      max-height: 80%;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav {font-size: 18px;}
+    }
+
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .accordion:hover {
+      background-color: #ccc; 
+    }
+
+    .panel {
+      padding: 5px 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+    }
+    
+     .section-bar {
+      overflow-y: auto;
+      max-height: 80vh; 
+    }
+
+
 hr {
   margin: 1rem 0;
   color: inherit;
