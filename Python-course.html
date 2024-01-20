@@ -38,7 +38,7 @@
     <div class="sidenav">
     
     <div class="section-bar">
-      <button class="accordion" onclick="togglePanel('sec1')" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">Section 1</button>
+      <button class="accordion" onclick="togglePanel('sec1')" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">Variables</button>
       <button class="panel sec1" onclick="openCity(event, 'Section1-t')" id="defaultOpen"> <div class="sec-ico"><i class="bi bi-file-earmark-text"></i></div>Teoria</button>
       <button class="panel sec1" onclick="openCity(event, 'Section1-v')"> <div class="sec-ico"> <i class="bi bi-file-earmark-play"></i></div> Video</button>
       <button class="panel sec1" onclick="openCity(event, 'Section1-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div> Ejercicio</button>
@@ -105,8 +105,13 @@
      
      	<!-- Contenido de la seccion 1 -->
     <div id="Section1-t" class="tabcontent">
-      <h3>Theory 1</h3>
-      <p>Heres is going to be the theory</p>
+      <h3>Variables</h3>
+      <p>Las variables son contenedores para almacenar valores de datos.</p>
+      <h3>Creando variables</h3>
+	<p>
+	Python no tiene ningún comando para declarar una variable.
+	Una variable se crea en el momento en que se le asigna un valor por primera vez.
+	</p>
     </div>
     
     <div id="Section1-v" class="tabcontent">
