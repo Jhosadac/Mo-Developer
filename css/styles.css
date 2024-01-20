@@ -450,6 +450,10 @@ border-radius: 25px;
     border-left: 2px solid green;
 }
 
+.container-img-header {
+  position: relative;
+  text-align: center;
+}
 
 .centered-img-header {
       color: rgb(15, 11, 31);
@@ -460,7 +464,6 @@ border-radius: 25px;
       padding-right: 11px;
       padding-left: 11px;
       line-height: 40px;
-      margin-left: 40%;
 	position: absolute;
     top: 50%;
     left: 50%;
