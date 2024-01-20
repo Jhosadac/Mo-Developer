@@ -360,16 +360,7 @@ height: auto;
 margin-top:50px; 
 border-radius: 25px;
 }
-    @media screen and (max-width: 600px){
-      .sidenav {padding-top: 15px;font-size: 14px;}
-      .section-bar { width: 100px;}
-      .panel {padding: 5px 20px;}
-      .course-main {margin-left: 115px;
-      font-size: 14px;}
-      footer { width: 100%; font-size: 14px;}
-      .yape-img	{ width: 100%;}
-      .header-img{ width: 100%; height: 100%; border-radius: 25px;}
-    }
+   
 
     
     .accordion {
@@ -399,7 +390,7 @@ border-radius: 25px;
     width: 85.7%;
     background-color: white;
     border-left: 6px solid rgb(65, 149, 155);
-
+    border-bottom: 1px solid grey;
   }
 
   .panel:hover {
@@ -411,6 +402,16 @@ border-radius: 25px;
       max-height: 80vh; 
     }
 
+ @media screen and (max-width: 600px){
+      .sidenav {padding-top: 15px;font-size: 14px;}
+      .section-bar { width: 100px;}
+      .panel {padding: 5px 20px;}
+      .course-main {margin-left: 115px;
+      font-size: 14px;}
+      footer { width: 100%; font-size: 14px;}
+      .yape-img	{ width: 100%;}
+      .header-img{ width: 100%; height: 100%; border-radius: 25px;}
+    }
 .course-row {
   margin: 5px 5px;
    display: flex; /* Usa flexbox para alinear los elementos en una fila */
