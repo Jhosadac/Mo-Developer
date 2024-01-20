@@ -529,7 +529,7 @@ border-radius: 25px;
       font-size: 40px;
       position: absolute;
     top: 145px;
-    left: 150px;
+    left: 155px;
     transform: translate(-50%, -50%);
     }
     
@@ -540,8 +540,8 @@ border-radius: 25px;
 .centered-img-header::before, .centered-img-header::after {
       content: ""; /* Pseudo-element para representar el borde */
       position: absolute;
-      top: 0px;
-      left: 5px;
+      top: -5px;
+      left: -10px;
       width: 100px;
       height: 100px;
       border: 3px solid rgb(15, 11, 31);
