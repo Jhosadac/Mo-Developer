@@ -390,7 +390,6 @@ border-radius: 25px;
     width: 85.7%;
     background-color: white;
     border-left: 6px solid rgb(65, 149, 155);
-    border-bottom: 1px solid grey;
   }
 
   .panel:hover {
