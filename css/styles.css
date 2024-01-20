@@ -398,6 +398,48 @@ footer {
       max-height: 80vh; 
     }
 
+.course-row {
+  margin: 5px 5px;
+   display: flex; /* Usa flexbox para alinear los elementos en una fila */
+  flex-wrap: wrap;
+}
+
+/* Add padding BETWEEN each column */
+.course-row,
+.course-row > .course-column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.course-column {
+  float: left;
+  width: 33.33%;
+  display: block; /* Hide all elements by default */
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+  .course-column {
+    width: 100%;}
+}
+
+/* Content */
+.course-content {
+  background-color: white;
+  border-radius: 20px;
+}
+
+.course-img {
+	border-radius: 20px;
+}
+
+.course-info {
+	padding: 15px; 
+    border-left: 2px solid green;
+}
+
+
+
 
 
 hr {
