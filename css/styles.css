@@ -466,16 +466,14 @@ border-radius: 25px;
     
     i-play{
 	text-align: center;
-    	margin-left: 80px;
-	margin-top: 0px;
     }
 
 
 .centered-img-header::before, .centered-img-header::after {
       content: ""; /* Pseudo-element para representar el borde */
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 2px;
+      left: -5px;
       width: 100px;
       height: 100px;
       border: 3px solid rgb(15, 11, 31);
