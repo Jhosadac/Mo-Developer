@@ -345,6 +345,7 @@ footer {
     .section-bar {
       overflow-y: scroll;
       max-height: 80%;
+      width: 210px;
     }
     @media screen and (max-height: 450px) {
       .sidenav {padding-top: 15px;}
