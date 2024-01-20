@@ -460,6 +460,8 @@ border-radius: 25px;
       padding-right: 11px;
       padding-left: 11px;
       line-height: 40px;
+      margin-left: 40%;
+      margin-bottom: 30%;
     }
     
     i-play{
@@ -467,7 +469,7 @@ border-radius: 25px;
     }
 
 
-.centered::before, .centered::after {
+.centered-img-header::before, .centered-img-header::after {
       content: ""; /* Pseudo-element para representar el borde */
       position: absolute;
       top: 0;
@@ -480,7 +482,7 @@ border-radius: 25px;
       opacity: 0;
     }
     
-    .centered::before {
+    .centered-img-header::before {
       animation-delay: 0.5s;
     }
 
