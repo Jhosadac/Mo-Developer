@@ -457,9 +457,7 @@ border-radius: 25px;
 
 .centered-img-header {
       color: rgb(15, 11, 31);
-      font-size: 30px;
-      width: 50px;
-	height: 50px;
+      font-size: 80px;
       padding-top: 20px;
       padding-right: 11px;
       padding-left: 11px;
@@ -471,7 +469,7 @@ border-radius: 25px;
     }
     
     i-play{
-    	margin-left: 15px;
+    	margin-left: 20px;
     }
 
 
