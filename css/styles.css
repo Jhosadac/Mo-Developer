@@ -354,9 +354,9 @@ footer {
 
 .header-img{
 width: 1000px; 
-height:600px ; 
+height:800px ; 
 margin-top:50px; 
-border-radius: 50px;
+border-radius: 25px;
 }
     @media screen and (max-width: 600px){
       .sidenav {padding-top: 15px;font-size: 14px;}
