@@ -198,6 +198,27 @@ font-size: 1.5rem;
   .nav-li .nav-a:hover {
     background-color: rgb(15, 11, 31);
   }
+
+
+
+
+ .start-nav-li {
+    float: right;
+  }
+  
+  .start-nav-li .start-nav-a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 1.5em;
+    background-color: rgb(15, 11, 31);
+  }
+  
+  .start-nav-li .start-nav-a:hover {
+   background-color: rgb(10, 6, 26);
+  }
   
   .dot {
     height: 15px;
