@@ -531,8 +531,8 @@ border-radius: 25px;
 .centered-img-header::before, .centered-img-header::after {
       content: ""; /* Pseudo-element para representar el borde */
       position: absolute;
-      top: 30px;
-      left: -20px;
+      top: 60px;
+      left: -15px;
       width: 100px;
       height: 100px;
       border: 3px solid rgb(15, 11, 31);
