@@ -570,11 +570,14 @@ border-radius: 25px;
 .keyword { color: #0077cc; }
 .string { color: #009900; }
 .comment { color: #999; }
-.function {
+.print {
   color: #880000;
 }
+.function{
+color: blue;
+}
 .integer{
-	color:red;
+color:red;
 }
 
 .py-code {
