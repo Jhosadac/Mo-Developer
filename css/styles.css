@@ -350,6 +350,11 @@ footer {
     @media screen and (max-height: 450px) {
       .sidenav {padding-top: 15px;}
       .sidenav {font-size: 18px;}
+      .section-bar { width: 100px;}
+      .panel {padding: 5px 20px;}
+      .course-main {margin-left: 115px;
+      font-size: 14px;}
+      footer { width: 115px; font-size: 14px;}
     }
 
     .accordion {
