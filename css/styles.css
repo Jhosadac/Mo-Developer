@@ -408,7 +408,7 @@ footer {
 /* Add padding BETWEEN each column */
 .course-row,
 .course-row > .course-column {
-  padding: 8px;
+  padding: 15px;
 }
 
 /* Create three equal columns that floats next to each other */
@@ -428,6 +428,7 @@ footer {
 .course-content {
   background-color: white;
   border-radius: 20px;
+  box-shadow: 0 30px 60px 0 rgba(141, 139, 139, 0.2); 
 }
 
 .course-img {
