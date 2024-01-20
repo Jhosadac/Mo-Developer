@@ -353,11 +353,10 @@ footer {
 
 
 .header-img{
-width: 1290px; 
-height:600px ; 
+width: 1000px; 
+height:400px ; 
 margin-top:50px; 
 border-radius: 50px;
-
 }
     @media screen and (max-width: 600px){
       .sidenav {padding-top: 15px;font-size: 14px;}
