@@ -308,7 +308,7 @@ font-size: 1.5rem;
 
     .sidenav {
       height: 100%;
-      width: 160px;
+      width: 200px;
       position: fixed;
       z-index: 1;
       top: 82px; /* Ajusta la posición para evitar superposición con la barra de navegación */
@@ -345,7 +345,7 @@ footer {
     .section-bar {
       overflow-y: scroll;
       max-height: 80%;
-      width: 210px;
+      width: 190px;
     }
     @media screen and (max-height: 450px) {
       .sidenav {padding-top: 15px;}
@@ -377,7 +377,7 @@ footer {
     overflow: hidden;
     text-align: left;
     width: 85.7%;
-    background-color: #ddffdd;
+    background-color: white;
     border-left: 6px solid rgb(65, 149, 155);
 
   }
