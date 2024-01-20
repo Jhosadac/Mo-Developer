@@ -567,6 +567,27 @@ border-radius: 25px;
     text-align: center;
 }
 
+.keyword { color: #0077cc; }
+.string { color: #009900; }
+.comment { color: #999; }
+.function {
+  color: #880000;
+}
+.integer{
+	color:red;
+}
+
+.py-code {
+	border-left: 5px solid rgb(45, 131, 143);
+    padding-left: 10px;
+    font-family: 'Courier New', monospace;
+  	font-size: 14px;
+    background-color: rgb(230, 240, 230);
+}
+
+
+
+
 hr {
   margin: 1rem 0;
   color: inherit;
