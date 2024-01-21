@@ -478,7 +478,49 @@ Especifique el índice inicial y el índice final, separados por dos puntos, par
 	a = <span class="string">"Hola, Josh"</span> <br>
 	<span class="print">print</span> (a.split(","))  <span class="comment"># Devuelve ['Hola', 'Josh']</span>
 	</div>
-	
+
+	<h3>Concatenar Strings</h3>
+	<p>Para concatenar o combinar dos cadenas, puede utilizar el operador +.</p>
+	<div class="py-code">
+	a = <span class="string">"Hola"</span> <br>
+	b = <span class="string">"Josh"</span> <br>
+	c = a + b <br>
+	<span class="print">print</span>(c)
+	</div>
+	<h3>Formato de Strings</h3>
+	<p>Como aprendimos en el capítulo Variables de Python, no podemos combinar cadenas y números como este:</p>
+	<div class="danger-code">
+	her = <span class="integer">5</span> <br>
+	txt = <span class="string">"Tengo " + her + " hermanos"</span> <br>
+	<span class="print">print</span>(txt)
+	</div>
+	<p>
+		¡Pero podemos combinar cadenas y números usando el método <span class="print">format()</span>! <br>
+
+El método <span class="print">format()</span> toma los argumentos pasados, los formatea y los coloca en la cadena donde {}están los marcadores de posición:
+	</p>
+	<div class="py-code">
+	her = <span class="integer">5</span> <br>
+	txt = <span class="string">"Tengo {} hermanos"</span> <br>
+	<span class="print">print</span>(txt.<span class="keyword">format</span>(age))
+	</div>
+	<p> El método format() toma un número ilimitado de argumentos y se colocan en los respectivos marcadores de posición: </p>
+	<div class="py-code">
+	quantity = <span class="integer">3</span> <br>
+	itemno = <span class="integer">567</span> <br>
+	price = <span class="integer">49.95</span> <br>
+	myorder = <span class="string">"I want {} pieces of item {} for {} dollars."</span> <br>
+	<span class="print">print</span>(myorder.<span class="keyword">format</span>(quantity, itemno, price))
+	</div>
+	<p> Puede utilizar números de índice <span class="print">{0}</span>para asegurarse de que los argumentos se coloquen en los marcadores de posición correctos:</p>
+		<div class="py-code">
+	quantity = <span class="integer">3</span> <br>
+	itemno = <span class="integer">567</span> <br>
+	price = <span class="integer">49.95</span> <br>
+	myorder = <span class="string">"I want to pay {2} dollars for {0} pieces of item {1}."</span> <br>
+	<span class="print">print</span>(myorder.<span class="keyword">format</span>(quantity, itemno, price))
+	</div>
+		
     </div>
     
     <div id="Section3-v" class="tabcontent">
