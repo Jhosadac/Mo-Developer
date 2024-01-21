@@ -589,7 +589,14 @@ color:red;
 	margin-bottom: 20px;
 }
 
-
+.danger-code {
+  background-color: rgb(255, 240, 240);
+  border-left: 6px solid #f44336;
+padding-left: 10px;
+    font-family: 'Courier New', monospace;
+  	font-size: 18px;
+	margin-bottom: 20px;
+}
 
 
 hr {
