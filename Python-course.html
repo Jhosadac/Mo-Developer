@@ -173,9 +173,49 @@
 	<h3> Caso de serpiente </h3>
 	    <p>Cada palabra está separada por un carácter de subrayado:</p>
 	   <div class="py-code"> 
-	        my_variable_name <span class="string">"Josh"</span>
+	        my_variable_name = <span class="string">"Josh"</span>
           </div>
 	    
+	<h3> Un valor para múltiples variables</h3>
+	    <p>Y puedes asignar el mismo valor a múltiples variables en una línea:</p>
+	   <div class="py-code"> 
+	        x = y = z = <span class="string">"Josh"</span>
+		<span class="print">print</span>(x) <br>
+		<span class="print">print</span>(y) <br>
+		<span class="print">print</span>(z)   
+          </div>
+
+	    <h3> Desempaquetar una colección</h3>
+	    <p>Si tiene una colección de valores en una lista, tupla, etc. 
+		Python le permite extraer los valores en variables. A esto se le llama desempacar .</p>
+	   <div class="py-code"> 
+	        colores = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+		x = y = z = colores <br>
+		<span class="print">print</span>(x) <br>
+		<span class="print">print</span>(y) <br>
+		<span class="print">print</span>(z)   
+          </div>
+
+	    <h3> Variables de Salida </h3>
+	    <p> La función Python <span class="print">print() </span> se usa a menudo para generar variables.</p>
+	    <div class="py-code"> 
+		 x = <span class="string">"Josh is awesome"</span> <br>
+		<span class="print">print</span>(x)
+          </div>
+	    <p> En la función <span class="print">print() </span> , genera múltiples variables, separadas por una coma: </p>
+	    <div class="py-code"> 
+		 x = <span class="string">"Josh"</span> <br>
+		y = <span class="string">"is"</span> <br>
+		z = <span class="string">"awesome"</span> <br>
+		<span class="print">print</span>(x, y, z)
+          </div>
+	    <p> También puede utilizar el operador <b>+</b> para generar múltiples variables: </p>
+	    <div class="py-code"> 
+		 x = <span class="string">"Josh"</span> <br>
+		y = <span class="string">"is"</span> <br>
+		z = <span class="string">"awesome"</span> <br>
+		<span class="print">print</span>(x + y + z)
+          </div>
     </div>
     
     <div id="Section1-v" class="tabcontent">
