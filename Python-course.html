@@ -112,11 +112,70 @@
 	Python no tiene ningún comando para declarar una variable.
 	Una variable se crea en el momento en que se le asigna un valor por primera vez.
 	</p>
-	<div class="py-code"> x = <span class="integer">5</span> <br>
+	<div class="py-code"> 
+	x = <span class="integer">5</span> <br>
 	 y =  <span class="string">"Josh"</span> <br>
-         <span class="function">print</span>(x) <br>
-         <span class="function">print</span>(y)
+         <span class="print">print</span>(x) <br>
+         <span class="print">print</span>(y)
         </div>
+	<p>
+	No es necesario declarar las variables con ningún tipo en particular e incluso pueden 
+	cambiar de tipo después de haberlas configurado.
+	</p>
+
+	<div class="py-code"> 
+	 x = <span class="integer">5</span>  <span class="comment"> # x es una variable tipo int</span><br>
+         x =  <span class="string">"Josh"</span>  <span class="comment"> # Ahora x es una variable tipo str</span><br>
+         <span class="print">print</span>(x)
+        </div>
+	  <h3>Fundición</h3>
+	    <p>Si desea especificar el tipo de datos de una variable, puede hacerlo mediante conversión.</p>
+	    <div class="py-code"> 
+		x = <span class="function">str</span> (<span class="integer">8</span>) <span class="comment"> # x es '8'</span><br>
+		y =  <span class="function">int</span> (<span class="integer">8</span>) <span class="comment"> # y es 8</span><br>
+		z =  <span class="function">float </span> (<span class="integer">8</span>) <span class="comment"> # z es 8.0</span>
+	</div>
+
+	  <h3>Nombres de variables</h3> 
+	    <p>
+		    Una variable puede tener un nombre corto (como xey) o 
+		    un nombre más descriptivo (edad, nombre_auto, volumen_total). Reglas para variables de Python:
+		<ul>
+		<li> El nombre de una variable debe comenzar con una letra o un carácter de subrayado. </li>
+		<li> El nombre de una variable no puede comenzar con un número. </li>
+	        <li> El nombre de una variable solo puede contener caracteres alfanuméricos y guiones bajos (Az, 0-9 y _). </li>
+		<li> Los nombres de las variables distinguen entre mayúsculas y minúsculas (edad, Edad y EDAD son tres variables diferentes) </li>
+	        <li> Un nombre de variable no puede ser ninguna de las palabras clave de Python. </li>
+		</ul>
+	    </p>
+		<div class="py-code"> 
+	        myvar = <span class="string">"Josh"</span> <br>
+		my_var = <span class="string">"Josh"</span> <br>
+		_my_var = <span class="string">"Josh"</span> <br>
+		MYVAR = <span class="string">"Josh"</span> <br>
+                myvar2 =  <span class="string">"Josh"</span>
+               </div>
+	<h3> Nombres de variables de varias palabras</h3>
+	    <p>
+		    Los nombres de variables con más de una palabra pueden resultar difíciles de leer.
+		    Hay varias técnicas que puede utilizar para hacerlos más legibles:
+	    </p>
+	<h3> El caso de Carmel </h3>
+	    <p>Cada palabra, excepto la primera, comienza con mayúscula:</p>
+	   <div class="py-code"> 
+	        myVariableName = <span class="string">"Josh"</span>
+          </div>
+	<h3> Caso Pascal </h3>
+	    <p>Cada palabra comienza con una letra mayúscula:</p>
+	   <div class="py-code"> 
+	        MyVariableName = <span class="string">"Josh"</span>
+          </div>
+	<h3> Caso de serpiente </h3>
+	    <p>Cada palabra está separada por un carácter de subrayado:</p>
+	   <div class="py-code"> 
+	        my_variable_name <span class="string">"Josh"</span>
+          </div>
+	    
     </div>
     
     <div id="Section1-v" class="tabcontent">
