@@ -56,7 +56,7 @@
       <button class="panel sec3" onclick="openCity(event, 'Section3-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div>Ejercicio</button>
 
 
-      <button class="accordion" onclick="togglePanel('sec4')">Section 4</button>
+      <button class="accordion" onclick="togglePanel('sec4')">Booleans</button>
       <button class="panel sec4" onclick="openCity(event, 'Section4-t')" id="defaultOpen"> <div class="sec-ico"><i class="bi bi-file-earmark-text"></i></div>Teoria</button>
       <button class="panel sec4" onclick="openCity(event, 'Section4-v')"> <div class="sec-ico"> <i class="bi bi-file-earmark-play"></i></div>Video</button>
       <button class="panel sec4" onclick="openCity(event, 'Section4-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div>Ejercicio</button>
@@ -537,8 +537,47 @@ El método <span class="print">format()</span> toma los argumentos pasados, los 
 
 <!-- Contenido de la seccion 4 -->
     <div id="Section4-t" class="tabcontent">
-      <h3>Theory 4</h3>
-      <p>Heres is going to be the theory</p>
+      <h3>Valores Booleanos</h3>
+      <p> Los booleanos representan uno de dos valores: <span class="print">True</span> o <span class="print">False</span>.</p>
+	<p>En programación a menudo necesitas saber si una expresión es <span class="print">True</span> o <span class="print">False</span>.
+
+Puede evaluar cualquier expresión en Python y obtener una de dos respuestas, <span class="print">True</span> o <span class="print">False</span>.
+
+Cuando comparas dos valores, la expresión se evalúa y Python devuelve la respuesta booleana:</p>
+	<div class="py-code">
+	<span class="print">print</span>(<span class="integer">10</span> >  <span class="integer">9</span>) <span class="comment"># Devuelve True</span> <br>
+	<span class="print">print</span>(<span class="integer">10</span> == <span class="integer">9</span>) <span class="comment"># Devuelve False</span> <br>		
+	<span class="print">print</span>(<span class="integer">10</span> <  <span class="integer">9</span>) <span class="comment"># Devuelve False</span>
+	</div>
+<p> Cuando ejecuta una condición en una declaración if, Python devuelve <span class="print">True</span> o <span class="print">False</span>:</p>
+	<div class="py-code">
+	a = <span class="integer"> 200 </span> <br>
+	b = <span class="integer"> 33 </span> <br>
+	<span class="keyword">if</span> b > a: <br>
+	&emsp; <span class="print">print</span>(<span class="string">"b es mayor que a"</span>) <br>
+	<span class="keyword">else</span>: <br>
+	&emsp; <span class="print">print</span>(<span class="string">"b no es mayor que a"</span>)
+	
+	</div>
+	<h3>Evaluar valores y variables</h3>
+	<p> La función <span class="print">bool()</span> le permite evaluar cualquier valor 
+		y darle <span class="print">True </span> o <span class="print">False </span> a cambio,</p>
+	<div class="py-code">
+	<span class="print">print</span>(<span class="keyword">bool</span>(<span class="string">"Hello"</span>)) <span class="comment"># True</span><br>
+	<span class="print">print</span>(<span class="keyword">bool</span>(<span class="integer">15</span>)) <span class="comment"># True</span>
+	</div>
+	<h3>La mayoría de los valores son verdaderos</h3>
+	<p>
+		Casi cualquier valor se evalúa <span class="print">True</span> si tiene algún tipo de contenido. <br>
+
+Cualquier cadena es <span class="print">True</span>, excepto las cadenas vacías. <br>
+
+Cualquier número lo es <span class="print">True</span>, excepto el <span class="print">0</span>. <br>
+
+Cualquier lista, tupla, conjunto y diccionario son <span class="print">True</span>, excepto los vacíos.
+	</p>
+	
+	    
     </div>
     
     <div id="Section4-v" class="tabcontent">
