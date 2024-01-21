@@ -44,13 +44,13 @@
       <button class="panel sec1" onclick="openCity(event, 'Section1-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div> Ejercicio</button>
       
 
-       <button class="accordion" onclick="togglePanel('sec2')">Section 2</button>
+       <button class="accordion" onclick="togglePanel('sec2')">Tipos de datos</button>
       <button class="panel sec2" onclick="openCity(event, 'Section2-t')" id="defaultOpen"> <div class="sec-ico"><i class="bi bi-file-earmark-text"></i></div>Teoria</button>
       <button class="panel sec2" onclick="openCity(event, 'Section2-v')"> <div class="sec-ico"> <i class="bi bi-file-earmark-play"></i></div>Video</button>
       <button class="panel sec2" onclick="openCity(event, 'Section2-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div>Ejercicio</button>
 
 
-     <button class="accordion" onclick="togglePanel('sec3')">Section 3</button>
+     <button class="accordion" onclick="togglePanel('sec3')">Strings</button>
       <button class="panel sec3" onclick="openCity(event, 'Section3-t')" id="defaultOpen"> <div class="sec-ico"><i class="bi bi-file-earmark-text"></i></div>Teoria</button>
       <button class="panel sec3" onclick="openCity(event, 'Section3-v')"> <div class="sec-ico"> <i class="bi bi-file-earmark-play"></i></div>Video</button>
       <button class="panel sec3" onclick="openCity(event, 'Section3-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div>Ejercicio</button>
@@ -179,7 +179,7 @@
 	<h3> Un valor para múltiples variables</h3>
 	    <p>Y puedes asignar el mismo valor a múltiples variables en una línea:</p>
 	   <div class="py-code"> 
-	        x = y = z = <span class="string">"Josh"</span>
+	        x = y = z = <span class="string">"Josh"</span> <br>
 		<span class="print">print</span>(x) <br>
 		<span class="print">print</span>(y) <br>
 		<span class="print">print</span>(z)   
@@ -228,6 +228,29 @@ Cualquiera puede utilizar las variables globales, tanto dentro como fuera de las
 		&emsp; <span class="print">print</span>( <span class="string">"Python is"</span> + x) <br>
 		myfunc()
           </div>
+
+	    <p> Crear una variable dentro de una función, con el mismo nombre que la variable global</p>
+	    <div class="py-code"> 
+		 x = <span class="string">"awsome"</span> <br>
+		<span class="keyword">def  </span>myfunc(): <br>
+		&emsp; x = <span class="string">"fantastic"</span> <br>
+		&emsp; <span class="print">print</span>( <span class="string">"Python is"</span> + x) <br>
+		myfunc() <br>
+		<span class="print">print</span>( <span class="string">"Python is"</span> + x)
+          </div>
+
+	    <h3> La palabra clave global</h3>
+	    <p>Normalmente, cuando creas una variable dentro de una función, esa variable es local y solo se puede usar dentro de esa función.
+
+Para crear una variable global dentro de una función, puede usar la palabra clave <span class="print">global</span></p>
+	
+	<div class="py-code">
+		<span class="keyword">def  </span>myfunc(): <br>
+		&emsp; <span class="keyword">global</span> x<br>
+		&emsp; x = <span class="string">"fantastic"</span> <br>
+		myfunc() <br>
+		<span class="print">print</span>( <span class="string">"Python is"</span> + x)
+          </div>
 	    
     </div>
     
@@ -245,8 +268,93 @@ Cualquiera puede utilizar las variables globales, tanto dentro como fuera de las
 
     <!-- Contenido de la seccion 2 -->
     	<div id="Section2-t" class="tabcontent">
-      <h3>Theory 2</h3>
-      <p>Heres is going to be the theory</p>
+      <h3>Tipos de datos integrados</h3>
+      <p>En programación, el tipo de datos es un concepto importante.
+
+Las variables pueden almacenar datos de diferentes tipos y diferentes tipos pueden hacer cosas diferentes.
+
+Python tiene los siguientes tipos de datos integrados de forma predeterminada, en estas categorías: <br>
+      
+      Tipo de texto:	<span class="print">str</span> <br>
+Tipos numéricos:	<span class="print">int</span>, <span class="print">float</span>, <span class="print">complex</span> <br>
+Tipos de secuencia:	<span class="print">list</span>, <span class="print">tuple</span>, <span class="print">range</span> <br>
+Tipo de mapeo:	<span class="print">dict</span> <br>
+Tipos de conjuntos:	<span class="print">set</span>,<span class="print">frozenset</span> <br>
+Tipo booleano:	<span class="print">bool</span> <br>
+Tipos binarios:	<span class="print">bytes</span>, <span class="print">bytearray</span>, <span class="print">memoryview</span> <br>
+Ninguno Tipo:	<span class="print">NoneType</span>
+      
+      </p>
+	<h3>Obtener el tipo de datos</h3>
+	<p> Puede obtener el tipo de datos de cualquier objeto usando la función <span class="print">Type()</span>:</p>	
+	<div class="py-code">
+		x = <span class="integer">5</span> <br>
+		myfunc() <br>
+		<span class="print">print</span>( <span class="keyword">type</span> (x))
+          </div>
+	<h3>Números en Python</h3>
+	<p> Hay tres tipos numéricos en Python:</p>
+	<ul>
+		<li> <span class="print">int</span></li>
+		<li> <span class="print">float</span></li>
+	        <li> <span class="print">complex</span></li>
+	</ul>
+	<p> Las variables de tipo numérico se crean cuando les asignas un valor:</p>
+	<div class="py-code">
+		x = <span class="integer">5</span> <span class="comment"># int</span><br>
+		y = <span class="integer">2.8</span> <span class="comment"># float</span><br>
+		z = 1j <span class="comment"># complex</span>
+          </div>
+	<h3> Int </h3>
+	<p> Int, o entero, es un número entero, positivo o negativo, sin decimales, de longitud ilimitada. </p>
+	<div class="py-code">
+		x = <span class="integer">1</span> <br>
+		y = <span class="integer">35656222554887711</span> <br>
+		z = -<span class="integer">3255522</span> 
+          </div>
+
+	<h3> Float </h3>
+	<p> Float, o "número de punto flotante" es un número, positivo o negativo, que contiene uno o más decimales.</p>
+	<div class="py-code">
+		x = <span class="integer">1.10</span> <br>
+		y = <span class="integer">1.0</span> <br>
+		z = -<span class="integer">35.29</span> 
+          </div>
+	<p>Los flotantes también pueden ser números científicos con una "e" para indicar la potencia de 10.</p>
+	<div class="py-code">
+		x = <span class="integer">35e3</span> <br>
+		y = <span class="integer">12E4</span> <br>
+		z = -<span class="integer">87.7e100</span> 
+          </div>
+	<h3>Complex</h3>
+		<p>Los números complejos se escriben con una "j" como parte imaginaria:</p>
+		<div class="py-code">
+		x = <span class="integer">3</span> + 5j <br>
+		y = 5j <br>
+		z = -5j 
+          	</div>
+	<h3>Conversión de tipo</h3>
+		<p>Puedes convertir de un tipo a otro con los métodos <span class="print">int()</span>, 
+			<span class="print">float()</span> y <span class="print">complex</span></p>
+		<div class="py-code">
+		x = <span class="integer">1</span> <span class="comment"># int</span> <br>
+		y = <span class="integer">2.8</span> <span class="comment"># float</span> <br>
+		z = 2j <span class="comment"># complex</span> <br>
+		<span class="comment"># De int a float</span> <br>
+			a = <span class="keyword">float</span>(x)
+		<span class="comment"># De float a int</span> <br>
+			a = <span class="keyword">int</span>(x)
+		<span class="comment"># De int a complex</span>
+			a = <span class="keyword">complex</span>(x)
+          	</div>
+	<h3>Número aleatorio</h3>
+		<p>Python no tiene una función <span class="print">random()</span> para crear un número aleatorio, pero Python tiene un módulo
+			integrado llamado <span class="print">random</span> que se puede utilizar para crear números aleatorios:</p>
+		<p>Importa el módulo aleatorio y muestra el número aleatorio entre 1 y 9:</p>
+		<div class="py-code">
+		<span class="keyword">import </span> random <br>
+		<span class="print">print</span> (random.randrange(<span class="integer">1</span>,<span class="integer">10</span>))
+          	</div>
     </div>
     
     <div id="Section2-v" class="tabcontent">
@@ -265,8 +373,112 @@ Cualquiera puede utilizar las variables globales, tanto dentro como fuera de las
     <!-- Contenido de la seccion 3 -->
    
    	<div id="Section3-t" class="tabcontent">
-      <h3>Theory 3</h3>
-      <p>Heres is going to be the theory</p>
+      <h3>Strings</h3>
+      <p>Los Strings en Python están entre comillas simples o dobles.
+
+<span class="print">'hola'</span> es lo mismo que <span class="print">"hola"</span>  .
+
+Puede mostrar una cadena literal con la función <span class="print">print()</span> :</p>
+	<div class="py-code">
+	<span class="print">print</span> (<span class="string">'hola'</span>) <br>
+	<span class="print">print</span> (<span class="string">"hola"</span>)
+	</div>
+	
+	<h3>Asignar cadena a una variable</h3>
+	<p>La asignación de una cadena a una variable se realiza con el nombre de la variable seguido de un signo igual y la cadena:</p>
+	<div class="py-code">
+	a = <span class="string">"Hello"</span> <br>
+	<span class="print">print</span> (a)
+	</div>
+
+		
+	<h3>Cadenas multilínea</h3>
+	<p>Puede asignar una cadena de varias líneas a una variable utilizando tres comillas:</p>
+	<div class="py-code">
+	a = <span class="string">"""Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""</span> <br>
+	<span class="print">print</span> (a)
+	</div>
+	<p>O tres comillas simples:</p>
+	<div class="py-code">
+	a = <span class="string">'''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.'''</span> <br>
+	<span class="print">print</span> (a)
+	</div>
+
+	<h3>Slicing</h3>
+	<p>Puede devolver una variedad de caracteres utilizando la sintaxis de segmento.
+
+Especifique el índice inicial y el índice final, separados por dos puntos, para devolver una parte de la cadena.</p>
+		<p>Consigue los caracteres de la posición 2 a la posición 5 (no incluido):</p>
+		<div class="py-code">
+	b = <span class="string">"Hola Josh"</span> <br>
+	<span class="print">print</span> (b[<span class="integer">2</span>:<span class="integer">5</span>])
+	</div>
+
+	<h3>Slice desde el inicio</h3>
+	<p>Al omitir el índice inicial, el rango comenzará en el primer carácter:</p>
+	<p>Consigue los caracteres desde el inicio hasta la posición 5 (no incluido):</p>
+	<div class="py-code">
+	b = <span class="string">"Hola Josh"</span> <br>
+	<span class="print">print</span> (b[:<span class="integer">5</span>])
+	</div>
+
+	<h3>Slice hasta el final</h3>
+	<p>Al omitir el índice final , el rango irá hasta el final:</p>
+	<p>Consigue los caracteres desde la posición 2 y hasta el final:</p>
+	<div class="py-code">
+	b = <span class="string">"Hola Josh"</span> <br>
+	<span class="print">print</span> (b[<span class="integer">2</span>:])
+	</div>
+
+	<h3>Indexación negativa</h3>
+	<p>Utilice índices negativos para comenzar el segmento desde el final de la cadena:</p>
+	<p>De: "J" en "Josh" (posición -4) <br>
+
+	hasta, pero no incluido: "s" en "Josh" (posición -2):</p>
+
+	<h3>Upper Case</h3>
+	<p>El método <span class="print">upper()</span> devuelve la cadena en mayúsculas:</p>
+	<div class="py-code">
+	a = <span class="string">"Hola Josh"</span> <br>
+	<span class="print">print</span> (a.upper())
+	</div>
+
+	<h3>Lower Case</h3>
+	<p>El método <span class="print">lower()</span> devuelve la cadena en minúsculas:</p>
+	<div class="py-code">
+	a = <span class="string">"Hola Josh"</span> <br>
+	<span class="print">print</span> (a.lower())
+	</div>
+
+	<h3>Eliminar espacios en blanco</h3>
+	<p>El espacio en blanco es el espacio antes y/o después del texto real y muy a menudo desea eliminar este espacio.</p>
+	<p>El método <span class="print">strip()</span>elimina cualquier espacio en blanco desde el principio o el final:</p>
+	<div class="py-code">
+	a = <span class="string">"  Hola Josh "</span> <br>
+	<span class="print">print</span> (a.strip()) <span class="comment"># Devuelve "Hola Josh"</span>
+	</div>
+
+	<h3>Reemplazar cadena</h3>
+	<p>El método <span class="print">replace()</span> reemplaza una cadena con otra cadena:</p>
+	<div class="py-code">
+	a = <span class="string">"Hola Josh"</span> <br>
+	<span class="print">print</span> (a.replace("J", "M"))
+	</div>
+
+	<h3>Split String</h3>
+	<p>El método <span class="print">split()</span> devuelve una lista donde el texto entre el separador especificado se convierte en los elementos de la lista.</p>
+	<p>El método <span class="print">split()</span>divide la cadena en subcadenas si encuentra instancias del separador:</p>
+	<div class="py-code">
+	a = <span class="string">"Hola, Josh"</span> <br>
+	<span class="print">print</span> (a.split(","))  <span class="comment"># Devuelve ['Hola', 'Josh']</span>
+	</div>
+	
     </div>
     
     <div id="Section3-v" class="tabcontent">
