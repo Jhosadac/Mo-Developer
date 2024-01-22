@@ -10,6 +10,7 @@
         <link rel="icon" type="image/x-icon" href="assets/Mo.ico" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <!-- .css -->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -56,13 +57,13 @@
       <button class="panel sec3" onclick="openCity(event, 'Section3-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div>Ejercicio</button>
 
 
-      <button class="accordion" onclick="togglePanel('sec4')">Booleans</button>
+      <button class="accordion" onclick="togglePanel('sec4')">Booleanos</button>
       <button class="panel sec4" onclick="openCity(event, 'Section4-t')" id="defaultOpen"> <div class="sec-ico"><i class="bi bi-file-earmark-text"></i></div>Teoria</button>
       <button class="panel sec4" onclick="openCity(event, 'Section4-v')"> <div class="sec-ico"> <i class="bi bi-file-earmark-play"></i></div>Video</button>
       <button class="panel sec4" onclick="openCity(event, 'Section4-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div>Ejercicio</button>
 
       
-       <button class="accordion" onclick="togglePanel('sec5')">Section 5</button>
+       <button class="accordion" onclick="togglePanel('sec5')">Operadores</button>
       <button class="panel sec5" onclick="openCity(event, 'Section5-t')" id="defaultOpen"> <div class="sec-ico"><i class="bi bi-file-earmark-text"></i></div>Teoria</button>
       <button class="panel sec5" onclick="openCity(event, 'Section5-v')"> <div class="sec-ico"> <i class="bi bi-file-earmark-play"></i></div>Video</button>
       <button class="panel sec5" onclick="openCity(event, 'Section5-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div>Ejercicio</button>
@@ -576,8 +577,64 @@ Cualquier número lo es <span class="print">True</span>, excepto el <span class=
 
 Cualquier lista, tupla, conjunto y diccionario son <span class="print">True</span>, excepto los vacíos.
 	</p>
+	<p>Lo siguiente devolverá Verdadero:</p>
+	<div class="py-code">
+	<span class="keyword">bool</span>(<span class="string">"abc"</span>) <br>
+	<span class="keyword">bool</span>(<span class="integer">123</span>) <br>
+	<span class="keyword">bool</span>([<span class="string">"Rojo"</span>, <span class="string">"Azul"</span>, <span class="string">"Amarillo"</span>])
+	</div>
+
+<h3>Algunos valores son falsos</h3>
+<p>De hecho, no hay muchos valores que se evalúen como <span class="print">False</span>, excepto valores vacíos, como <span class="print">()</span>, <span class="print">[]</span>, <span class="print">{}</span>, 
+	<span class="print">""</span> el número <span class="print">0</span> y el valor <span class="print">None</span>. Y, por supuesto, el valor <span class="print">False</span>se evalúa como <span class="print">False</span>.</p>
+
+<p>Lo siguiente devolverá Falso:</p>
+<div class="py-code">
+	<span class="keyword">bool</span>(<span class="keyword">False</span>) <br>
+	<span class="keyword">bool</span>(None) <br>
+	<span class="keyword">bool</span>(<span class="integer">0</span>) <br>
+	<span class="keyword">bool</span>(<span class="string">""</span>) <br>
+	<span class="keyword">bool</span>(()) <br>
+	<span class="keyword">bool</span>([]) <br>
+	<span class="keyword">bool</span>({})
 	
+</div>
+
+<p>Un valor más, u objeto en este caso, se evalúa como <span class="print">False</span>, 
+	y eso es si tienes un objeto creado a partir de una clase con una función <span class="print"> __len__ </span> que devuelve <span class="print">0</span> o <span class="print">False</span>:</p>
+<div class="py-code">
+	<span class="keyword">class</span> myclass(): <br>
+	&emsp; <span class="keyword">def</span> __len__(self): <br>
+	&emsp; &emsp; <span class="keyword">return</span> <span class="integer">0</span> <br>
+	myobj = myclass() <br>
+	<span class="print">print</span>(<span classs="keyword">bool</span>(myobj))
+</div>
+<h3>Las funciones pueden devolver un valor booleano</h3>
+	<p>Puede crear funciones que devuelvan un valor booleano:</p>
+	<div class="py-code">
+	<span class="keyword">def</span> myFunction(): <br>
+	&emsp; <span class="keyword">return</span> <span class="keyword">True</span> <br>
+	<span class="print">print</span>(myFunction())
+</div>
+<p>Puede ejecutar código basado en la respuesta booleana de una función:</p>
+<p>Imprime "¡SÍ!" si la función devuelve Verdadero, de lo contrario imprime "¡NO!":</p>
+<div class="py-code">
+	<span class="keyword">def</span> myFunction(): <br>
+	&emsp; <span class="keyword">return</span> <span class="keyword">True</span> <br>
+	<span class="keyword">if</span> myFunction(): <br>
+	&emsp; <span class="print">print</span>(<span class="string">"¡SÍ!"</span>) <br>
+	<span class="keyword">else</span>: <br>
+	&emsp; <span class="print">print</span>(<span class="string">"¡NO!"</span>)
+</div>
+<p>Python también tiene muchas funciones integradas que devuelven un valor booleano, como la función <span class="print">isinstance()</span>, 
+	que se puede utilizar para determinar si un objeto es de un determinado tipo de datos:</p>    
+
+	<div class="py-code">
+	x = <span class="integer">200</span>
+	<span class="print">print</span>(<span class="keyword">isinstance</span>(x,<span class="keyword">int</span>)) <span class="comment"># Devuelve True</span>
+	</div>
 	    
+	
     </div>
     
     <div id="Section4-v" class="tabcontent">
@@ -592,8 +649,243 @@ Cualquier lista, tupla, conjunto y diccionario son <span class="print">True</spa
 	
     <!-- Contenido de la seccion 5 -->
     	<div id="Section5-t" class="tabcontent">
-      <h3>Theory 5</h3>
-      <p>Heres is going to be the theory</p>
+      <h3>Operadores de Python</h3>
+      <p>Los operadores se utilizan para realizar operaciones con variables y valores.
+
+En el siguiente ejemplo, utilizamos el operador <span class="print">+</span> para sumar dos valores:</p>
+	<div class="py-code">
+	<span class="print">print</span>(<span class="integer">10</span> + <span class="integer">5</span> ) 
+	</div>
+	<p>Python divide los operadores en los siguientes grupos:</p>
+	<ul>
+		<li> Operadores aritméticos</li>
+		<li> Operadores de Asignación</li>
+	        <li> Operadores de comparación</li>
+		<li> Operadores logicos</li>
+		<li> Operadores de identidad</li>
+	        <li> Operadores de membresía</li>
+		<li> Operadores bit a bit</li>
+	</ul>
+	<h3>Operadores aritméticos de Python</h3>
+	<p>Los operadores aritméticos se utilizan con valores numéricos para realizar operaciones matemáticas comunes:</p>
+	<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Operador</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"> + </th>
+      <td>Adición</td>
+      <td> x + y </td>
+    </tr>
+    <tr>
+      <th scope="row"> - </th>
+      <td>Sustracción</td>
+      <td> x - y </td>
+    </tr>
+    <tr>
+      <th scope="row"> * </th>
+      <td>Multiplicación</td>
+      <td> x * y </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> / </th>
+      <td> División </td>
+      <td> x / y </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> % </th>
+      <td> Módulo </td>
+      <td> x % y </td>
+    </tr>
+
+     <tr>
+      <th scope="row"> ** </th>
+      <td> Exponenciación</td>
+      <td> x ** y </td>
+    </tr>
+
+     <tr>
+      <th scope="row"> // </th>
+      <td> División entera </td>
+      <td> x // y</td>
+    </tr>
+
+  </tbody>
+</table>
+<h3>Operadores de asignación de Python</h3>
+<p>Los operadores de asignación se utilizan para asignar valores a variables:</p>
+	<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Operador</th>
+      <th scope="col">Ejemplo</th>
+      <th scope="col">Equivalente</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"> = </th>
+      <td> x = 5 </td>
+      <td> x = 5 </td>
+    </tr>
+    <tr>
+      <th scope="row"> += </th>
+      <td> x += 3 </td>
+      <td> x = x + 3 </td>
+    </tr>
+    <tr>
+      <th scope="row"> -= </th>
+      <td> x -= 3 </td>
+      <td> x = x - 3 </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> *= </th>
+      <td> x *= 3 </td>
+      <td> x = x * 3 </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> /= </th>
+      <td> x /= 3 </td>
+      <td> x = x / 3 </td>
+    </tr>
+
+     <tr>
+      <th scope="row"> %= </th>
+      <td> x %= 3 </td>
+      <td> x = x % 3 </td>
+    </tr>
+
+     <tr>
+      <th scope="row"> //= </th>
+      <td> x //= 3 </td>
+      <td> x = x // 3 </td>
+    </tr>
+
+   <tr>
+      <th scope="row"> **= </th>
+      <td> x **= 3 </td>
+      <td> x = x ** 3 </td>
+    </tr>	
+
+   <tr>
+      <th scope="row"> &= </th>
+      <td> x &= 3 </td>
+      <td> x = x & 3 </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> |= </th>
+      <td> x |= 3 </td>
+      <td> x = x | 3 </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> ^= </th>
+      <td> x ^= 3 </td>
+      <td> x = x ^ 3 </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> >>= </th>
+      <td> x >>= 3 </td>
+      <td> x = x >> 3 </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> &lt;&lt; </th>
+      <td> x &lt;&lt;= 3 </td>
+      <td> x = x &lt;&lt; 3 </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Operadores de comparación de Python</h3>
+<p>Los operadores de comparación se utilizan para comparar dos valores:</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Operador</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"> == </th>
+      <td>Igual</td>
+      <td> x == y </td>
+    </tr>
+    <tr>
+      <th scope="row"> != </th>
+      <td>No igual</td>
+      <td> x != y </td>
+    </tr>
+    <tr>
+      <th scope="row"> > </th>
+      <td>Mayor que</td>
+      <td> x > y </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> &lt; </th>
+      <td> Menor que </td>
+      <td> x &lt; y </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> >= </th>
+      <td> Mayor igual que </td>
+      <td> x >= y </td>
+    </tr>
+
+     <tr>
+      <th scope="row"> &lt;= </th>
+      <td> Menor igual que </td>
+      <td> x &lt;= y </td>
+    </tr>
+
+  </tbody>
+</table>
+<h3>Operadores lógicos de Python</h3>
+<p>Los operadores lógicos se utilizan para combinar declaraciones condicionales</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Operador</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"> and </th>
+      <td>Devuelve True si ambas sentencias son verdaderas</td>
+      <td> x < 5 and x < 10 </td>
+    </tr>
+    <tr>
+      <th scope="row"> or </th>
+      <td>Devuelve True si una de las sentencias es verdadera</td>
+      <td> x < 5 or x < 4 </td>
+    </tr>
+    <tr>
+      <th scope="row"> not </th>
+      <td>Revierte el resultado. Si es True devuelve False</td>
+      <td> not(x < 5 and x < 4) </td>
+    </tr>
+
+  </tbody>
+</table>
+		
     </div>
     
     <div id="Section5-v" class="tabcontent">
