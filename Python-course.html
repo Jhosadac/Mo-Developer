@@ -882,10 +882,190 @@ En el siguiente ejemplo, utilizamos el operador <span class="print">+</span> par
       <td>Revierte el resultado. Si es True devuelve False</td>
       <td> not(x < 5 and x < 4) </td>
     </tr>
-
   </tbody>
 </table>
-		
+
+    <h3>Operadores de identidad de Python</h3>
+	  <p>Los operadores de identidad se utilizan para comparar los objetos, no si son iguales, 
+		  sino si en realidad son el mismo objeto, con la misma ubicación de memoria:</p> 
+	<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Operador</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"> is </th>
+      <td>Devuelve True si ambas variables son el mismo objeto</td>
+      <td> x is y </td>
+    </tr>
+    <tr>
+      <th scope="row"> is not </th>
+      <td>Devuelve True si ambas variables no son el mismo objeto</td>
+      <td> x is not y </td>
+    </tr>
+  </tbody>
+</table>
+
+	<h3>Operadores de membresía de Python</h3>
+	<p>Los operadores de membresía se utilizan para probar si una secuencia se presenta en un objeto:</p>
+	<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Operador</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"> in </th>
+      <td>Devuelve True si una secuencia con el valor especificado está presente en el objeto</td>
+      <td> x is y </td>
+    </tr>
+    <tr>
+      <th scope="row"> not in </th>
+      <td>Devuelve True si una secuencia con el valor especificado no está presente en el objeto</td>
+      <td> x is not y </td>
+    </tr>
+  </tbody>
+</table>
+
+      <h3>Operadores bit a bit de Python</h3> 
+	<p>Los operadores bit a bit se utilizan para comparar números (binarios):</p>
+	<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Operador</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"> & </th>
+      <td>AND</td>
+      <td>compara cada bit y lo pone a 1 si ambos son 1, caso contrario pone 0</td>
+      <td> x & y </td>
+    </tr>
+    <tr>
+      <th scope="row"> | </th>
+      <td> OR </td>
+      <td> compara cada bit y lo pone a 1 si uno o ambos son 1, caso contrario pone a 0 </td>
+	<td> x | y </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> ^ </th>
+      <td> XOR </td>
+      <td> compara cada bit y lo pone a 1 si sólo uno es 1, en caso contrario (si ambos son 1 o ambos son 0) se pone a 0 </td>
+	<td> x ^ y </td>
+    </tr>
+
+     <tr>
+      <th scope="row"> ~ </th>
+      <td> NOT </td>
+      <td> invierte cada bit (0 se convierte en 1 y 1 en 0) </td>
+	<td> x ~ y </td>
+    </tr>
+
+     <tr>
+      <th scope="row"> << </th>
+      <td> desplazamiento a la izquierda </td>
+      <td> inserta el número especificado de 0's (en este caso 2) por la derecha y deja 
+		caer la misma cantidad de bits por la izquierda </td>
+	<td> x << 2 </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> &lt;&lt; </th>
+      <td> Desplazamiento a la derecha </td>
+      <td> desplaza cada bit el número especificado de veces hacia la derecha. 
+	      Los huecos vacíos a la izquierda se rellenan con 0's. </td>
+	<td> x &lt;&lt; 2 </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Precedencia del operador</h3>
+<p>La precedencia del operador describe el orden en el que se realizan las operaciones.</p>
+<p>Los paréntesis tienen la máxima prioridad, lo que significa que las expresiones dentro de paréntesis deben evaluarse primero:</p>
+
+<div class="py-code">
+	<span class="print">print</span>((<span class="integer">10</span> + <span class="integer">5</span>) - (<span class="integer">4</span> + <span class="integer">1</span>)) 
+	</div>
+<p>La multiplicación <span class="print">*</span>tiene mayor prioridad que la suma <span class="print">+</span> y, por lo tanto, las multiplicaciones se evalúan antes que las sumas:</p>
+	   <div class="py-code">
+	<span class="print">print</span>(<span class="integer">100</span> + <span class="integer">5</span> * <span class="integer">2</span>) 
+	</div> 
+	<p>El orden de prioridad se describe en la siguiente tabla, comenzando con la prioridad más alta en la parte superior:</p>
+	<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Operador</th>
+      <th scope="col">Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"> <span>()</span> </th>
+      <td>Paréntesis</td>
+    </tr>
+    <tr>
+      <th scope="row"> <span>**</span> </th>
+      <td>Exponenciación</td>
+    </tr>
+    <tr>
+      <th scope="row"> <span>+x -x ~x</span> </th>
+      <td>Unario más, unario menos y bitwise NOT</td>
+    </tr>
+
+    <tr>
+      <th scope="row"> <span>* / // %</span> </th>
+      <td>Multiplicación, división, división entera y módulo</td>
+    </tr>
+
+     <tr>
+      <th scope="row"> <span>+ -</span> </th>
+      <td>Adición y sustracción</td>
+    </tr>
+    <tr>
+      <th scope="row"> <span> << &lt;&lt; </span> </th>
+      <td>Desplazamientos bit a izquierda y derecha</td>
+    </tr>
+	<tr>
+      <th scope="row"> <span> & </span> </th>
+      <td>AND bit a bit</td>
+    </tr>
+     <tr>
+      <th scope="row"> <span> | </span> </th>
+      <td>OR bit a bit</td>
+    </tr>
+     <tr>
+      <th scope="row"> <span> == , != , > , >= , < , <= , is <br> is not , in , not in </span> </th>
+      <td>Operadores de comparación, identidad y pertenencia</td>
+    </tr>
+
+    <tr>
+      <th scope="row"> <span> not </span> </th>
+      <td>not lógico</td>
+    </tr>
+     <tr>
+      <th scope="row"> <span> and </span> </th>
+      <td> Y </td>
+    </tr>
+   <tr>
+      <th scope="row"> <span> or </span> </th>
+      <td> O </td>
+    </tr>
+  </tbody>
+</table>
+<p>Si dos operadores tienen la misma precedencia, la expresión se evalúa de izquierda a derecha.</p>
+	      
     </div>
     
     <div id="Section5-v" class="tabcontent">
