@@ -1325,9 +1325,83 @@ Recuerde aumentar el índice en 1 después de cada iteración. </p>
 	nuevaLista = [x <span class="keyword">for</span> x <span class="keyword">in</span> miLista <span class="keyword">if</span> <span class="string">"a"</span> <span class="keyword">in</span> x] <br>
 	<span class="print">print</span>(nuevaLista)
 	</div>
+	<h3>La sintaxis</h3>
+	<div class="info-code"> nuevaLista = [expresión <span class="keyword">for</span> item <span class="keyword">in</span> iterable 
+		<span class="keyword">if</span> condición == <span class="keyword">True</span>]
+	</div>
+	<p> El valor de retorno es una lista nueva, que deja la lista anterior sin cambios.</p>
+	<h3>Condición</h3>
+	<p>La condición es como un filtro que solo acepta los elementos que se valoran en <span class="print">True</span> </p>
+	<p>Sólo acepta items que no sean "Amarillo":</p>
+	<div class="py-code">
+	nuevaLista = [x <span class="keyword">for</span> x <span class="keyword">in</span> colores <span class="keyword">if</span> x != <span class="string">"Amarillo"</span>]
+	</div>
+	<p>La condición <span class="info-code">
+		<span class="keyword">if</span> x != <span class="string">"Amarillo"</span>
+	</span>  
+	regresará <span class="print">True</span> para todos los elementos excepto "Amarillo", lo que hará que la nueva lista contenga todas las frutas excepto "Amarillo".</p>
 
+	<p> La condición es opcional y puede omitirse: </p>
+	<p>Sin declaración <span class="print">Sin ifdeclaración:</span>:</p>
+	<div class="py-code">
+	nuevaLista = [x <span class="keyword">for</span> x <span class="keyword">in</span> miLista]
+	</div>
+	<h3> iterable </h3>
+	<p>El iterable puede ser cualquier objeto iterable, como una lista, tupla, conjunto, etc.</p>
+	<p>Puedes usar la función <span class="print">range()</span> para crear un iterable:</p>
+	<div class="py-code">
+	nuevaLista = [x <span class="keyword">for</span> x <span class="keyword">in range</span>(<span class="integer">10</span>)]
+	</div>
+	<h3>Expresión</h3>
+	<p>La expresión es el elemento actual en la iteración, pero también es el resultado, 
 		
-    </div>
+		que puede manipular antes de que termine como un elemento de lista en la nueva lista:</p>
+
+	<p>Establece los valores en la nueva lista en mayúsculas:</p>
+	<div class="py-code">
+	nuevaLista = [x.upper() <span class="keyword">for</span> x <span class="keyword">in</span> colores]
+	</div>
+	<p>Puedes configurar el resultado como quieras:</p>
+	<p>Establece todos los valores en la nueva lista en 'hola':</p>
+	<div class="py-code">
+	nuevaLista = [<span class="string">'Hola'</span> <span class="keyword">for</span> x <span class="keyword">in</span> colores]
+	</div>
+	<p> La expresión también puede contener condiciones, no como un filtro, sino como una forma de manipular el resultado:</p>
+	<p>Devuelve "Rojo" en lugar de "Azul":</p>
+	<div class="py-code">
+	nuevaLista = [ x <span class="keyword">if</span> x != <span class="string">"Azul"</span> <span class="keyword">else</span> <span class="string">"Rojo"</span> <span class="keyword">for</span> x <span class="keyword">in</span> colores]
+	</div>
+	<p>La expresión del ejemplo anterior dice: "Devolver el item si no es Azul, si es plátano devolver Rojo".</p>
+	<h3>Ordenar lista alfanuméricamente</h3>
+	<p> Los objetos de lista tienen un método <span class="print">sort()</span> que ordenará la lista de forma alfanumérica, ascendente, de forma predeterminada: </p>
+	<div class="py-code">
+	estaLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span>]  
+		<br>
+	estaLista.sort() <br>
+	<span class="print">print</span>(estaLista) <span class="comment"># Devuelve ['Amarillo', 'Azul', 'Marrón', 'Rojo', 'Rosa', 'Verde']</span>
+	</div>
+	<h3>Orden descendiente</h3>
+	<p>Para ordenar de forma descendente, utilice el argumento de palabra clave <span class="print">reverse = True</span>:</p>	
+	<div class="py-code">
+	estaLista = [<span class="string">Rojo</span> , <span class="string">Azul</span> , <span class="string">Amarillo</span> , <span class="string">Verde</span> , <span class="string">Marrón</span> , <span class="string">Rosa</span>]  
+		<br>
+	estaLista.sort(reverse = <span class="keyword">True</span>) <br>
+	<span class="print">print</span>(estaLista) <span class="comment"># Devuelve ['Verde', 'Rosa', 'Rojo', 'Marrón', 'Azul', 'Amarillo']</span>
+	</div>
+	<h3> Personalizar la función de clasificación </h3>
+	<p> También puede personalizar su propia función utilizando el argumento de palabra clave <span class="print"> key = function </span> .
+
+La función devolverá un número que se utilizará para ordenar la lista (el número más bajo primero):</p>
+<div class="py-code">
+	<span class="keyword">def</span> mifunc(n): <br>
+	&emsp; <span class="keyword">return abs</span>(n - <span class="integer">50</span>) <br>
+	esta Lista = [ <span class="integer">100</span> , <span class="integer">50</span> , <span class="integer">65</span> , <span class="integer">82</span> , <span class="integer">23</span>] <br>
+	estaLista = sort(key = mifunc) <br>
+	<span class="print">print</span>(estaLista) 
+</div>
+		
+		
+</div>
     
     <div id="Section6-v" class="tabcontent">
       <h3>Video 6</h3>
