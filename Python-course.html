@@ -341,12 +341,9 @@ Ninguno Tipo:	<span class="print">NoneType</span>
 		x = <span class="integer">1</span> <span class="comment"># int</span> <br>
 		y = <span class="integer">2.8</span> <span class="comment"># float</span> <br>
 		z = 2j <span class="comment"># complex</span> <br>
-		<span class="comment"># De int a float</span> <br>
-			a = <span class="keyword">float</span>(x)
-		<span class="comment"># De float a int</span> <br>
-			a = <span class="keyword">int</span>(x)
-		<span class="comment"># De int a complex</span>
-			a = <span class="keyword">complex</span>(x)
+		a = <span class="keyword">float</span>(x) <span class="comment"># De int a float</span> <br>
+		a = <span class="keyword">int</span>(y) <span class="comment"># De float a int</span> <br>
+		a = <span class="keyword">complex</span>(z) <span class="comment"># De int a complex</span>
           	</div>
 	<h3>Número aleatorio</h3>
 		<p>Python no tiene una función <span class="print">random()</span> para crear un número aleatorio, pero Python tiene un módulo
@@ -439,9 +436,7 @@ Especifique el índice inicial y el índice final, separados por dos puntos, par
 
 	<h3>Indexación negativa</h3>
 	<p>Utilice índices negativos para comenzar el segmento desde el final de la cadena:</p>
-	<p>De: "J" en "Josh" (posición -4) <br>
-
-	hasta, pero no incluido: "s" en "Josh" (posición -2):</p>
+	<p>De: "J" en "Josh" (posición -4) hasta, pero no incluido: "s" en "Josh" (posición -2):</p>
 
 	<h3>Upper Case</h3>
 	<p>El método <span class="print">upper()</span> devuelve la cadena en mayúsculas:</p>
@@ -1116,7 +1111,10 @@ Si agrega nuevos elementos a una lista, los nuevos elementos se colocarán al fi
 	miLista = [<span class="keyword">True</span> , <span class="keyword">False</span> , <span class="keyword">True</span>]
 	</div>
 	<p>Una lista puede contener diferentes tipos de datos:</p>
-	miLista = [<span class="keyword">True</span> , <span class="integer">12</span> , <span class="string">"Rojo"</span>]
+	<div class="py-code"> 
+		miLista = [<span class="keyword">True</span> , <span class="integer">12</span> , <span class="string">"Rojo"</span>]
+	</div>
+	
 	<h3>tipo()</h3>
 	<p>Desde la perspectiva de Python, las listas se definen como objetos con el tipo de datos 'lista': <b> <class 'list'> </b></p>
 	
@@ -1146,13 +1144,13 @@ Si agrega nuevos elementos a una lista, los nuevos elementos se colocarán al fi
 Al especificar un rango, el valor de retorno será una nueva lista con los elementos especificados.</p>
 	<p> Devuelve el tercer, cuarto y quinto elemento: </p>
 	<div class="py-code">
-	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Naranja"</span>] , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span><br>
-	<span class="print">print</span>(miLista[<span class="integer">2</span>:<span class="integer">2</span>])
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Naranja"</span> , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span>]<br>
+	<span class="print">print</span>(miLista[<span class="integer">2</span>:<span class="integer">5</span>])
 	</div>
 	<p>Al omitir el valor inicial, el rango comenzará en el primer elemento:</p>
 	<p>Este ejemplo devuelve los elementos desde el principio hasta "Verde", pero SIN incluirlo:</p>
 	<div class="py-code">
-	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Naranja"</span>] , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span><br>
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Naranja"</span> , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span>]<br>
 	<span class="print">print</span>(miLista[:<span class="integer">4</span>])
 	</div>
 	<p>Al omitir el valor final, el rango continuará hasta el final de la lista:</p>
@@ -1171,7 +1169,7 @@ Al especificar un rango, el valor de retorno será una nueva lista con los eleme
 	<h3> Comprobar si el item existe </h3>
 	<p>Para determinar si un elemento específico está presente en una lista, utilice la palabra clave <span class="print">in</span>:</p>
 	<div class="py-code">
-	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> <br>
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
 	<span class="keyword">if</span> <span class="string">"Verde"</span> <span class="keyword">in</span> miLista: <br>
 	&emsp; <span class="print">print</span>(<span class="string">"Yes"</span>)
 	</div>
@@ -1179,7 +1177,7 @@ Al especificar un rango, el valor de retorno será una nueva lista con los eleme
 	<p>Para cambiar el valor de un item específico, consulte el número de índice:</p>
 	<p>Cambie el segundo elemento:</p>
 	<div class="py-code">
-	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> <br>
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
 	miLista[<span class="integer">1</span>] =  <span class="string">"Verde"</span> <br>
 	<span class="print">print</span>(miLista)
 	</div>
@@ -1257,7 +1255,7 @@ Al especificar un rango, el valor de retorno será una nueva lista con los eleme
 
 	<p> La delpalabra clave también elimina el índice especificado: </p>
 	<div class="py-code">
-	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>]
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
 	<span class="keyword">del</span>  miLista[<span class="integer">0</span>] <br>
 	<span class="print">print</span>(miLista)
 	</div>
@@ -1266,7 +1264,7 @@ Al especificar un rango, el valor de retorno será una nueva lista con los eleme
 
 La lista aún permanece, pero no tiene contenido.</p>
 	<div class="py-code">
-	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>]
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
 	miLista.clear() <br>
 	<span class="print">print</span>(miLista)
 	</div>
@@ -1274,7 +1272,7 @@ La lista aún permanece, pero no tiene contenido.</p>
 	<p> Puede recorrer los elementos de la lista utilizando un bucle <span class="print">for</span>: </p>
 	<p> Imprime todos los elementos de la lista, uno por uno:</p>
 	<div class="py-code">
-	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>]
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
 	<span class="keyword">for </span> x <span class="keyword">in</span> miLista: <br>
 	&emsp; <span class="print">print</span>(x)
 	</div>
@@ -1284,7 +1282,7 @@ La lista aún permanece, pero no tiene contenido.</p>
 
 Utilice las funciones <span class="print">range()</span> y <span class="print">len()</span> para crear un iterable adecuado. </p>
 	<div class="py-code">
-	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>]
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
 	<span class="keyword">for </span> i <span class="keyword">in</span> <span class="keyword">range</span>(<span class="keyword">len</span>(miLista)): <br>
 	&emsp; <span class="print">print</span>(miLista[i])
 	</div>
