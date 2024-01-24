@@ -97,6 +97,8 @@
 
       
       </div>
+	<button id ="courses-sidenav" class="openbtn" onclick="toggleNav()">☰</button>
+	    
     </div>
 
     <div class="course-main">
@@ -344,6 +346,31 @@
 
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+var sectionbarVisible = false;
+
+function toggleNav() {
+  var sectionbar = document.getElementById("section-bar");
+  var coursemain = document.getElementById("course-main");
+  var openbtn = document.querySelector(".openbtn");
+   var csidenav = document.getElementById("courses-sidenav");
+
+  sidebarVisible = !sidebarVisible;
+
+  if (sectionbarVisible) {
+    sectionbar.style.width = "250px";
+    coursemain.style.marginLeft = "0px";
+    csidenav.style.marginLeft = "250px";
+    openbtn.innerHTML = "☰";
+  } else {
+    sectionbar.style.width = "0px";
+    coursemain.style.marginLeft = "0px";
+    csidenav.style.marginLeft = "0px";
+    openbtn.innerHTML = "☰";
+  }
+}
 </script>
 
     </body>
