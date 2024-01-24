@@ -69,7 +69,7 @@
       <button class="panel sec5" onclick="openCity(event, 'Section5-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div>Ejercicio</button>
 
       
-       <button class="accordion" onclick="togglePanel('sec6')">Section 6</button>
+       <button class="accordion" onclick="togglePanel('sec6')">Listas</button>
       <button class="panel sec6" onclick="openCity(event, 'Section6-t')" id="defaultOpen"> <div class="sec-ico"><i class="bi bi-file-earmark-text"></i></div>Teoria</button>
       <button class="panel sec6" onclick="openCity(event, 'Section6-v')"> <div class="sec-ico"> <i class="bi bi-file-earmark-play"></i></div>Video</button>
       <button class="panel sec6" onclick="openCity(event, 'Section6-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div>Ejercicio</button>
@@ -1082,8 +1082,253 @@ En el siguiente ejemplo, utilizamos el operador <span class="print">+</span> par
     <!-- Contenido de la seccion 6 -->
    
    	<div id="Section6-t" class="tabcontent">
-      <h3>Theory 6</h3>
-      <p>Heres is going to be the theory</p>
+      <h3>Listas</h3>
+      <p>Las listas se utilizan para almacenar varios elementos en una sola variable. Las listas se crean usando corchetes:</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	<span class="print">print</span>(miLista) 
+	</div>
+	<h3>Listar elementos</h3>
+	<p>Los elementos de la lista están indexados, el primer elemento tiene índice <span class="print">[0]</span>, el segundo elemento tiene índice, <span class="print">[1]</span> , etc.</p>
+	<h3>Ordenado</h3>
+	<p>Cuando decimos que las listas están ordenadas, significa que los elementos tienen un orden definido y ese orden no cambiará.
+
+Si agrega nuevos elementos a una lista, los nuevos elementos se colocarán al final de la lista.</p>
+	<h3>Cambiable</h3>
+	<p>La lista se puede cambiar, lo que significa que podemos cambiar, agregar y eliminar elementos en una lista después de haberla creado.</p>
+	<h3>Permitir duplicados</h3>		
+	<p>Dado que las listas están indexadas, las listas pueden tener elementos con el mismo valor:</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Verde"</span> , <span class="string">"Amarillo"</span>] <br>
+	<span class="print">print</span>(miLista) 
+	</div>
+	<h3>Longitud de la lista</h3>
+	<p> Para determinar cuántos elementos tiene una lista, use la función <span class="print">len()</span>: </p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	<span class="print">print</span>( <span class="keyword">len</span>(miLista)) 
+	</div>
+	<h3>Elementos de lista: tipos de datos</h3>
+	<p>Los elementos de la lista pueden ser de cualquier tipo de datos:</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	miLista = [<span class="integer">12</span> , <span class="integer">8</span> , <span class="integer">401</span>] <br>
+	miLista = [<span class="keyword">True</span> , <span class="keyword">False</span> , <span class="keyword">True</span>]
+	</div>
+	<p>Una lista puede contener diferentes tipos de datos:</p>
+	miLista = [<span class="keyword">True</span> , <span class="integer">12</span> , <span class="string">"Rojo"</span>]
+	<h3>tipo()</h3>
+	<p>Desde la perspectiva de Python, las listas se definen como objetos con el tipo de datos 'lista': <b> <class 'list'> </b></p>
+	
+	<h3>El constructor lista()</h3>
+	<p>También es posible utilizar el constructor <span class="print">list()</span> al crear una nueva lista.</p>
+	<div class="py-code">
+	miLista = list((<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>)) <span class="comment"># Tenga en cuenta el doble paréntesis</span><br>
+	<span class="print">print</span>(miLista) 
+	</div>
+	<h3>Acceder a elementos</h3>
+	<p>Los elementos de la lista están indexados y puede acceder a ellos consultando el número de índice:</p>	
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	<span class="print">print</span>(miLista[<span class="integer">1</span>]) <span class="comment"># Devuelve "Azul"</span>
+	</div>
+	<h3>Indexación negativa</h3>
+	<p>La indexación negativa significa comenzar desde el final.
+
+<span class="print">-1</span> se refiere al último elemento, <span class="print">-2</span> se refiere al penúltimo elemento, etc.</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	<span class="print">print</span>(miLista[-<span class="integer">1</span>]) <span class="comment"># Devuelve "Amarillo"</span>
+	</div>
+	<h3>Rango de índices</h3>
+	<p>Puede especificar un rango de índices especificando dónde comenzar y dónde terminar el rango.
+
+Al especificar un rango, el valor de retorno será una nueva lista con los elementos especificados.</p>
+	<p> Devuelve el tercer, cuarto y quinto elemento: </p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Naranja"</span>] , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span><br>
+	<span class="print">print</span>(miLista[<span class="integer">2</span>:<span class="integer">2</span>])
+	</div>
+	<p>Al omitir el valor inicial, el rango comenzará en el primer elemento:</p>
+	<p>Este ejemplo devuelve los elementos desde el principio hasta "Verde", pero SIN incluirlo:</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Naranja"</span>] , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span><br>
+	<span class="print">print</span>(miLista[:<span class="integer">4</span>])
+	</div>
+	<p>Al omitir el valor final, el rango continuará hasta el final de la lista:</p>
+	<p>Este ejemplo devuelve los elementos desde "Amarillo" hasta el final:</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Naranja"</span>] , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span><br>
+	<span class="print">print</span>(miLista[<span class="integer">2</span>:])
+	</div>
+	<h3> Rango de índices negativos </h3>
+	<p>Especifique índices negativos si desea iniciar la búsqueda desde el final de la lista:</p>
+	<p>Este ejemplo devuelve los elementos desde "Naranja" (-4) hasta "Rosa" (-1), pero SIN incluirlo:</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Naranja"</span> , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span>] <br>
+	<span class="print">print</span>(miLista[-<span class="integer">4</span>:-<span class="integer">1</span>])
+	</div>
+	<h3> Comprobar si el item existe </h3>
+	<p>Para determinar si un elemento específico está presente en una lista, utilice la palabra clave <span class="print">in</span>:</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> <br>
+	<span class="keyword">if</span> <span class="string">"Verde"</span> <span class="keyword">in</span> miLista: <br>
+	&emsp; <span class="print">print</span>(<span class="string">"Yes"</span>)
+	</div>
+	<h3> Cambiar valor del item</h3>
+	<p>Para cambiar el valor de un item específico, consulte el número de índice:</p>
+	<p>Cambie el segundo elemento:</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> <br>
+	miLista[<span class="integer">1</span>] =  <span class="string">"Verde"</span> <br>
+	<span class="print">print</span>(miLista)
+	</div>
+
+	<h3>Cambiar un rango de valores de elementos</h3>
+	<p>Para cambiar el valor de los elementos dentro de un rango específico, defina una lista con los nuevos valores y consulte el rango de números de índice donde desea insertar los nuevos valores:</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> ,  <span class="string">"Naranja"</span> ,  <span class="string">"Negro"</span> , <span class="string">"Rosa"</span>] <br>
+	miLista[<span class="integer">1</span>:<span class="integer">3</span>] =  [<span class="string">"Dorado"</span> , <span class="string">"Celeste"</span>] <br>
+	<span class="print">print</span>(miLista)
+	</div>
+	<p>Si inserta más elementos de los que reemplaza, los nuevos elementos se insertarán donde especificó y los elementos restantes se moverán en consecuencia:</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	miLista[<span class="integer">1</span>:<span class="integer">2</span>] =  [<span class="string">"Dorado"</span> , <span class="string">"Celeste"</span>] <br>
+	<span class="print">print</span>(miLista)
+	</div>
+
+	<h3>Insertar elementos</h3>
+	<p>Para insertar un nuevo elemento de la lista, sin reemplazar ninguno de los valores existentes, podemos usar el método <span class="print">insert()</span>.</p>
+	<p>El método <span class="print">insert()</span> inserta un elemento en el índice especificado:</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	miLista.insert(<span class="integer">2</span> ,  <span class="string">"Dorado"</span> ) <br>
+	<span class="print">print</span>(miLista)
+	</div>
+
+	<h3>Agregar elementos</h3>
+	<p>Para agregar un elemento al final de la lista, use el método <span class="print">append()</span> :</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	miLista.append(<span class="string">"Dorado"</span>) <br>
+	<span class="print">print</span>(miLista)
+	</div>
+	<h3> Ampliar lista </h3>
+	<p>Para agregar elementos de otra lista a la lista actual, use el método <span class="print">extend()</span>. Los elementos se agregarán al final de la lista. </p>
+	<p>Añade los elementos de oscuros a miLista:</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	oscuros = [<span class="string">"Gris"</span> , <span class="string">"Negro"</span> , <span class="string">"Marrón"</span>] <br>
+	miLista.extend(oscuros) <br>
+	<span class="print">print</span>(miLista)
+	</div>
+	<h3> Agregar cualquier iterable </h3>
+	<p>  El método <span class="print">extend()</span> no tiene que agregar listas , puede agregar cualquier objeto iterable (tuplas, conjuntos, diccionarios, etc.). </p>
+	<p> Agregando elementos de una tupla a una lista:</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	miTupla = (<span class="string">"Verde"</span> , <span class="string">"Blanco"</span>) <br>
+	<span class="print">print</span>(miLista)
+	</div>
+
+	<h3> Eliminar elemento especificado </h3>
+	<p> El método <span class="print">remove()</span> elimina el elemento especificado.</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	miLista.remove(<span class="string">"Rojo"</span>) <br>
+	<span class="print">print</span>(miLista)
+	</div>
+
+	<p> Si hay más de un elemento con el valor especificado, el método <span class="print">remove()</span>elimina la primera aparición: </p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Rojo"</span>] <br>
+	miLista.remove(<span class="string">"Rojo"</span>) <br>
+	<span class="print">print</span>(miLista)
+	</div>
+
+	<h3> Eliminar índice especificado </h3>
+	<p> El método <span class="print">pop()</span>elimina el índice especificado. Si no especifica el índice, el método <span class="print">pop()</span> elimina el último elemento.</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Rojo"</span>] <br>
+	miLista.pop(<span class="integer">1</span>) <span class="comment"># elimina y devuelve dicho elemento</span> <br>
+	<span class="print">print</span>(miLista)
+	</div>
+
+	<p> La delpalabra clave también elimina el índice especificado: </p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>]
+	<span class="keyword">del</span>  miLista[<span class="integer">0</span>] <br>
+	<span class="print">print</span>(miLista)
+	</div>
+	<h3> Limpiar la lista</h3>
+	<p> El método <span class="print">clear()</span>vacía la lista.
+
+La lista aún permanece, pero no tiene contenido.</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>]
+	miLista.clear() <br>
+	<span class="print">print</span>(miLista)
+	</div>
+<h3> Listas de bucles</h3>
+	<p> Puede recorrer los elementos de la lista utilizando un bucle <span class="print">for</span>: </p>
+	<p> Imprime todos los elementos de la lista, uno por uno:</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>]
+	<span class="keyword">for </span> x <span class="keyword">in</span> miLista: <br>
+	&emsp; <span class="print">print</span>(x)
+	</div>
+
+	<h3> Recorrer los números de índice </h3>	
+	<p> También puede recorrer los elementos de la lista consultando su número de índice.
+
+Utilice las funciones <span class="print">range()</span> y <span class="print">len()</span> para crear un iterable adecuado. </p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>]
+	<span class="keyword">for </span> i <span class="keyword">in</span> <span class="keyword">range</span>(<span class="keyword">len</span>(miLista)): <br>
+	&emsp; <span class="print">print</span>(miLista[i])
+	</div>
+
+	<h3> Usando un bucle while </h3>	
+	<p> Puede recorrer los elementos de la lista utilizando un bucle <span class="print">while</span>.
+
+Utilice la función <span class="print">len()</span> para determinar la longitud de la lista, luego comience en 0 y recorra los elementos de la lista haciendo referencia a sus índices.
+
+Recuerde aumentar el índice en 1 después de cada iteración. </p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	i = <span class="integer">0</span> <br>
+	<span class="keyword">while </span> i < <span class="keyword">len</span>(miLista): <br>
+	&emsp; <span class="print">print</span>(miLista[i]) <br>
+	&emsp; i = i + <span class="integer">1</span>	
+	</div>
+<h3> Bucle usando la comprensión de listas </h3>
+	<p> La comprensión de listas ofrece la sintaxis más corta para recorrer listas: </p>
+	<p> Un bucle <span class="for"></span> manual breve que imprimirá todos los elementos de una lista: </p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	[<span class="print">print</span>(x) for x <span class="keyword">in</span> miLista]
+	</div>
+
+	<h3> Comprensión de listas </h3>
+	<p> La comprensión de listas ofrece una sintaxis más corta cuando desea crear una nueva lista basada en los valores de una lista existente. </p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	nuevaLista = [] <br>
+
+	<span class="keyword">for</span> x <span class="keyword">in</span> miLista: <br>
+	&emsp; <span class="keyword">if</span> <span class="string">"a"</span> <span class="keyword">in</span> x: <br>
+	&emsp; &emsp; nuevaLista.append(x) <br>	
+	<span class="print">print</span>(nuevaLista)
+	</div>
+	<p>Con la comprensión de listas puedes hacer todo eso con una sola línea de código:</p>
+	<div class="py-code">
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	nuevaLista = [x <span class="keyword">for</span> x <span class="keyword">in</span> miLista <span class="keyword">if</span> <span class="string">"a"</span> <span class="keyword">in</span> x] <br>
+	<span class="print">print</span>(nuevaLista)
+	</div>
+
+		
     </div>
     
     <div id="Section6-v" class="tabcontent">
