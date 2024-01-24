@@ -364,7 +364,9 @@ font-size: 1.5rem;
       flex-direction: column;
     }
 @media screen and (max-width: 600px){
-	.course-main { font-size: 15px;}
+	.course-main tabcontent p {
+    font-size: 15px;
+}
 }
 
 footer {
