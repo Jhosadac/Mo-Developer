@@ -432,8 +432,8 @@ border-radius: 25px;
 
  @media screen and (max-width: 600px){
       .sidenav {padding-top: 15px;font-size: 14px;}
-      .section-bar { width: 100px;}
-      .panel {padding: 5px 20px;}
+      .section-bar { width: 70px;}
+      .panel {padding: 5px 5px;}
       .course-main {margin-left: 115px;
       font-size: 14px;}
       footer { width: 100%; font-size: 14px;}
