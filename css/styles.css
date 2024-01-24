@@ -606,6 +606,31 @@ padding-left: 10px;
 	margin-bottom: 20px;
 }
 
+/* new */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  border: none;
+  transition: background-color 0.3s;
+  text-align: center;
+  margin: 0px;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#course-main {
+  transition: margin-left .5s;
+  padding: 0px;
+  z-index: 1;
+}
+#courses-sidenav {
+transition: margin-left .5s;
+  padding-left: 0px;
+}
 
 hr {
   margin: 1rem 0;
