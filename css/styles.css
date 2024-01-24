@@ -596,6 +596,13 @@ color:red;
     background-color: rgb(230, 240, 230);
 	margin-bottom: 20px;
 }
+.info-code {
+    padding-left: 10px;
+    font-family: 'Courier New', monospace;
+  	font-size: 18px;
+    background-color: #cccccc;
+	margin-bottom: 20px;
+}
 
 .danger-code {
   background-color: rgb(255, 240, 240);
