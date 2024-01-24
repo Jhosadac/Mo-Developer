@@ -1399,7 +1399,139 @@ La función devolverá un número que se utilizará para ordenar la lista (el n�
 	estaLista = sort(key = mifunc) <br>
 	<span class="print">print</span>(estaLista) 
 </div>
-		
+<h3> Clasificación que no distingue entre mayúsculas y minúsculas </h3>	
+<p> De forma predeterminada, el método <span class="print">sort()</span> distingue entre mayúsculas y minúsculas, 
+	lo que da como resultado que todas las letras mayúsculas se ordenen antes que las minúsculas:</p>
+<div class="py-code">
+	estaLista = [<span class="string">"Rojo"</span> , <span class="string">"azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"verde"</span>]  <br>
+	estaLista.sort() <br>
+	<span class="print">print</span>(estaLista) <span class="comment"># Devuelve ['Amarillo', 'Rojo', 'azul', 'verde']</span>
+	</div>
+<p> Afortunadamente, podemos utilizar funciones integradas como funciones clave al ordenar una lista.
+
+Entonces, si desea una función de clasificación que no distinga entre mayúsculas y minúsculas, use str.lower como función clave:</p>
+<div class="py-code">
+estaLista = [<span class="string">"Rojo"</span> , <span class="string">"azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"verde"</span>]  <br>
+estaLista.sort(key = <span class="keyword">str</span>.lower) <br>
+<span class="print">print</span>(estaLista) <span class="comment"># Devuelve ['Amarillo', 'azul', 'Rojo', 'verde']</span>
+</div>
+<h3> Orden inverso</h3>
+<p>¿Qué sucede si desea invertir el orden de una lista, independientemente del alfabeto?
+
+El método <span class="print">reverse()</span> invierte el orden de clasificación actual de los elementos.</p>
+<p>Invierta el orden de los elementos de la lista:</p>
+<div class="py-code">
+estaLista = [<span class="string">"Rojo"</span> , <span class="string">"azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"verde"</span>]  <br>
+estaLista.reverse() <br>
+<span class="print">print</span>(estaLista) <span class="comment"># Devuelve ['verde', 'Amarillo', 'azul', 'Rojo']</span>
+</div>		
+<h3> Copiar una lista </h3>
+<p>
+	No puede copiar una lista simplemente escribiendo <span class="print">list2 = list1</span>, porque: <span class="print">list2</span> solo será una referencia a <span class="print">list1</span>, y los cambios realizados en <span class="print">list1</span> también se realizarán automáticamente en <span class="print">list2</span>.
+
+Hay formas de hacer una copia, una es utilizar el método List integrado <span class="print">copy()</span>.
+</p>
+<div class="py-code">
+estaLista = [<span class="string">"Rojo"</span> , <span class="string">"azul"</span> , <span class="string">"Amarillo"</span>]  <br>
+miLista = estaLista.copy() <br>
+<span class="print">print</span>(miLista)
+</div>	
+<p> Otra forma de realizar una copia es utilizar el método integrado <span class="print">list()</span>.</p>
+<div class="py-code">
+estaLista = [<span class="string">"Rojo"</span> , <span class="string">"azul"</span> , <span class="string">"Amarillo"</span>]  <br>
+miLista = <span class="keyword">list</span>(estaLista) <br>
+<span class="print">print</span>(miLista)
+</div>	
+<h3> Unir dos listas</h3>
+Hay varias formas de unir o concatenar dos o más listas en Python.
+
+Una de las formas más sencillas es mediante el <span class="print">+</span> operador.
+<div class="py-code">
+Lista1 = [<span class="string">"a"</span> , <span class="string">"b"</span> , <span class="string">"c"</span>] <br>
+Lista2 = [<span class="integer">1</span> , <span class="integer">2</span> , <span class="integer">3</span>] <br>
+Lista3 = Lista1 + Lista2 <br>
+<span class="print">print</span>(Lista3)
+</div>
+<p>Otra forma de unir dos listas es agregando todos los elementos de la lista2 a la lista1, uno por uno:</p>
+<div class="py-code">
+Lista1 = [<span class="string">"a"</span> , <span class="string">"b"</span> , <span class="string">"c"</span>] <br>
+Lista2 = [<span class="integer">1</span> , <span class="integer">2</span> , <span class="integer">3</span>] <br>
+<span class="keyword">for</span> x <span class="keyword">in</span> Lista2: <br>
+&emsp; Lista1.append(x) <br>
+<span class="print">print</span>(Lista2)
+</div>
+<p>O puede utilizar el método <span class="extend()"></span>, cuyo propósito es agregar elementos de una lista a otra lista:</p>
+<div class="py-code">
+Lista1 = [<span class="string">"a"</span> , <span class="string">"b"</span> , <span class="string">"c"</span>] <br>
+Lista2 = [<span class="integer">1</span> , <span class="integer">2</span> , <span class="integer">3</span>] <br>
+Lista1.extend(Lista2) <br>
+<span class="print">print</span>(Lista1)
+</div>
+<h3>Métodos de lista</h3>
+<p>Python tiene un conjunto de métodos integrados que puedes usar en listas</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Método</th>
+      <th scope="col">Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"> append() </th>
+      <td>Añade un elemento al final de la lista</td>
+    </tr>
+    <tr>
+      <th scope="row"> clear() </th>
+      <td>Elimina todos los elementos de la lista</td>
+    </tr>
+    <tr>
+      <th scope="row"> copy() </th>
+      <td>Devuelve una copia de la lista</td>
+    </tr>
+
+    <tr>
+      <th scope="row"> count() </th>
+      <td> Devuelve el numero de elementos de una lista con un valor específico </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> extend() </th>
+      <td> Añade elementos a la lista (o cualquier iterable) al final de la lista actual </td>
+    </tr>
+
+     <tr>
+      <th scope="row"> index() </th>
+      <td> Devuelve el índice del primer elemento con un valor específico </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> insert() </th>
+      <td> Añade un elemento a un posición específica </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> pop() </th>
+      <td> Elimina un elemento de una posición específica </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> remove() </th>
+      <td> Elimina el item con un valor específico </td>
+    </tr>
+
+     <tr>
+      <th scope="row"> reverse() </th>
+      <td> Revierte el orden de la lista </td>
+    </tr>
+
+   <tr>
+      <th scope="row"> sort() </th>
+      <td> Ordena la lista </td>
+    </tr>
+
+  </tbody>
+</table>
 		
 </div>
     
