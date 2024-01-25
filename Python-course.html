@@ -1730,8 +1730,94 @@ colores = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</spa
 <span class="print">azul</span> <br>
 <span class="print">amarillo</span>
 </div>
-	    
-	    
+<notas-code> <b>Nota:</b> La cantidad de variables debe coincidir con la cantidad de valores en la tupla; de lo contrario, debe usar un asterisco para recopilar los valores restantes como una lista.</notas-code>    
+
+<h3>Usando asterisco <span class="integer">*</span></h3>
+<p>Si el número de variables es menor que el número de valores, puede agregar un <span class="print">*</span> al nombre de la 
+	variable y los valores se asignarán a la variable como una lista:</p>
+<p>Asigne el resto de valores como una lista llamada "roja":</p>
+<div class="py-code">
+colores = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span>) <br>
+(rojo, azul, *amarillo) = colores <br>
+<span class="print">rojo</span> <br>
+<span class="print">azul</span> <br>
+<span class="print">amarillo</span> <span class="comment"># Devuelve ['Amarillo', 'Verde', 'Marrón']</span>
+</div>
+<p>Si el asterisco se agrega a otro nombre de variable distinto del último, Python asignará valores a la variable hasta que el número de valores restantes coincida con el número de variables restantes.</p>
+<p>Agregue una lista de valores a la variable "dorado":</p>
+<div class="py-code">
+colores = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span>) <br>
+(rojo, *dorado, amarillo) = colores <br>
+<span class="print">rojo</span> <br>
+<span class="print">dorado</span> <span class="comment"># Devuelve ['Azul', 'Amarillo', 'Verde']</span> <br>
+<span class="print">amarillo</span> 
+</div>	    
+
+<h3>Recorrer una tupla</h3>
+<p>Puede recorrer los elementos de la tupla utilizando un bucle <span class="print">for</span>.</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+<span class="keyword">for</span> x <span class="keyword">in</span> estaTupla: <br>
+&emsp; <span class="print">print</span>(x)	
+</div>	
+<h3>Recorrer los números de índice</h3>
+<p>También puede recorrer los elementos de la tupla consultando su número de índice.
+
+Utilice las funciones <span class="print">range()</span>y <span class="print">len()</span>para crear un iterable adecuado.</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="keyword">range</span>(<span class="keyword">len</span>(estaTupla)): <br>
+&emsp; <span class="print">print</span>(estaTupla[i])	
+</div>	
+<h3>Usando un bucle while</h3>
+<p>Puede recorrer los elementos de la tupla utilizando un bucle <span class="print">while()</span>.
+
+Utilice la función <span class="print">len()</span> para determinar la longitud de la tupla, luego comience en 0 y recorra los elementos de la tupla haciendo referencia a sus índices.
+
+Recuerde aumentar el índice en 1 después de cada iteración</p>	    
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+i = <span class="integer">0</span> <br>
+<span class="keyword">while</span> i < <span class="keyword">len</span>(estaTupla): <br>
+&emsp; <span class="print">print</span>(estaTupla[i]) <br>
+&emsp; i = i <span class="integer">1</span>
+</div>	
+<h3>Unir dos tuplas</h3>
+<p>Para unir dos o más tuplas puedes utilizar el operador <span class="print">+</span>:</p>
+<div class="py-code">
+Tupla1 = (<span class="string">"a"</span> , <span class="string">"b"</span> , <span class="string">"c"</span>) <br>
+Tupla2 = (<span class="integer">1</span> , <span class="integer">2</span> , <span class="integer">3</span>) <br>
+<br>
+Tuple3 = Tuple1 + Tuple2 <br>
+<span class="print">print</span>(Tupla3)
+</div>
+<h3>Multiplicar tuplas</h3>
+<p>Si desea multiplicar el contenido de una tupla un número determinado de veces, puede utilizar el operador <span class="print">*</span>:</p>	    
+<div class="py-code">
+colores = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+miTupla = colores * <span class="integer">2</span> <br>
+<span class="print">print</span>(miTupla) <span class="comment"># ('Rojo', 'Azul', 'Amarillo', 'Rojo', 'Azul', 'Amarillo')</span>
+</div>
+<h3> Métodos de Tuplas</h3>
+<p>Python tiene dos métodos integrados que puedes usar en tuplas.</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Método</th>
+      <th scope="col">Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"> count() </th>
+      <td>Devuelve el numero de veces que un valor específico ocurre en la tupla</td>
+    </tr>
+     <tr>
+      <th scope="row"> index() </th>
+      <td>Busca en la tupla un valor especificado y devuelve la posición en la que se encontró.</td>
+    </tr>
+  </tbody>
+</table>    
 	    
     </div>
     
@@ -1747,8 +1833,70 @@ colores = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</spa
 	
     <!-- Contenido de la seccion 8 -->
     	<div id="Section8-t" class="tabcontent">
-      <h3>Theory 8</h3>
-      <p>Heres is going to be the theory</p>
+      <h3>Sets</h3>
+      <p>Los sets se utilizan para almacenar varios elementos en una sola variable.</p>
+      <p>Los Sets se escriben entre llaves.</p>
+<div class="py-code">
+esteSet = {<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br>
+<span class="print">print</span>(esteSet)
+</div>
+<h3>Establecer elementos</h3>
+<p>Los elementos establecidos no están ordenados, no se pueden cambiar y no permiten valores duplicados.</p>
+<h3>Desordenado</h3>
+<p>Desordenado significa que los elementos de un Set no tienen un orden definido.
+
+Los elementos establecidos pueden aparecer en un orden diferente cada vez que los usa y no se puede hacer referencia a ellos mediante índice o clave.</p>		
+<h3>Inmutable</h3>
+<p>Los elementos del Set no se pueden cambiar, lo que significa que no podemos cambiarlos una vez creado el Set.</p>
+<div class="notas-code"> Una vez que se crea un Set, no puede cambiar sus elementos, pero puede eliminar elementos y agregar elementos nuevos. </div>
+<h3>Duplicados no permitidos</h3>
+<p>Los Sets no pueden tener dos items con el mismo valor.</p>
+<p>Los Sets no pueden tener dos artículos con el mismo valor.</p>
+<div class="py-code">
+esteSet = {<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Rojo"</span>} <br>
+<span class="print">print</span>(esteSet)
+</div>
+<div class="notas-code">
+	<b>Nota:</b> Los valores <span class="integer">True</span> y <span class="integer">1</span> se consideran el mismo valor en Sets y se tratan como duplicados:
+</div>
+<div class="py-code">
+esteSet = {<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="keyword">True</span> , <span class="integer">1</span> , <span class="integer">2</span>} <br>
+<span class="print">print</span>(esteSet) <span class="comment"># {True, 2, 'Azul', 'Amarillo', 'Rojo'}</span>
+</div>
+<div class="notas-code">
+	<b>Nota:</b> Los valores <span class="integer">False</span> y <span class="integer">0</span> se consideran el mismo valor en Sets y se tratan como duplicados:
+</div>
+<div class="py-code">
+esteSet = {<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="keyword">False</span> , <span class="integer">0</span> , <span class="integer">2</span>} <br>
+<span class="print">print</span>(esteSet) <span class="comment"># {False, 2, 'Rojo', 'Amarillo', 'Azul'}</span>
+</div>
+<h3>Obtener la longitud de un Set</h3>
+<p>Para determinar cuántos elementos tiene un Set, utilice la función <span class="print">len()</span>.</p>		
+<div class="py-code">
+esteSet = {<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br>
+<span class="print">print</span>(<span class="keyword">len</span>(esteSet))
+</div>
+<h3>Establecer elementos: tipos de datos</h3>
+<p>Los elementos del conjunto pueden ser de cualquier tipo de datos:</p>
+<div class="py-code">
+Set1 = {<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br>
+Set2 = {<span class="integer">1</span> , <span class="integer">2</span> , <span class="integer">3</span>} <br>
+Set3 = {<span class="keyword">True</span> , <span class="keyword">False</span> , <span class="string">False</span>}
+</div>
+<p>Un conjunto puede contener diferentes tipos de datos:</p>
+<div class="py-code">
+Set1 = {<span class="string">"Rojo"</span>, <span class="integer">2</span> , <span class="string">False</span>} 
+</div>
+<h3>tipo()</h3>
+<p>Desde la perspectiva de Python, los conjuntos se definen como objetos con el tipo de datos 'sets':</p>		
+<h3>El constructor set()</h3>
+<p>También es posible utilizar el constructor <span class="print">set()</span> para crear un conjunto.</p>
+<div class="py-code">
+esteSet = set((<span class="string">"Rojo"</span>, <span class="integer">2</span> , <span class="string">False</span>)) <span class="comment"># Note el doble paréntesis</span><br> 
+<span class="print">print</span>(esteSet)
+</div>
+	      
+		
     </div>
     
     <div id="Section8-v" class="tabcontent">
