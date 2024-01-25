@@ -1680,17 +1680,56 @@ x = <span class="keyword">tuple</span>(x) <br>
 <h3>Agregar elementos</h3>
 <p>Dado que las tuplas son inmutables, no tienen un método incorporado <span class="print">append()</span>, pero existen otras formas de agregar elementos a una tupla.
 </p>
-<p>1. Convierta en una lista : al igual que la solución alternativa para cambiar una tupla, puede convertirla en una lista, agregar sus elementos y convertirla nuevamente en una tupla.</p>
+<p>1. <b>Convierta en una lista</b> : al igual que la solución alternativa para cambiar una tupla, puede convertirla en una lista, agregar sus elementos y convertirla nuevamente en una tupla.</p>
 <p>Convierte la tupla en una lista, agregue "naranja" y conviértala nuevamente en una tupla:</p>
 
 <div class="py-code">
 estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
 y = <span class="keyword">list</span>(estaLista) <br>
-y.append(<span class="string">"Negro"</span>) <br>
+y.append(<span class="string">"Rosa"</span>) <br>
 estaTupla = <span class="keyword">tuple</span>(y)
 </div>
-<p>2. Agregue tupla a una tupla . Se le permite agregar tuplas a tuplas, por lo que si desea agregar un elemento (o muchos), cree una nueva tupla con los elementos y agréguela a la tupla existente:</p>
-
+<p>2. <b>Agregue tupla a una tupla</b> . Se le permite agregar tuplas a tuplas, por lo que si desea agregar un elemento (o muchos), cree una nueva tupla con los elementos y agréguela a la tupla existente:</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+y = (<span classs="string">"Rosa"</span>,) <br>
+estaTupla +=  y <br>
+<span class="print">print</span>(estaTupla)
+</div>
+<h3>Eliminar elementos</h3>
+<p>Las tuplas no se pueden cambiar , por lo que no puedes eliminar elementos de ellas, pero puedes usar la misma solución que usamos para cambiar y agregar elementos de tupla:</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+y = <span classs="keyword">list</span>(estaTupla) <br>
+y.remove(<span class="string">"Azul"</span>) <br>
+<span class="print">print</span>(estaTupla)
+</div>
+<p>O puedes eliminar la tupla por completo:</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+y = <span classs="keyword">list</span>(estaTupla) <br>
+y.remove(<span class="string">"Azul"</span>) <br>
+<span class="print">print</span>(estaTupla)
+</div>	    
+<p>La palabra clave <span class="print">del</span> puede eliminar la tupla por completo:</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+<span class="keyword">del</span> estaTupla <br>
+<span class="print">print</span>(estaTupla) <span class="comment"># Devolverá error, pues la tupla ya no existe</span>
+</div>	 	    
+<h3>Desempaquetando una tupla</h3>
+<p>Cuando creamos una tupla, normalmente le asignamos valores. Esto se llama "empaquetar" una tupla:</p>
+<div class="py-code">
+colores = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>)
+</div>
+<p>Pero, en Python, también podemos extraer los valores nuevamente en variables. Esto se llama "desempaquetar":</p>
+<div class="py-code">
+colores = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+(rojo, azul, amarillo) = colores <br>
+<span class="print">rojo</span> <br>
+<span class="print">azul</span> <br>
+<span class="print">amarillo</span>
+</div>
 	    
 	    
 	    
