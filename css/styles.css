@@ -603,6 +603,13 @@ color:red;
     background-color: #f5f5f5;
 	margin-bottom: 20px;
 }
+.notas-code {
+    padding-left: 10px;
+    font-family: 'Courier New', monospace;
+  	font-size: 18px;
+    background-color: #ffff77;
+	margin-bottom: 20px;
+}
 
 .danger-code {
   background-color: rgb(255, 240, 240);
