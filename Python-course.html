@@ -75,25 +75,25 @@
       <button class="panel sec6" onclick="openCity(event, 'Section6-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div>Ejercicio</button>
 
       
-      <button class="accordion" onclick="togglePanel('sec7')">Section 7</button>
+      <button class="accordion" onclick="togglePanel('sec7')">Tuple</button>
       <button class="panel sec7" onclick="openCity(event, 'Section7-t')" id="defaultOpen"> <div class="sec-ico"><i class="bi bi-file-earmark-text"></i></div>Teoria</button>
       <button class="panel sec7" onclick="openCity(event, 'Section7-v')"> <div class="sec-ico"> <i class="bi bi-file-earmark-play"></i></div>Video</button>
       <button class="panel sec7" onclick="openCity(event, 'Section7-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div>Ejercicio</button>
 
       
-       <button class="accordion" onclick="togglePanel('sec8')">Section 8</button>
+       <button class="accordion" onclick="togglePanel('sec8')">Sets</button>
       <button class="panel sec8" onclick="openCity(event, 'Section8-t')" id="defaultOpen"> <div class="sec-ico"><i class="bi bi-file-earmark-text"></i></div>Teoria</button>
       <button class="panel sec8" onclick="openCity(event, 'Section8-v')"> <div class="sec-ico"> <i class="bi bi-file-earmark-play"></i></div>Video</button>
       <button class="panel sec8" onclick="openCity(event, 'Section8-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div>Ejercicio</button>
 
       
-      <button class="accordion" onclick="togglePanel('sec9')">Section 2</button>
+      <button class="accordion" onclick="togglePanel('sec9')">Dictionaries</button>
       <button class="panel sec9" onclick="openCity(event, 'Section9-t')" id="defaultOpen"> <div class="sec-ico"><i class="bi bi-file-earmark-text"></i></div>Teoria</button>
       <button class="panel sec9" onclick="openCity(event, 'Section9-v')"> <div class="sec-ico"> <i class="bi bi-file-earmark-play"></i></div>Video</button>
       <button class="panel sec9" onclick="openCity(event, 'Section9-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div>Ejercicio</button>
 
       
-      <button class="accordion" onclick="togglePanel('sec10')" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">Section 10</button>
+      <button class="accordion" onclick="togglePanel('sec10')" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">if...else</button>
       <button class="panel sec10" onclick="openCity(event, 'Section10-t')" id="defaultOpen"> <div class="sec-ico"><i class="bi bi-file-earmark-text"></i></div>Teoria</button>
       <button class="panel sec10" onclick="openCity(event, 'Section10-v')"> <div class="sec-ico"> <i class="bi bi-file-earmark-play"></i></div>Video</button>
       <button class="panel sec10" onclick="openCity(event, 'Section10-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div>Ejercicio</button>
@@ -1549,8 +1549,151 @@ Lista1.extend(Lista2) <br>
 
 <!-- Contenido de la seccion 7 -->
     <div id="Section7-t" class="tabcontent">
-      <h3>Theory 7</h3>
-      <p>Heres is going to be the theory</p>
+      <h3>Tuple</h3>
+      <p>Las tuplas se utilizan para almacenar varios elementos en una sola variable.
+
+Tuple es uno de los 4 tipos de datos integrados en Python que se utilizan para almacenar colecciones de datos; los otros 3 son: List , Set y Dictionary ; todos con diferentes calidades y usos.
+
+Una tupla es una colección ordenada e inmutable .
+
+Las tuplas se escriben entre paréntesis.</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+<span class="print">print</span>(estaTupla)
+</div>	
+<h3>Elementos de tupla</h3>
+<p>Los elementos de tupla están ordenados, no se pueden modificar y permiten valores duplicados.
+
+Los elementos de tupla están indexados, el primer elemento tiene índice <span class="print">[0]</span>, el segundo elemento tiene índice, <span class="print">[1]</span> , etc.</p>
+<h3>Ordenado</h3>
+<p>Cuando decimos que las tuplas están ordenadas, significa que los elementos tienen un orden definido y ese orden no cambiará.</p>
+<h3>Inmutable</h3>
+<p>Las tuplas no se pueden cambiar, lo que significa que no podemos cambiar, agregar o eliminar elementos una vez creada la tupla.</p>
+<h3>Permitir duplicados</h3>
+<p>Como las tuplas están indexadas, pueden tener elementos con el mismo valor:</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Rojo"</span> , <span class="string">"Marrón"</span>) <br>
+<span class="print">print</span>(estaTupla)
+</div>
+<h3>Longitud de tupla</h3>
+<p> Para determinar cuántos elementos tiene una tupla, use la función <span class="print">len()</span>:</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+<span class="print">print</span>(<span class="keyword">len</span>(estaTupla))
+</div>
+<h3>Crear tupla con un elemento</h3>
+<p>Para crear una tupla con un solo elemento, debe agregar una coma después del elemento; de lo contrario, Python no la reconocerá como una tupla.</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> ,) <br>
+<span class="print">print</span>(<span class="keyword">type</span>(estaTupla)) <br>
+<br>
+<span class="comment"># No es tupla</span> <br>
+estaTupla = (<span class="string">"Rojo"</span>) <br>
+<span class="print">print</span>(<span class="keyword">type</span>(estaTupla))
+</div>
+<h3>Elementos de tupla: tipos de datos</h3>
+<p>Los elementos de tupla pueden ser de cualquier tipo de datos:</p>
+<div class="py-code">
+Tupla1 = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+Tupla2 = (<span class="integer">1</span> , <span class="integer">8</span> , <span class="integer">5</span>) <br>
+Tupla3 = (<span class="keyword">True</span> , <span class="keyword">False</span> , <span class="keyword">False</span>) <br>
+</div>
+<p>Una tupla puede contener diferentes tipos de datos:</p>
+<div class="py-code">
+Tupla1 = (<span class="string">"Rojo"</span> , <span class="integer">8</span> , <span class="keyword">False</span>)
+</div>
+<h3>tipo()</h3>
+<p>Desde la perspectiva de Python, las tuplas se definen como objetos con el tipo de datos 'tupla':</p>
+<h3>El constructor tupla()</h3>
+<p>También es posible utilizar el constructor <span class="print">tuple()</span> para crear una tupla.</p>
+<div class="py-code">
+estaTupla = tuple((<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>)) <span class="comment"># Note el doble paréntesis</span> <br>
+<span class="print">print</span>(estaTupla)
+</div>
+<h3>Acceder a elementos de tupla</h3>
+<p>Puede acceder a elementos de tupla consultando el número de índice, entre corchetes:</p>
+<p>Imprime el segundo elemento de la tupla:</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+<span class="print">print</span>(estaTupla[<span class="integer">1</span>]) 
+</div>
+<h3>Indexación negativa</h3>
+<p>La indexación negativa significa comenzar desde el final.
+
+<span class="integer">-1</span> se refiere al último elemento, <span class="integer">-2</span> se refiere al penúltimo elemento, etc.</p>
+<p> Imprime el último elemento de la tupla:</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+<span class="print">print</span>(estaTupla[<span class="integer">-1</span>]) 
+</div>
+<h3>Rango de índices</h3>
+<p>Puede especificar un rango de índices especificando dónde comenzar y dónde terminar el rango.
+
+Al especificar un rango, el valor de retorno será una nueva tupla con los elementos especificados.</p>
+<p>Devuelva el tercer, cuarto y quinto elemento:</p>	    
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span>) <br>
+<span class="print">print</span>(estaTupla[<span class="integer">2</span>:<span class="integer">5</span>]) <span class="comment"># Incluye el 2 pero no el 5</span>
+</div>
+<p>Al omitir el valor inicial, el rango comenzará en el primer elemento:</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span>) <br>
+<span class="print">print</span>(estaTupla[:<span class="integer">4</span>]) <span class="comment"># No incluye el Marrón</span>
+</div>
+<p>Al omitir el valor final, el rango continuará hasta el final de la tupla:</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span>) <br>
+<span class="print">print</span>(estaTupla[<span class="integer">2</span>:]) <span class="comment"># Desde Amarillo hasta el final</span>
+</div>
+<h3>Rango de índices negativos</h3>
+<p>Especifique índices negativos si desea iniciar la búsqueda desde el final de la tupla:</p>	
+<p>Este ejemplo devuelve los elementos del índice -4 (incluido) al índice -1 (excluido)</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span>) <br>
+<span class="print">print</span>(estaTupla[-<span class="integer">4</span>:-<span class="integer">1</span>]) <span class="comment"># Desde Amarillo hasta el final</span>
+</div>
+<h3>Comprobar si el item existe</h3>
+<p>Para determinar si un elemento específico está presente en una tupla use la palabra clave <span class="print">in</span>:</p>
+<p>Compruebe si "Verde" está presente en la tupla:</p>
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+<span class="keyword">if</span> <span class="string">"Verde"</span> <span class="keyword">in</span> estaTupla: <br>
+&emsp; <span class="print">print</span>(<span class="string">"Yes"</span>)	
+</div>
+<h3>Actualizar tuplas</h3>
+<p>Las tuplas no se pueden cambiar, lo que significa que no se pueden cambiar, agregar ni eliminar elementos una vez creada la tupla.
+
+Pero existen algunas soluciones.</p>
+<h3>Cambiar valores de tupla</h3>
+<p>Una vez creada una tupla, no puedes cambiar sus valores. Las tuplas son <b>inmutables</b> o <b>inmutable</b> como también se les llama.
+
+Pero hay una solución. Puede convertir la tupla en una lista, cambiar la lista y convertir la lista nuevamente en una tupla.</p>
+<p>Convierte la tupla en una lista para poder cambiarla:</p>
+<div class="py-code">
+x = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> <br>
+y = <span class="keyword">list</span>(x) <br>
+y[<span class="integer">1</span>] = <span class="string">"Azul"</span> <br>
+x = <span class="keyword">tuple</span>(x) <br>
+<span class="print">print</span>(x)
+
+</div>
+<h3>Agregar elementos</h3>
+<p>Dado que las tuplas son inmutables, no tienen un método incorporado <span class="print">append()</span>, pero existen otras formas de agregar elementos a una tupla.
+</p>
+<p>1. Convierta en una lista : al igual que la solución alternativa para cambiar una tupla, puede convertirla en una lista, agregar sus elementos y convertirla nuevamente en una tupla.</p>
+<p>Convierte la tupla en una lista, agregue "naranja" y conviértala nuevamente en una tupla:</p>
+
+<div class="py-code">
+estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
+y = <span class="keyword">list</span>(estaLista) <br>
+y.append(<span class="string">"Negro"</span>) <br>
+estaTupla = <span class="keyword">tuple</span>(y)
+</div>
+<p>2. Agregue tupla a una tupla . Se le permite agregar tuplas a tuplas, por lo que si desea agregar un elemento (o muchos), cree una nueva tupla con los elementos y agréguela a la tupla existente:</p>
+
+	    
+	    
+	    
     </div>
     
     <div id="Section7-v" class="tabcontent">
