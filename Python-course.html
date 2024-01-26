@@ -1839,7 +1839,7 @@ miTupla = colores * <span class="integer">2</span> <br>
     	<div id="Section8-t" class="tabcontent">
       <h3>Sets</h3>
       <p>Los sets se utilizan para almacenar varios elementos en una sola variable.</p>
-      <p>Los Sets se escriben entre llaves.</p>
+      <p>Los sets se escriben entre llaves.</p>
 <div class="py-code">
 esteSet = {<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br>
 <span class="print">print</span>(esteSet)
@@ -1847,59 +1847,301 @@ esteSet = {<span class="string">"Rojo"</span> , <span class="string">"Azul"</spa
 <h3>Establecer elementos</h3>
 <p>Los elementos establecidos no están ordenados, no se pueden cambiar y no permiten valores duplicados.</p>
 <h3>Desordenado</h3>
-<p>Desordenado significa que los elementos de un Set no tienen un orden definido.
+<p>Desordenado significa que los elementos de un set no tienen un orden definido.
 
 Los elementos establecidos pueden aparecer en un orden diferente cada vez que los usa y no se puede hacer referencia a ellos mediante índice o clave.</p>		
 <h3>Inmutable</h3>
-<p>Los elementos del Set no se pueden cambiar, lo que significa que no podemos cambiarlos una vez creado el Set.</p>
-<div class="notas-code"> Una vez que se crea un Set, no puede cambiar sus elementos, pero puede eliminar elementos y agregar elementos nuevos. </div>
+<p>Los elementos del set no se pueden cambiar, lo que significa que no podemos cambiarlos una vez creado el set.</p>
+<div class="notas-code"> Una vez que se crea un set, no puede cambiar sus elementos, pero puede eliminar elementos y agregar elementos nuevos. </div>
 <h3>Duplicados no permitidos</h3>
-<p>Los Sets no pueden tener dos items con el mismo valor.</p>
-<p>Los Sets no pueden tener dos artículos con el mismo valor.</p>
+<p>Los sets no pueden tener dos items con el mismo valor.</p>
+<p>Los sets no pueden tener dos artículos con el mismo valor.</p>
 <div class="py-code">
 esteSet = {<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Rojo"</span>} <br>
 <span class="print">print</span>(esteSet)
 </div>
 <div class="notas-code">
-	<b>Nota:</b> Los valores <span class="integer">True</span> y <span class="integer">1</span> se consideran el mismo valor en Sets y se tratan como duplicados:
+	<b>Nota:</b> Los valores <span class="integer">True</span> y <span class="integer">1</span> se consideran el mismo valor en sets y se tratan como duplicados:
 </div>
 <div class="py-code">
 esteSet = {<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="keyword">True</span> , <span class="integer">1</span> , <span class="integer">2</span>} <br>
 <span class="print">print</span>(esteSet) <span class="comment"># {True, 2, 'Azul', 'Amarillo', 'Rojo'}</span>
 </div>
 <div class="notas-code">
-	<b>Nota:</b> Los valores <span class="integer">False</span> y <span class="integer">0</span> se consideran el mismo valor en Sets y se tratan como duplicados:
+	<b>Nota:</b> Los valores <span class="integer">False</span> y <span class="integer">0</span> se consideran el mismo valor en sets y se tratan como duplicados:
 </div>
 <div class="py-code">
 esteSet = {<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="keyword">False</span> , <span class="integer">0</span> , <span class="integer">2</span>} <br>
 <span class="print">print</span>(esteSet) <span class="comment"># {False, 2, 'Rojo', 'Amarillo', 'Azul'}</span>
 </div>
 <h3>Obtener la longitud de un Set</h3>
-<p>Para determinar cuántos elementos tiene un Set, utilice la función <span class="print">len()</span>.</p>		
+<p>Para determinar cuántos elementos tiene un set, utilice la función <span class="print">len()</span>.</p>		
 <div class="py-code">
 esteSet = {<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br>
 <span class="print">print</span>(<span class="keyword">len</span>(esteSet))
 </div>
 <h3>Establecer elementos: tipos de datos</h3>
-<p>Los elementos del conjunto pueden ser de cualquier tipo de datos:</p>
+<p>Los elementos del set pueden ser de cualquier tipo de datos:</p>
 <div class="py-code">
-Set1 = {<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br>
-Set2 = {<span class="integer">1</span> , <span class="integer">2</span> , <span class="integer">3</span>} <br>
-Set3 = {<span class="keyword">True</span> , <span class="keyword">False</span> , <span class="string">False</span>}
+set1 = {<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br>
+set2 = {<span class="integer">1</span> , <span class="integer">2</span> , <span class="integer">3</span>} <br>
+set3 = {<span class="keyword">True</span> , <span class="keyword">False</span> , <span class="keyword">False</span>}
 </div>
-<p>Un conjunto puede contener diferentes tipos de datos:</p>
+<p>Un set puede contener diferentes tipos de datos:</p>
 <div class="py-code">
-Set1 = {<span class="string">"Rojo"</span>, <span class="integer">2</span> , <span class="string">False</span>} 
+set1 = {<span class="string">"Rojo"</span>, <span class="integer">2</span> , <span class="keyword">False</span>} 
 </div>
 <h3>tipo()</h3>
-<p>Desde la perspectiva de Python, los conjuntos se definen como objetos con el tipo de datos 'sets':</p>		
+<p>Desde la perspectiva de Python, los sets se definen como objetos con el tipo de datos 'sets':</p>		
 <h3>El constructor set()</h3>
-<p>También es posible utilizar el constructor <span class="print">set()</span> para crear un conjunto.</p>
+<p>También es posible utilizar el constructor <span class="print">set()</span> para crear un set.</p>
 <div class="py-code">
-esteSet = set((<span class="string">"Rojo"</span>, <span class="integer">2</span> , <span class="string">False</span>)) <span class="comment"># Note el doble paréntesis</span><br> 
+esteSet = set((<span class="string">"Rojo"</span>, <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>)) <span class="comment"># Note el doble paréntesis</span><br> 
 <span class="print">print</span>(esteSet)
 </div>
-	      
+<h3>Acceder a elementos</h3>
+<p>
+	No puede acceder a elementos de un set haciendo referencia a un índice o una clave.
+
+Pero puede recorrer los elementos del set mediante un for bucle o preguntar si un valor específico 
+	está presente en un set mediante la palabra clave <span class="print">in</span>.
+</p>
+<div class="py-code">
+esteSet = {<span class="string">"Rojo"</span>, <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br> 
+<span class="keyword">for</span> x <span class="keyword">in</span> esteSet: <br>
+&emsp; <span class="print">print</span>(x)
+</div>
+<p>Compruebe si "Rojo" está presente en el set:</p>
+<div class="py-code">
+esteSet = {<span class="string">"Rojo"</span>, <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br> 
+&emsp; <span class="print">print</span>(<span class="string">"Rojo"</span> <span class=keyword>in</span> esteSet) <span class="comment"># Devuelve True</span>
+</div>
+<h3>Cambiar elementos</h3>
+<div class="notas-code">  <p>Una vez que se crea un set, no puede cambiar sus elementos, pero puede agregar elementos nuevos.</p> </div>
+<h3>Agregar elementos</h3>	
+<p>Para agregar un elemento a un set, utilice el método <span class="print">add()</span>.</p>	
+<div class="py-code">
+esteSet = {<span class="string">"Rojo"</span>, <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br> 
+esteSet.add(<span class="string">"Naranja"</span>) <br>
+<span class="print">print</span>(esteSet)
+</div>
+<h3>Agregar sets</h3>
+<p>Para agregar elementos de otro set al set actual, use el método <span class="print">update() </span>.</p>
+<p>Agregue elementos desde pasteles dentro esteSet:</p>
+<div class="py-code">
+esteSet = {<span class="string">"Rojo"</span>, <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br> 
+pasteles = {<span class="string">"Rosa"</span>, <span class="string">"Celeste"</span> , <span class="string">"Limón"</span>} <br>
+esteSet.update(pasteles) <br>
+<span class="print">print</span>(esteSet) <span class="comment"># {'Amarillo', 'Rojo', 'Limón', 'Azul', 'Celeste', 'Rosa'}</span>
+</div>
+<h3>Agregar cualquier iterable</h3>
+<p>El objeto del método <span class="print">update()</span> no tiene por qué ser un set, puede ser cualquier objeto iterable (tuplas, listas, diccionarios, etc.).</p>
+<p>Agregue elementos de una lista a at set:</p>
+<div class="py-code">
+esteSet = {<span class="string">"Rojo"</span>, <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br> 
+miLista = [<span class="string">"Rosa"</span>, <span class="string">"Celeste"</span>] <br>
+esteSet.update(miLista) <br>
+<span class="print">print</span>(esteSet) <span class="comment"># {'Amarillo', 'Azul', 'Rojo', 'Rosa', 'Celeste'}</span>
+</div>
+<h3>Eleminar elementos establecidos</h3>
+<p>Para eliminar un elemento de un set, utilice <span class="print">remove()</span>o el método <span class="print">discard()</span>.</p>
+<p>Elimine "Rojo" utilizando el método <span class="print">remove()</span>:</p>
+<div class="py-code">
+esteSet = {<span class="string">"Rojo"</span>, <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br> 
+esteSet.remove(<span class="string">"Rojo"</span>) <br>
+<span class="print">print</span>(esteSet) <span class="comment"># {'Amarillo', 'Azul'}</span>
+</div>		
+<div class="notas-code"> <b>Nota:</b> Si el elemento a eliminar no existe, <span class="integer">remove()</span> generará un error.</div>
+<p>Elimine "Rojo" utilizando el método <span class="print">discard()</span>:</p>
+<div class="py-code">
+esteSet = {<span class="string">"Rojo"</span>, <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br> 
+esteSet.discard(<span class="string">"Rojo"</span>) <br>
+<span class="print">print</span>(esteSet) <span class="comment"># {'Amarillo', 'Azul'}</span>
+</div>	
+<div class="notas-code"> <b>Nota:</b> Si el elemento a eliminar no existe, <span class="integer">remove()</span> <b>NO</b> generará un error.</div>		
+<p>
+	También puede utilizar el método <span class="print">pop()</span> para eliminar un elemento, pero este método eliminará un elemento aleatorio, por lo que no puede estar seguro de qué elemento se elimina.
+
+El valor de retorno del método <span class="print">pop()</span> es el elemento eliminado.
+</p>
+<div class="py-code">
+esteSet = {<span class="string">"Rojo"</span>, <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br> 
+x = esteSet.pop() <br>
+<span class="print">print</span>(x) <br>
+<span class="print">print</span>(esteSet)
+</div>
+<div class="notas-code"> <b>Nota:</b> Los sets están desordenados , por lo que cuando se utiliza el método <span class="integer">pop()</span>, no se sabe qué elemento se elimina.</div>
+<p>El método <span class="print">clear()</span> vacía el set:</p>
+<div class="py-code">
+esteSet = {<span class="string">"Rojo"</span>, <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br> 
+esteSet.clear() <br>
+<span class="print">print</span>(esteSet) <span class="comment"># set()</span>
+</div>
+<p>La palabra <span class="print">del</span> clave eliminará el set por completo:</p>
+<div class="py-code">
+esteSet = {<span class="string">"Rojo"</span>, <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>} <br> 
+<span class="keyword">del</span> esteSet <br>
+<span class="print">print</span>(esteSet) <span class="comment"># Devolverá Error, pues no existe</span>
+</div>
+<h3>Unir dos sets</h3>
+<p>
+	Hay varias formas de unir dos o más sets en Python.
+
+Puede utilizar el método <span class="print">union()</span> que devuelve un nuevo set que contiene todos los elementos de ambos sets, 
+	o el método <span class="print">update()</span> que inserta todos los elementos de un set en otro:
+</p>		
+<div class="py-code">
+set1 = {<span class="string">"a"</span> , <span class="string">"b"</span> , <span class="string">"c"</span>} <br>
+set2 = {<span class="integer">1</span> , <span class="integer">2</span> , <span class="integer">3</span>} <br> 
+set3 = set1.union(set2) <br>
+<span class="print">print</span>(set3)
+</div>
+<p>El método <span class="print">update()</span> inserta los elementos del set2 en el set1:</p>
+<div class="py-code">
+set1 = {<span class="string">"a"</span> , <span class="string">"b"</span> , <span class="string">"c"</span>} <br>
+set2 = {<span class="integer">1</span> , <span class="integer">2</span> , <span class="integer">3</span>} <br> 
+set1 = set1.update(set2) <br>
+<span class="print">print</span>(set1)
+</div>
+<div class="notas-code"><b>Nota:</b> Ambos <span class="integer">union()</span> y <span class="integer">update()</span> excluirán cualquier elemento duplicado.</div>		
+<h3>Guarde SÓLO los duplicados</h3>
+<p>El método <span class="print">intersection_update()</span> mantendrá sólo los elementos que estén presentes en ambos sets.</p>
+<div class="py-code">
+x = {<span class="string">"a"</span> , <span class="string">"b"</span> , <span class="string">"c"</span>} <br>
+y = {<span class="string">"d"</span> , <span class="string">"e"</span> , <span class="string">"a"</span>} <br> 
+x.intersection_update(y) <br>
+<span class="print">print</span>(x) <span class="comment"># Devuelve {'a'}</span>
+</div>
+<p>El método <span class="print">intersection()</span> devolverá un nuevo set, que solo contiene los elementos que están presentes en ambos sets.</p>
+<div class="py-code">
+x = {<span class="string">"a"</span> , <span class="string">"b"</span> , <span class="string">"c"</span>} <br>
+y = {<span class="string">"d"</span> , <span class="string">"e"</span> , <span class="string">"a"</span>} <br> 
+z = x.intersection(y) <br>
+<span class="print">print</span>(z) <span class="comment"># Devuelve {'a'}</span>
+</div>
+<h3>Conserve todo, pero NO los duplicados</h3>
+<p>El método <span class="print">symmetric_difference_update()</span> mantendrá solo los elementos que NO estén presentes en ambos sets.</p>
+<div class="py-code">
+x = {<span class="string">"a"</span> , <span class="string">"b"</span> , <span class="string">"c"</span>} <br>
+y = {<span class="string">"d"</span> , <span class="string">"e"</span> , <span class="string">"a"</span>} <br> 
+x.symmetric_difference_update(y) <br>
+<span class="print">print</span>(x) <span class="comment"># Devuelve {'c', 'd', 'b', 'e'}</span>
+</div>
+<p>El método <span class="print">symmetric_difference()</span> devolverá un nuevo set que contiene solo los elementos que NO están presentes en ambos sets.</p>
+<div class="py-code">
+x = {<span class="string">"a"</span> , <span class="string">"b"</span> , <span class="string">"c"</span>} <br>
+y = {<span class="string">"d"</span> , <span class="string">"e"</span> , <span class="string">"a"</span>} <br> 
+z = x.symmetric_difference(y) <br>
+<span class="print">print</span>(z) <span class="comment"># Devuelve {'c', 'd', 'b', 'e'}</span>
+</div>		
+<div class="notas-code"><b>Nota:</b> Los valores <span class="integer">True</span> y <span class="integer">1</span> se consideran el mismo valor en sets y se tratan como duplicados</div>
+<div class="py-code">
+x = {<span class="string">"a"</span> , <span class="string">"b"</span> , <span class="keyword">True</span>} <br>
+y = {<span class="integer">1</span> , <span class="string">"a"</span> , <span class="string">"d"</span>} <br> 
+z = x.symmetric_difference(y) <br>
+<span class="print">print</span>(z) <span class="comment"># Devuelve {'b', 'd'}</span>
+</div>	
+<h3>Métodos de Set</h3>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Método</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"> add() </th>
+      <td> Añade un elemento al set </td>
+    </tr>
+    <tr>
+      <th scope="row"> clear() </th>
+      <td> Elimina todos los elementos del set </td>
+    </tr>
+    <tr>
+      <th scope="row"> copy() </th>
+      <td> Devuelve una copia del set </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> difference() </th>
+      <td> Devuelve un set que contiene la diferencia entre 2 o más sets </td>
+    </tr>
+
+    <tr>
+      <th scope="row"> difference_update() </th>
+      <td> Elimina los elementos en este set que también están incluidos en el otro</td>
+      <td> x % y </td>
+    </tr>
+
+     <tr>
+      <th scope="row"> discard() </th>
+      <td> Elimina un elemento específico </td>
+    </tr>
+
+     <tr>
+      <th scope="row"> intersection() </th>
+      <td> Devuelve un set que es la intersección de otros dos </td>
+      <td> x // y</td>
+    </tr>
+
+      <tr>
+      <th scope="row"> intersection_update() </th>
+      <td> Elimina los elementos en este set que no tiene otro </td>
+      <td> x // y</td>
+    </tr>
+
+     <tr>
+      <th scope="row"> isdisjoint() </th>
+      <td> Devuelve si dos conjuntos tienen una intersección o no </td>
+    </tr>
+
+      <tr>
+      <th scope="row"> issubset() </th>
+      <td> Devuelve si otro conjunto contiene este conjunto o no </td>
+    </tr>
+
+      <tr>
+      <th scope="row"> issuperset() </th>
+      <td> Devuelve si este conjunto contiene otro conjunto o no </td>
+    </tr>
+
+      <tr>
+      <th scope="row"> pop() </th>
+      <td> Elimina un elemento del conjunto </td>
+    </tr> 
+
+     <tr>
+      <th scope="row"> remove() </th>
+      <td> Elimina el elemento especificado </td>
+    </tr> 	  
+
+     <tr>
+      <th scope="row"> symmetric_difference() </th>
+      <td> Devuelve un conjunto con las diferencias simétricas de dos conjuntoso </td>
+    </tr> 	  
+
+      <tr>
+      <th scope="row"> symmetric_difference_update() </th>
+      <td> inserta las diferencias simétricas de este conjunto y otro </td>
+    </tr> 	  
+
+      <tr>
+      <th scope="row"> union() </th>
+      <td> Devuelve un conjunto que contiene la unión de conjuntos </td>
+    </tr> 	  
+
+      <tr>
+      <th scope="row"> update() </th>
+      <td> Actualiza el conjunto con la unión de este conjunto y otros </td>
+    </tr> 	  
+	  
+
+  </tbody>
+</table>		
 		
     </div>
     
@@ -1917,8 +2159,21 @@ esteSet = set((<span class="string">"Rojo"</span>, <span class="integer">2</span
     <!-- Contenido de la seccion 9 -->
    
    	<div id="Section9-t" class="tabcontent">
-      <h3>Theory 9</h3>
-      <p>Heres is going to be the theory</p>
+      <h3>Diccionario</h3>
+      <p>Los diccionarios se utilizan para almacenar valores de datos en pares clave:valor.
+
+Un diccionario es una colección ordenada*, modificable y que no permite duplicados.</p>
+<div class="notas-code">A partir de la versión 3.7 de Python, los diccionarios están ordenados . En Python 3.6 y versiones anteriores, los diccionarios están desordenados .</div>
+<p>Los diccionarios están escritos entre llaves y tienen claves y valores:</p>
+<div class="py-code">
+	esteDict = { <br>
+	<span class="string">"brand"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"model"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"year"</span> : <span class="integer">19g4</span>
+	}
+</div>
+
+		
     </div>
     
     <div id="Section9-v" class="tabcontent">
