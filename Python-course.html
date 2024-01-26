@@ -2167,12 +2167,335 @@ Un diccionario es una colección ordenada*, modificable y que no permite duplica
 <p>Los diccionarios están escritos entre llaves y tienen claves y valores:</p>
 <div class="py-code">
 	esteDict = { <br>
-	<span class="string">"brand"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"model"</span> : <span class="string">"Mustang"</span> <br>
-	<span class="string">"year"</span> : <span class="integer">19g4</span>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1994</span> <br>
 	}
 </div>
+<h3>Elementos del diccionario</h3>
+<p>
+	Los elementos del diccionario están ordenados, modificables y no permiten duplicados.
 
+Los elementos del diccionario se presentan en pares clave:valor y se puede hacer referencia a ellos mediante el nombre de la clave.
+</p>
+<div class="py-code">
+	esteDict = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	<span class="print">print</span>(esteDict[<span class="string">"marca"</span>])
+</div>
+<h3>¿Ordenado o desordenado?</h3>
+<div class="notas-code"> A partir de la versión 3.7 de Python, los diccionarios están ordenados . En Python 3.6 y versiones anteriores, los diccionarios están desordenados . </div>
+<p>
+	Cuando decimos que los diccionarios están ordenados, significa que los elementos tienen un orden definido y ese orden no cambiará.
+
+Desordenado significa que los elementos no tienen un orden definido, no se puede hacer referencia a un elemento mediante un índice.
+</p>
+<h3>Cambiable</h3>
+<p>Los diccionarios se pueden cambiar, lo que significa que podemos cambiar, agregar o eliminar elementos una vez creado el diccionario.</p>
+<h3>Duplicados no permitidos</h3>
+<p>Los diccionarios no pueden tener dos elementos con la misma clave:</p>
+<div class="py-code">
+	esteDict = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	<span class="string">"año"</span> : <span class="integer">2024</span> <br>
+	} <br>
+	<span class="print">print</span>(esteDict)
+</div>		
+<h3>Longitud del diccionario</h3>
+<p>Para determinar cuántos elementos tiene un diccionario, use la función <span class="print">len()</span>:</p>
+<p>Imprime la cantidad de elementos en el diccionario:</p>
+<div class="py-code">
+	<span class="print">print</span>(<span class="keyword">len</span>(esteDict))
+</div>	
+<h3>Elementos del diccionario: tipos de datos</h3>
+<p>Los valores de los elementos del diccionario pueden ser de cualquier tipo de datos:</p>
+<div class="py-code">
+	esteDict = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"electrico"</span> : <span class="keyword">True</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	<span class="string">"colores"</span> : [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+	}
+</div>	
+<h3>tipo()</h3>
+<p>Desde la perspectiva de Python, los diccionarios se definen como objetos con el tipo de datos 'dict':</p>
+<h3>El constructor dict()</h3>
+<p>También es posible utilizar el constructor <span class="print">dict()</span> para crear un diccionario.</p>
+<div class="py-code">
+	esteDict = <span class="keyword">dict</span>(nombre = <span class="string">"Josh"</span> , edad =  <span class="integer">18</span> , país =  <span class="integer">Perú</span>) <br>
+	<span class="print">print</span>(esteDict)
+</div>		
+<h3>Accediendo a elementos</h3>
+<p>Puede acceder a los elementos de un diccionario consultando su nombre clave, entre corchetes:</p>
+<p>Obtenga el valor de la clave "modelo":</p>
+<div class="py-code">
+	esteDict = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	x = esteDict[<span class="string">"modelo"</span>]
+</div>
+<p>También hay un método llamado <span class="print">get()</span> que te dará el mismo resultado:</p>
+<div class="py-code">
+	x = esteDict.get(<span class"string">"modelo"</span>)
+</div>
+<h3>Obtener claves</h3>
+<p>El método <span class="print">keys()</span> devolverá una lista de todas las claves del diccionario.</p>
+<div class="py-code">
+	x = esteDict.keys()
+</div>
+<p>La lista de claves es una vista del diccionario, lo que significa que cualquier cambio realizado en el diccionario se reflejará en la lista de claves.</p>
+<p>Agregue un nuevo elemento al diccionario original y observe que la lista de claves también se actualiza:</p>
+<div class="py-code">
+	carro = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	x = carro.keys() <br>
+	<span class="print">print</span>(x) <span class="comment"># Antes del cambio</span> <br>
+	carro[<span class"string">"color"</span>] = <span class"string">"blanco"</span> <br>
+	<span class="print">print</span>(x) <span class="comment"># Después del cambio</span> 
+</div>
+<h3>Obtener valores</h3>
+<p>El método <span class="print">values()</span> devolverá una lista de todos los valores del diccionario.</p>
+<div class="py-code">
+	x = esteDict.values()
+</div>
+<p>La lista de valores es una vista del diccionario, lo que significa que cualquier cambio realizado en el diccionario se reflejará en la lista de valores.</p>		
+<p>Realice un cambio en el diccionario original y observe que la lista de valores también se actualiza:</p>
+<div class="py-code">
+	carro = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	x = carro.values() <br>
+	<span class="print">print</span>(x) <span class="comment"># Antes del cambio</span> <br>
+	carro[<span class"string">"año"</span>] = <span class"integer">2024</span> <br>
+	<span class="print">print</span>(x) <span class="comment"># Después del cambio</span> 
+</div>
+<h3>Obtener items</h3>
+<div class="py-code">
+	x = esteDict.items() <span class="comment"># Devuelve dict_items([('marca', 'Ford'), ('modelo', 'Mustang'), ('año', 1964)])</span>
+</div>
+<p>La lista devuelta es una vista de los elementos del diccionario, lo que significa que cualquier cambio realizado en el diccionario se reflejará en la lista de elementos.</p>
+<p>Realice un cambio en el diccionario original y observe que la lista de elementos también se actualiza:</p>
+<div class="py-code">
+	carro = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	x = carro.items() <br>
+	<span class="print">print</span>(x) <span class="comment"># Antes del cambio</span> <br>
+	carro[<span class"string">"año"</span>] = <span class"integer">2024</span> <br>
+	<span class="print">print</span>(x) <span class="comment"># Después del cambio</span> 
+</div>
+<h3>Comprobar si la clave existe</h3>
+<p>Para determinar si una clave específica está presente en un diccionario, utilice la palabra clave <span class="print">in</span>:</p>
+<div class="py-code">
+	carro = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	<span class="keyword">if</span> <span class="string">"modelo"</span> <span class="keyword">in</span> esteDict: <br>
+	&emsp; <span class="print">print</span>(<span class="string">"Si"</span>)
+</div>
+<h3>Cambiar valores</h3>
+<p>Puede cambiar el valor de un elemento específico consultando su nombre clave:</p>
+<p>Cambie el "año" a 2018:</p>
+<div class="py-code">
+	carro = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	esteDict[<span class="string">"año"</span>] = <span class="integer">2022</span>
+</div>		
+<h3>Actualizar diccionario</h3>
+<p>
+	El método <span class="print">update()</span>actualizará el diccionario con los elementos del argumento dado.
+
+El argumento debe ser un diccionario o un objeto iterable con pares clave:valor.
+</p>
+<div class="py-code">
+	carro = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	esteDict.update({<span class="string">"año"</span> : <span class="integer">2024</span>})
+</div>	
+<h3>Agregar elementos</h3>
+<p>Agregar un elemento al diccionario se realiza usando una nueva clave de índice y asignándole un valor:</p>		
+<div class="py-code">
+	carro = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	esteDict[<span class="string">"color"</span>] = <span class="string">"Rojo"</span> <br>
+	<span class="print">print</span>(esteDict)
+</div>	
+<h3>Eliminar elementos</h3>
+<p>Existen varios métodos para eliminar elementos de un diccionario:</p>
+<p>El método <span class="print">pop()</span> elimina el elemento con el nombre de clave especificado:</p>
+<div class="py-code">
+	esteDict = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	esteDict.pop(<span class="string">"modelo"</span>)
+	<span class="print">print</span>(esteDict)
+</div>	
+<p>El método <span class="print">popitem()</span> elimina el último elemento insertado (en versiones anteriores a la 3.7, se elimina un elemento aleatorio):</p>		
+<div class="py-code">
+	esteDict = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	esteDict.popitem()
+	<span class="print">print</span>(esteDict)
+</div>	
+<p>La palabra clave <span class="print">del</span> elimina el elemento con el nombre de clave especificado:</p>
+<div class="py-code">
+	esteDict = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	<span class="keyword">del</span> esteDict[<span class="string">"modelo"</span>] <br>
+	<span class="print">print</span>(esteDict)
+</div>	
+<p>La palabra clave <span class="print">del</span> también puede eliminar el diccionario por completo:</p>
+<div class="danger-code">
+	esteDict = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	<span class="keyword">del</span> esteDict<br>
+	<span class="print">print</span>(esteDict) <span class="comment"># Devuelve error, pues esteDict no existe</span>
+</div>
+<p>El clear()método vacía el diccionario:</p>
+<div class="py-code">
+	esteDict = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	esteDict.clear() <br>
+	<span class="print">print</span>(esteDict)
+</div>
+<h3>Recorrer un diccionario</h3>
+<p>
+	Puede recorrer un diccionario mediante un bucle <span class="print">for</span>.
+
+Al recorrer un diccionario, el valor de retorno son las claves del diccionario, pero también existen métodos para devolver los valores .
+</p>
+<p>Imprime todos los nombres clave en el diccionario, uno por uno:</p>
+<div class="py-code">
+	<span class="keyword">for</span> x <span class="keyword">in</span> esteDict: <br>
+	&emsp; <span class="print">print</span>(x)
+</div>
+<p>Imprime todos los valores del diccionario, uno por uno:</p>
+<div class="py-code">
+	<span class="keyword">for</span> x <span class="keyword">in</span> esteDict: <br>
+	&emsp; <span class="print">print</span>(esteDict[x])
+</div>
+<p>También puedes usar el método <span class="print">values()</span> para devolver valores de un diccionario:</p>
+<div class="py-code">
+	<span class="keyword">for</span> x <span class="keyword">in</span> esteDict.values(): <br>
+	&emsp; <span class="print">print</span>(x)
+</div>		
+<p>Puedes usar el método <span class="print">keys()</span> para devolver las claves de un diccionario:</p>
+<div class="py-code">
+	<span class="keyword">for</span> x <span class="keyword">in</span> esteDict.keys(): <br>
+	&emsp; <span class="print">print</span>(x)
+</div>	
+<p>Recorra las claves y los valores utilizando el método <span class="print">items()</span>:</p>
+<div class="py-code">
+	<span class="keyword">for</span> x, y <span class="keyword">in</span> esteDict.items(): <br>
+	&emsp; <span class="print">print</span>(x, y)
+</div>	
+<h3>Copiar un diccionario</h3>
+<p>No puedes copiar un diccionario simplemente escribiendo <span class="print">dict2 = dict1</span>, porque: <span class="print">dict2</span> solo será una referencia a <span class="print">dict1</span>, y los cambios realizados en <span class="print">dict1</span> también se realizarán automáticamente en <span class="print">dict2</span>.
+
+Hay formas de hacer una copia, una es utilizar el método Diccionario incorporado <span class="print">copy()</span>.</p>		
+<div class="py-code">
+	esteDict = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	miDict = esteDict.copy() <br>
+	<span class="print">print</span>(miDict)
+</div>
+<p>Otra forma de realizar una copia es utilizar la función incorporada <span class="print">dict()</span>.</p>
+<div class="py-code">
+	esteDict = { <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	} <br>
+	miDict = <span class="keyword">dict</span>(esteDict) <br>
+	<span class="print">print</span>(miDict)
+</div>
+<h3>Diccionarios anidados</h3>
+<p>Un diccionario puede contener diccionarios, esto se denomina diccionarios anidados.</p>
+<div class="py-code">
+	mifamilia = { <br>
+	&emsp; <span class="string">"hijo1"</span> : { <br>
+	&emsp; &emsp; <span class="string">"nombre"</span> : <span class="string">"Emilio"</span> , <br>
+	&emsp; &emsp; <span class="string">"año"</span> : <span class="integer">2020</span><br>
+	} , <br>
+	&emsp; <span class="string">"hijo2"</span> : { <br>
+	&emsp; &emsp; <span class="string">"nombre"</span> : <span class="string">"Renzo"</span> , <br>
+	&emsp; &emsp; <span class="string">"año"</span> : <span class="integer">2018</span><br>
+	} , <br>
+	&emsp; <span class="string">"hijo3"</span> : { <br>
+	&emsp; &emsp; <span class="string">"nombre"</span> : <span class="string">"Victor"</span> , <br>
+	&emsp; &emsp; <span class="string">"año"</span> : <span class="integer">2014</span><br>
+	&emsp;}  <br>
+	}
+</div>		
+<p>O, si desea agregar tres diccionarios a un diccionario nuevo:</p>
+<p>Crea tres diccionarios, luego cree un diccionario que contendrá los otros tres diccionarios:</p>
+<div class="py-code">
+	hijo1 = { <br>
+	&emsp; <span class="string">"nombre"</span> : <span class="string">"Emilio"</span> <br>
+	&emsp; <span class="string">"año"</span> : <span class="integer">2020</span> <br>
+	} <br>
+	hijo2 = { <br>
+	&emsp; <span class="string">"nombre"</span> : <span class="string">"Emilio"</span> <br>
+	&emsp; <span class="string">"año"</span> : <span class="integer">2018</span> <br>
+	} <br>
+	hijo3 = { <br>
+	&emsp; <span class="string">"nombre"</span> : <span class="string">"Emilio"</span> <br>
+	&emsp; <span class="string">"año"</span> : <span class="integer">2014</span> <br>
+	} <br>
+	mifamilia = { <br>
+	&emsp; <span class="string">"hijo1"</span> : hijo1 <br>
+	&emsp; <span class="string">"hijo2"</span> : hijo2 <br>
+	&emsp; <span class="string">"hijo3"</span> : hijo3
+	} 
+</div>
+<h3>Acceder a elementos en diccionarios anidados</h3>
+<p>Imprime el nombre del hijo 2:</p>
+<div class="py-code">
+	<span class"print">print</span>(mifamilia[<span class="string">"hijo1"</span>][<span class="string">"nombre"</span>])
+</div>
+		
 		
     </div>
     
