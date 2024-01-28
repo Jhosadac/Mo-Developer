@@ -354,7 +354,7 @@ Ninguno Tipo:	<span class="print">NoneType</span>
 	<div class="py-code">
 		x = <span class="integer">5</span> <br>
 		myfunc() <br>
-		<span class="print">print</span>( <span class="keyword">type</span> (x))
+		<span class="print">print</span>(<span class="keyword">type</span>(x))
           </div>
 	<h3>Números en Python</h3>
 	<p> Hay tres tipos numéricos en Python:</p>
@@ -441,15 +441,15 @@ Ninguno Tipo:	<span class="print">NoneType</span>
 
 Puede mostrar una cadena literal con la función <span class="print">print()</span> :</p>
 	<div class="py-code">
-	<span class="print">print</span> (<span class="string">'hola'</span>) <br>
-	<span class="print">print</span> (<span class="string">"hola"</span>)
+	<span class="print">print</span>(<span class="string">'hola'</span>) <br>
+	<span class="print">print</span>(<span class="string">"hola"</span>)
 	</div>
 	
 	<h3>Asignar cadena a una variable</h3>
 	<p>La asignación de una cadena a una variable se realiza con el nombre de la variable seguido de un signo igual y la cadena:</p>
 	<div class="py-code">
 	a = <span class="string">"Hello"</span> <br>
-	<span class="print">print</span> (a)
+	<span class="print">print</span>(a)
 	</div>
 
 		
@@ -460,7 +460,7 @@ Puede mostrar una cadena literal con la función <span class="print">print()</sp
 consectetur adipiscing elit,
 sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua."""</span> <br>
-	<span class="print">print</span> (a)
+	<span class="print">print</span>(a)
 	</div>
 	<p>O tres comillas simples:</p>
 	<div class="py-code">
@@ -468,7 +468,7 @@ ut labore et dolore magna aliqua."""</span> <br>
 consectetur adipiscing elit,
 sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua.'''</span> <br>
-	<span class="print">print</span> (a)
+	<span class="print">print</span>(a)
 	</div>
 
 	<h3>Slicing</h3>
@@ -478,7 +478,7 @@ Especifique el índice inicial y el índice final, separados por dos puntos, par
 		<p>Consigue los caracteres de la posición 2 a la posición 5 (no incluido):</p>
 		<div class="py-code">
 	b = <span class="string">"Hola Josh"</span> <br>
-	<span class="print">print</span> (b[<span class="integer">2</span>:<span class="integer">5</span>])
+	<span class="print">print</span>(b[<span class="integer">2</span>:<span class="integer">5</span>])
 	</div>
 
 	<h3>Slice desde el inicio</h3>
@@ -486,7 +486,7 @@ Especifique el índice inicial y el índice final, separados por dos puntos, par
 	<p>Consigue los caracteres desde el inicio hasta la posición 5 (no incluido):</p>
 	<div class="py-code">
 	b = <span class="string">"Hola Josh"</span> <br>
-	<span class="print">print</span> (b[:<span class="integer">5</span>])
+	<span class="print">print</span>(b[:<span class="integer">5</span>])
 	</div>
 
 	<h3>Slice hasta el final</h3>
@@ -494,7 +494,7 @@ Especifique el índice inicial y el índice final, separados por dos puntos, par
 	<p>Consigue los caracteres desde la posición 2 y hasta el final:</p>
 	<div class="py-code">
 	b = <span class="string">"Hola Josh"</span> <br>
-	<span class="print">print</span> (b[<span class="integer">2</span>:])
+	<span class="print">print</span>(b[<span class="integer">2</span>:])
 	</div>
 
 	<h3>Indexación negativa</h3>
@@ -502,21 +502,21 @@ Especifique el índice inicial y el índice final, separados por dos puntos, par
 	<p>De: "J" en "Josh" (posición -4) hasta, pero no incluido: "s" en "Josh" (posición -2):</p>
 	<div class="py-code">
 	b = <span class="string">"Hola Josh"</span> <br>
-	<span class="print">print</span> (b[-<span class="integer">4</span>:-<span class="integer">2</span>])
+	<span class="print">print</span>(b[-<span class="integer">4</span>:-<span class="integer">2</span>])
 	</div>
 		
 	<h3>Upper Case</h3>
 	<p>El método <span class="print">upper()</span> devuelve la cadena en mayúsculas:</p>
 	<div class="py-code">
 	a = <span class="string">"Hola Josh"</span> <br>
-	<span class="print">print</span> (a.upper())
+	<span class="print">print</span>(a.upper())
 	</div>
 
 	<h3>Lower Case</h3>
 	<p>El método <span class="print">lower()</span> devuelve la cadena en minúsculas:</p>
 	<div class="py-code">
 	a = <span class="string">"Hola Josh"</span> <br>
-	<span class="print">print</span> (a.lower())
+	<span class="print">print</span>(a.lower())
 	</div>
 
 	<h3>Eliminar espacios en blanco</h3>
@@ -524,14 +524,14 @@ Especifique el índice inicial y el índice final, separados por dos puntos, par
 	<p>El método <span class="print">strip()</span>elimina cualquier espacio en blanco desde el principio o el final:</p>
 	<div class="py-code">
 	a = <span class="string">"  Hola Josh "</span> <br>
-	<span class="print">print</span> (a.strip()) <span class="comment"># Devuelve "Hola Josh"</span>
+	<span class="print">print</span>(a.strip()) <span class="comment"># Devuelve "Hola Josh"</span>
 	</div>
 
 	<h3>Reemplazar cadena</h3>
 	<p>El método <span class="print">replace()</span> reemplaza una cadena con otra cadena:</p>
 	<div class="py-code">
 	a = <span class="string">"Hola Josh"</span> <br>
-	<span class="print">print</span> (a.replace("J", "M"))
+	<span class="print">print</span>(a.replace("J", "M"))
 	</div>
 
 	<h3>Split String</h3>
@@ -1168,7 +1168,7 @@ Si agrega nuevos elementos a una lista, los nuevos elementos se colocarán al fi
 	<p> Para determinar cuántos elementos tiene una lista, use la función <span class="print">len()</span>: </p>
 	<div class="py-code">
 	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
-	<span class="print">print</span>( <span class="keyword">len</span>(miLista)) 
+	<span class="print">print</span>(<span class="keyword">len</span>(miLista)) 
 	</div>
 	<h3>Elementos de lista: tipos de datos</h3>
 	<p>Los elementos de la lista pueden ser de cualquier tipo de datos:</p>
@@ -1223,7 +1223,7 @@ Al especificar un rango, el valor de retorno será una nueva lista con los eleme
 	<p>Al omitir el valor final, el rango continuará hasta el final de la lista:</p>
 	<p>Este ejemplo devuelve los elementos desde "Amarillo" hasta el final:</p>
 	<div class="py-code">
-	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Naranja"</span>] , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span><br>
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Naranja"</span> , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span>]<br>
 	<span class="print">print</span>(miLista[<span class="integer">2</span>:])
 	</div>
 	<h3> Rango de índices negativos </h3>
@@ -1252,7 +1252,7 @@ Al especificar un rango, el valor de retorno será una nueva lista con los eleme
 	<h3>Cambiar un rango de valores de elementos</h3>
 	<p>Para cambiar el valor de los elementos dentro de un rango específico, defina una lista con los nuevos valores y consulte el rango de números de índice donde desea insertar los nuevos valores:</p>
 	<div class="py-code">
-	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> ,  <span class="string">"Naranja"</span> ,  <span class="string">"Negro"</span> , <span class="string">"Rosa"</span>] <br>
+	miLista = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> ,  <span class="string">"Naranja"</span> ,  <span class="string">"Marrón"</span> , <span class="string">"Rosa"</span>] <br>
 	miLista[<span class="integer">1</span>:<span class="integer">3</span>] =  [<span class="string">"Dorado"</span> , <span class="string">"Celeste"</span>] <br>
 	<span class="print">print</span>(miLista)
 	</div>
@@ -1409,7 +1409,7 @@ Recuerde aumentar el índice en 1 después de cada iteración. </p>
 	regresará <span class="print">True</span> para todos los elementos excepto "Amarillo", lo que hará que la nueva lista contenga todas las frutas excepto "Amarillo".</p>
 
 	<p> La condición es opcional y puede omitirse: </p>
-	<p>Sin declaración <span class="print">Sin ifdeclaración:</span>:</p>
+	<p>Sin declaración <span class="print">if</span>:</p>
 	<div class="py-code">
 	nuevaLista = [x <span class="keyword">for</span> x <span class="keyword">in</span> miLista]
 	</div>
@@ -1462,7 +1462,7 @@ La función devolverá un número que se utilizará para ordenar la lista (el n�
 <div class="py-code">
 	<span class="keyword">def</span> mifunc(n): <br>
 	&emsp; <span class="keyword">return abs</span>(n - <span class="integer">50</span>) <br>
-	esta Lista = [ <span class="integer">100</span> , <span class="integer">50</span> , <span class="integer">65</span> , <span class="integer">82</span> , <span class="integer">23</span>] <br>
+	esta Lista = [<span class="integer">100</span> , <span class="integer">50</span> , <span class="integer">65</span> , <span class="integer">82</span> , <span class="integer">23</span>] <br>
 	estaLista = sort(key = mifunc) <br>
 	<span class="print">print</span>(estaLista) 
 </div>
@@ -1756,10 +1756,10 @@ y = <span class="keyword">list</span>(estaLista) <br>
 y.append(<span class="string">"Rosa"</span>) <br>
 estaTupla = <span class="keyword">tuple</span>(y)
 </div>
-<p>2. <b>Agregue tupla a una tupla</b> . Se le permite agregar tuplas a tuplas, por lo que si desea agregar un elemento (o muchos), cree una nueva tupla con los elementos y agréguela a la tupla existente:</p>
+<p>2. <b>Agregue tupla a una tupla</b>: Se le permite agregar tuplas a tuplas, por lo que si desea agregar un elemento (o muchos), cree una nueva tupla con los elementos y agréguela a la tupla existente:</p>
 <div class="py-code">
 estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>) <br>
-y = (<span classs="string">"Rosa"</span>,) <br>
+y = (<span class="string">"Rosa"</span>,) <br>
 estaTupla +=  y <br>
 <span class="print">print</span>(estaTupla)
 </div>
@@ -1806,18 +1806,18 @@ colores = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</spa
 <div class="py-code">
 colores = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span>) <br>
 (rojo, azul, *amarillo) = colores <br>
-<span class="print">rojo</span> <br>
-<span class="print">azul</span> <br>
-<span class="print">amarillo</span> <span class="comment"># Devuelve ['Amarillo', 'Verde', 'Marrón']</span>
+<span class="print">print</span>(rojo) <br>
+<span class="print">print</span>(azul) <br>
+<span class="print">print</span>(amarillo) <span class="comment"># Devuelve ['Amarillo', 'Verde', 'Marrón']</span>
 </div>
 <p>Si el asterisco se agrega a otro nombre de variable distinto del último, Python asignará valores a la variable hasta que el número de valores restantes coincida con el número de variables restantes.</p>
 <p>Agregue una lista de valores a la variable "dorado":</p>
 <div class="py-code">
 colores = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span> , <span class="string">"Verde"</span> , <span class="string">"Marrón"</span>) <br>
 (rojo, *dorado, amarillo) = colores <br>
-<span class="print">rojo</span> <br>
-<span class="print">dorado</span> <span class="comment"># Devuelve ['Azul', 'Amarillo', 'Verde']</span> <br>
-<span class="print">amarillo</span> 
+<span class="print">print</span>(rojo) <br>
+<span class="print">print</span>(dorado) <span class="comment"># Devuelve ['Azul', 'Amarillo', 'Verde']</span> <br>
+<span class="print">print</span>(amarillo) 
 </div>	    
 
 <h3>Recorrer una tupla</h3>
@@ -1847,7 +1847,7 @@ estaTupla = (<span class="string">"Rojo"</span> , <span class="string">"Azul"</s
 i = <span class="integer">0</span> <br>
 <span class="keyword">while</span> i < <span class="keyword">len</span>(estaTupla): <br>
 &emsp; <span class="print">print</span>(estaTupla[i]) <br>
-&emsp; i = i <span class="integer">1</span>
+&emsp; i = i + <span class="integer">1</span>
 </div>	
 <h3>Unir dos tuplas</h3>
 <p>Para unir dos o más tuplas puedes utilizar el operador <span class="print">+</span>:</p>
@@ -2204,8 +2204,7 @@ z = x.symmetric_difference(y) <br>
 	  
 
   </tbody>
-</table>		
-		
+</table>			
     </div>
     
     <div id="Section8-v" class="tabcontent">
@@ -2230,8 +2229,8 @@ Un diccionario es una colección ordenada*, modificable y que no permite duplica
 <p>Los diccionarios están escritos entre llaves y tienen claves y valores:</p>
 <div class="py-code">
 	esteDict = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1994</span> <br>
 	}
 </div>
@@ -2243,8 +2242,8 @@ Los elementos del diccionario se presentan en pares clave:valor y se puede hacer
 </p>
 <div class="py-code">
 	esteDict = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
 	<span class="print">print</span>(esteDict[<span class="string">"marca"</span>])
@@ -2262,9 +2261,9 @@ Desordenado significa que los elementos no tienen un orden definido, no se puede
 <p>Los diccionarios no pueden tener dos elementos con la misma clave:</p>
 <div class="py-code">
 	esteDict = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
-	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">2024</span> <br>
 	} <br>
 	<span class="print">print</span>(esteDict)
@@ -2279,9 +2278,9 @@ Desordenado significa que los elementos no tienen un orden definido, no se puede
 <p>Los valores de los elementos del diccionario pueden ser de cualquier tipo de datos:</p>
 <div class="py-code">
 	esteDict = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"electrico"</span> : <span class="keyword">True</span> <br>
-	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"electrico"</span> : <span class="keyword">True</span> ,<br>
+	<span class="string">"año"</span> : <span class="integer">1964</span> ,<br>
 	<span class="string">"colores"</span> : [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
 	}
 </div>	
@@ -2298,8 +2297,8 @@ Desordenado significa que los elementos no tienen un orden definido, no se puede
 <p>Obtenga el valor de la clave "modelo":</p>
 <div class="py-code">
 	esteDict = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
 	x = esteDict[<span class="string">"modelo"</span>]
@@ -2317,8 +2316,8 @@ Desordenado significa que los elementos no tienen un orden definido, no se puede
 <p>Agregue un nuevo elemento al diccionario original y observe que la lista de claves también se actualiza:</p>
 <div class="py-code">
 	carro = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
 	x = carro.keys() <br>
@@ -2335,8 +2334,8 @@ Desordenado significa que los elementos no tienen un orden definido, no se puede
 <p>Realice un cambio en el diccionario original y observe que la lista de valores también se actualiza:</p>
 <div class="py-code">
 	carro = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
 	x = carro.values() <br>
@@ -2352,8 +2351,8 @@ Desordenado significa que los elementos no tienen un orden definido, no se puede
 <p>Realice un cambio en el diccionario original y observe que la lista de elementos también se actualiza:</p>
 <div class="py-code">
 	carro = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
 	x = carro.items() <br>
@@ -2365,8 +2364,8 @@ Desordenado significa que los elementos no tienen un orden definido, no se puede
 <p>Para determinar si una clave específica está presente en un diccionario, utilice la palabra clave <span class="print">in</span>:</p>
 <div class="py-code">
 	carro = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
 	<span class="keyword">if</span> <span class="string">"modelo"</span> <span class="keyword">in</span> esteDict: <br>
@@ -2377,8 +2376,8 @@ Desordenado significa que los elementos no tienen un orden definido, no se puede
 <p>Cambie el "año" a 2018:</p>
 <div class="py-code">
 	carro = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
 	esteDict[<span class="string">"año"</span>] = <span class="integer">2022</span>
@@ -2391,8 +2390,8 @@ El argumento debe ser un diccionario o un objeto iterable con pares clave:valor.
 </p>
 <div class="py-code">
 	carro = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
 	esteDict.update({<span class="string">"año"</span> : <span class="integer">2024</span>})
@@ -2401,8 +2400,8 @@ El argumento debe ser un diccionario o un objeto iterable con pares clave:valor.
 <p>Agregar un elemento al diccionario se realiza usando una nueva clave de índice y asignándole un valor:</p>		
 <div class="py-code">
 	carro = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
 	esteDict[<span class="string">"color"</span>] = <span class="string">"Rojo"</span> <br>
@@ -2413,28 +2412,28 @@ El argumento debe ser un diccionario o un objeto iterable con pares clave:valor.
 <p>El método <span class="print">pop()</span> elimina el elemento con el nombre de clave especificado:</p>
 <div class="py-code">
 	esteDict = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
-	esteDict.pop(<span class="string">"modelo"</span>)
+	esteDict.pop(<span class="string">"modelo"</span>) <br>
 	<span class="print">print</span>(esteDict)
 </div>	
 <p>El método <span class="print">popitem()</span> elimina el último elemento insertado (en versiones anteriores a la 3.7, se elimina un elemento aleatorio):</p>		
 <div class="py-code">
 	esteDict = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
-	esteDict.popitem()
+	esteDict.popitem() <br>
 	<span class="print">print</span>(esteDict)
 </div>	
 <p>La palabra clave <span class="print">del</span> elimina el elemento con el nombre de clave especificado:</p>
 <div class="py-code">
 	esteDict = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
 	<span class="keyword">del</span> esteDict[<span class="string">"modelo"</span>] <br>
@@ -2443,8 +2442,8 @@ El argumento debe ser un diccionario o un objeto iterable con pares clave:valor.
 <p>La palabra clave <span class="print">del</span> también puede eliminar el diccionario por completo:</p>
 <div class="danger-code">
 	esteDict = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
 	<span class="keyword">del</span> esteDict<br>
@@ -2453,8 +2452,8 @@ El argumento debe ser un diccionario o un objeto iterable con pares clave:valor.
 <p>El clear()método vacía el diccionario:</p>
 <div class="py-code">
 	esteDict = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
 	esteDict.clear() <br>
@@ -2497,8 +2496,8 @@ Al recorrer un diccionario, el valor de retorno son las claves del diccionario, 
 Hay formas de hacer una copia, una es utilizar el método Diccionario incorporado <span class="print">copy()</span>.</p>		
 <div class="py-code">
 	esteDict = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
 	miDict = esteDict.copy() <br>
@@ -2507,8 +2506,8 @@ Hay formas de hacer una copia, una es utilizar el método Diccionario incorporad
 <p>Otra forma de realizar una copia es utilizar la función incorporada <span class="print">dict()</span>.</p>
 <div class="py-code">
 	esteDict = { <br>
-	<span class="string">"marca"</span> : <span class="string">"Ford"</span> <br>
-	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> <br>
+	<span class="string">"marca"</span> : <span class="string">"Ford"</span> ,<br>
+	<span class="string">"modelo"</span> : <span class="string">"Mustang"</span> ,<br>
 	<span class="string">"año"</span> : <span class="integer">1964</span> <br>
 	} <br>
 	miDict = <span class="keyword">dict</span>(esteDict) <br>
@@ -2536,20 +2535,20 @@ Hay formas de hacer una copia, una es utilizar el método Diccionario incorporad
 <p>Crea tres diccionarios, luego cree un diccionario que contendrá los otros tres diccionarios:</p>
 <div class="py-code">
 	hijo1 = { <br>
-	&emsp; <span class="string">"nombre"</span> : <span class="string">"Emilio"</span> <br>
+	&emsp; <span class="string">"nombre"</span> : <span class="string">"Emilio"</span> ,<br>
 	&emsp; <span class="string">"año"</span> : <span class="integer">2020</span> <br>
 	} <br>
 	hijo2 = { <br>
-	&emsp; <span class="string">"nombre"</span> : <span class="string">"Emilio"</span> <br>
+	&emsp; <span class="string">"nombre"</span> : <span class="string">"Emilio"</span> ,<br>
 	&emsp; <span class="string">"año"</span> : <span class="integer">2018</span> <br>
 	} <br>
 	hijo3 = { <br>
-	&emsp; <span class="string">"nombre"</span> : <span class="string">"Emilio"</span> <br>
+	&emsp; <span class="string">"nombre"</span> : <span class="string">"Emilio"</span> ,<br>
 	&emsp; <span class="string">"año"</span> : <span class="integer">2014</span> <br>
 	} <br>
 	mifamilia = { <br>
-	&emsp; <span class="string">"hijo1"</span> : hijo1 <br>
-	&emsp; <span class="string">"hijo2"</span> : hijo2 <br>
+	&emsp; <span class="string">"hijo1"</span> : hijo1 ,<br>
+	&emsp; <span class="string">"hijo2"</span> : hijo2 ,<br>
 	&emsp; <span class="string">"hijo3"</span> : hijo3
 	} 
 </div>
@@ -2590,7 +2589,7 @@ Hay formas de hacer una copia, una es utilizar el método Diccionario incorporad
 Una "declaración if" se escribe utilizando la palabra clave <span class="print">if</span> .</p>
 <div class="py-code">
 	a = <span class="integer">33</span> <br>
-	b = <span classs="integer">200</span> <br>
+	b = <span class="integer">200</span> <br>
 	<span class="keyword">if</span> b > a: <br>
 	&emsp; <span class="print">print</span>(<span class="string">"b es mayor que a"</span>)
 </div>
@@ -2612,7 +2611,7 @@ Una "declaración if" se escribe utilizando la palabra clave <span class="print"
 <p>La palabra clave <span class="print">elif</span> es la forma que tiene Python de decir "si las condiciones anteriores no eran verdaderas, intente esta condición".</p>
 <div class="py-code">
 	a = <span class="integer">33</span> <br>
-	b = <span classs="integer">200</span> <br>
+	b = <span class="integer">200</span> <br>
 	<span class="keyword">if</span> b > a: <br>
 	&emsp; <span class="print">print</span>(<span class="string">"b es mayor que a"</span>) <br>
 	<span class="keyword">elif</span> a == b: <br>
@@ -2626,7 +2625,7 @@ Una "declaración if" se escribe utilizando la palabra clave <span class="print"
 <p>La palabra clave <span class="print">else</span> captura cualquier cosa que no esté cubierta por las condiciones anteriores.</p>
 <div class="py-code">
 	a = <span class="integer">33</span> <br>
-	b = <span classs="integer">200</span> <br>
+	b = <span class="integer">200</span> <br>
 	<span class="keyword">if</span> b > a: <br>
 	&emsp; <span class="print">print</span>(<span class="string">"b es mayor que a"</span>) <br>
 	<span class="keyword">elif</span> b == a: <br>
@@ -2641,7 +2640,7 @@ Una "declaración if" se escribe utilizando la palabra clave <span class="print"
 </p>
 <div class="py-code">
 	a = <span class="integer">33</span> <br>
-	b = <span classs="integer">200</span> <br>
+	b = <span class="integer">200</span> <br>
 	<span class="keyword">if</span> b > a: <br>
 	&emsp; <span class="print">print</span>(<span class="string">"b es mayor que a"</span>) <br>
 	<span class="keyword">else</span>: <br>
@@ -2656,30 +2655,30 @@ Una "declaración if" se escribe utilizando la palabra clave <span class="print"
 <p>Si solo tiene una declaración para ejecutar, una para if y otra para else, puede ponerlas todas en la misma línea:</p>
 <div class="py-code">
 	a = <span class="integer">2</span> <br>
-	b = <span classs="integer">330</span> <br>
+	b = <span class="integer">330</span> <br>
 	<span class="print">print</span>(<span class="string">"A"</span>) <span class="keyword">if</span> a > b <span class="keyword">else</span> <span class="print">print</span>(<span class="string">"B"</span>)
 </div>	
 <div class="notas-code">Esta técnica se conoce como <b>Operadores Ternarios o Expresiones Condicionales</b>.</div>
 <p>También puedes tener varias declaraciones else en la misma línea:</p>
 <div class="py-code">
 	a = <span class="integer">330</span> <br>
-	b = <span classs="integer">330</span> <br>
+	b = <span class="integer">330</span> <br>
 	<span class="print">print</span>(<span class="string">"A"</span>) <span class="keyword">if</span> a > b <span class="keyword">else</span> <span class="print">print</span>(<span class="string">"="</span>) <span class="keyword">if</span> a == b <span class="keyword">else</span> <span class="print">print</span>(<span class="string">"B"</span>)
 </div>	
 <h3>and</h3>
 <p>La palabra clave <span class="print">and</span> es un operador lógico y se utiliza para combinar declaraciones condicionales:</p>
 <div class="py-code">
 	a = <span class="integer">200</span> <br>
-	b = <span classs="integer">33</span> <br>
-	c = <span classs="integer">500</span> <br>
-	 <span class="keyword">if</span> a > b <span class="keyword">in</span> c > a: <br>
+	b = <span class="integer">33</span> <br>
+	c = <span class="integer">500</span> <br>
+	 <span class="keyword">if</span> a > b <span class="keyword">and</span> c > a: <br>
 	&emsp; <span class="print">print</span>(<span class="string">"Ambas condiciones son Verdaderas"</span>)
 </div>		
 <h3>or</h3>
 <div class="py-code">
 	a = <span class="integer">200</span> <br>
-	b = <span classs="integer">33</span> <br>
-	c = <span classs="integer">500</span> <br>
+	b = <span class="integer">33</span> <br>
+	c = <span class="integer">500</span> <br>
 	 <span class="keyword">if</span> a > b <span class="keyword">or</span> c > a: <br>
 	&emsp; <span class="print">print</span>(<span class="string">"Al menos una condición es verdadera"</span>)
 </div>	
@@ -2688,7 +2687,7 @@ Una "declaración if" se escribe utilizando la palabra clave <span class="print"
 <p>Pruebe si aNO es mayor que b:</p>
 <div class="py-code">
 	a = <span class="integer">33</span> <br>
-	b = <span classs="integer">200</span> <br>
+	b = <span class="integer">200</span> <br>
 	 <span class="keyword">if</span> not a > b: <br>
 	&emsp; <span class="print">print</span>(<span class="string">"a NO es mayor que b"</span>)
 </div>	
@@ -2759,7 +2758,7 @@ Una "declaración if" se escribe utilizando la palabra clave <span class="print"
 <div class="py-code">
 	i = <span class="integer">1</span> <br>
 	<span class="keyword">while</span> i &lt; <span class="integer">6</span>: <br>
-	&emsp; i += 1
+	&emsp; i += 1 <br>
 	&emsp; <span class="keyword">if</span> i == <span class="integer">3</span>: <br>
 	&emsp; &emsp; <span class="keyword">continue</span> <br>
 	&emsp; <span class="print">print</span>(i)	
@@ -2771,7 +2770,7 @@ Una "declaración if" se escribe utilizando la palabra clave <span class="print"
 	i = <span class="integer">1</span> <br>
 	<span class="keyword">while</span> i &lt; <span class="integer">6</span>: <br>
 	&emsp; <span class="print">print</span>(i) <br>
-	&emsp; i += 1
+	&emsp; i += 1 <br>
 	&emsp; <span class="keyword">else</span>: <br>
 	&emsp; &emsp; <span class="print">print</span>(<span class="string">"i ya no es maenor que 6"</span>) <br>
 		
@@ -2796,7 +2795,114 @@ Una "declaración if" se escribe utilizando la palabra clave <span class="print"
 	   <!-- Contenido de la seccion 12 -->
    
    	<div id="Section12-t" class="tabcontent">
-		<p> Heres is going to go the theory</p>
+		<h3>Bucle For</h3>
+		<p>
+			Un bucle <span class="print">for</span> se utiliza para iterar sobre una secuencia (es decir, una lista, una tupla, un diccionario, un conjunto o una cadena).
+
+Esto se parece menos a la palabra clave <span class="print">for</span> en otros lenguajes de programación y funciona más como un método iterador como el que se encuentra en otros lenguajes de programación orientados a objetos.
+
+Con el bucle <span class="print">for</span> podemos ejecutar un conjunto de declaraciones, una vez para cada elemento de una lista, tupla, conjunto, etc.
+		</p>
+	<p>Imprime cada color en una lista de colores:</p>
+	<div class="py-code">
+		colores = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+		<span class="keyword">for</span> x <span class="keyword">in</span> colores: <br>
+		&emsp; <span class="print">print</span>(x)
+	</div>
+	<p>El bucle <span class="print">for</span> no requiere que se establezca una variable de indexación de antemano.</p>
+	<h3>Bucle a través de un string</h3>
+	<p>Incluso las cadenas son objetos iterables y contienen una secuencia de caracteres:</p>
+	<p>Recorre las letras de la palabra "Rojo":</p>
+	<div class="py-code">
+		<span class="keyword">for</span> x <span class="keyword">in</span> <span class="string">"Rojo"</span>: <br>
+		&emsp; <span class="print">print</span>(x)
+	</div>
+	<h3>Declaración Break</h3>
+	<p>Con la instrucción <span class="print">break</span> podemos detener el ciclo antes de que haya recorrido todos los elementos:</p>
+	<p>Sale del bucle cuando x sea "Amarillo":</p>
+	<div class="py-code">
+		colores = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+		<span class="keyword">for</span> x <span class="keyword">in</span> colores: <br>
+		&emsp; <span class="print">print</span>(x) <br>
+		&emsp; <span class="keyword">if</span> x == <span class="string">"Amarillo"</span> <br>
+		&emsp; &emsp; <span class="keyword">break</span>
+	</div>
+	<h3>Declaración continue</h3>
+	<p>Con la instrucción <span class="continue">continue</span> podemos detener la iteración actual del bucle y continuar con la siguiente:</p>
+	<p>No imprimir Azul:</p>
+	<div class="py-code">
+		colores = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+		<span class="keyword">for</span> x <span class="keyword">in</span> colores: <br>
+		&emsp; <span class="keyword">if</span> x == <span class="string">"Amarillo"</span> <br>
+		&emsp; &emsp; <span class="keyword">continue</span> <br>
+		&emsp; <span class="print">print</span>(x) <br>
+	</div>	
+	<h3>Función range()</h3>
+	<p>
+		Para recorrer un conjunto de código un número específico de veces, podemos usar la función <span class="print">range()</span> ,
+La función <span class="print">range()</span> devuelve una secuencia de números, que comienza en 0 de forma predeterminada, se incrementa en 1 (de forma predeterminada) y termina en un número específico.
+	</p>
+<div class="py-code">
+		<span class="keyword">for</span> x <span class="keyword">in</span> <span class="keyword">range</span>(<span class="integer">6</span>): <br>
+		&emsp; <span class="print">print</span>(x)
+	</div>	
+<div class="notas-code">
+	Tenga en cuenta que el <span class="integer">rango (6)</span> no son los valores de 0 a 6, sino los valores de 0 a 5.
+</div>
+<p>
+	La función <span class="print">range()</span> tiene por defecto 0 como valor inicial; sin embargo, 
+	es posible especificar el valor inicial agregando un parámetro: <span class="print">range(2, 6)</span> , que significa valores del 2 al 6 (pero sin incluir 6):
+</p>
+<div class="py-code">
+		<span class="keyword">for</span> x <span class="keyword">in</span> <span class="keyword">range</span>(<span class="integer">2</span>, <span class="integer">6</span>): <br>
+		&emsp; <span class="print">print</span>(x)
+	</div>	
+<p>La función <span class="print">range()</span> por defecto incrementa la secuencia en 1, 
+	sin embargo, es posible especificar el valor de incremento agregando un tercer parámetro: <span class="print">range(2, 30, 3 )</span>:</p>
+<p>Incrementa la secuencia con 3:</p>
+<div class="py-code">
+		<span class="keyword">for</span> x <span class="keyword">in</span> <span class="keyword">range</span>(<span class="integer">2</span>, <span class="integer">30</span>, <span class="integer">3</span>): <br>
+		&emsp; <span class="print">print</span>(x)
+	</div>	
+	<h3>Else en el bucle For</h3>
+	<p>La palabra clave <span class="print">else</span> en un bucle <span class="print">for</span> especifica un bloque de código que se ejecutará cuando finalice el bucle:</p>
+	<p>Imprime todos los números del 0 al 5 e imprime un mensaje cuando el ciclo haya finalizado:</p>
+<div class="py-code">
+		<span class="keyword">for</span> x <span class="keyword">in</span> <span class="keyword">range</span>(<span class="integer">6</span>): <br>
+		&emsp; <span class="print">print</span>(x) <br>	
+	       	<span class="keyword">else</span>: <br>
+		&emsp; &emsp; <span class="keyword">continue</span> <br>
+		&emsp; <span class="print">print</span>(<span class="string">"Acabamos"</span>)
+	</div>	
+<div class="notas-code">
+	<b>Nota:</b> El bloque <span class="integer">else</span> NO se ejecutará si una declaración detiene el ciclo <span class="integer">break</span>.
+</div>
+<h3>Bucles anidados</h3>
+<p>
+	Un bucle anidado es un bucle dentro de un bucle.
+
+El "bucle interno" se ejecutará una vez por cada iteración del "bucle externo":
+</p>
+<div class="py-code">
+		adj = [<span class="string">"Intenso"</span> , <span class="string">"Marino"</span> , <span class="string">"soleado"</span>] <br>
+		colores = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+		<span class="keyword">for</span> x <span class="keyword">in</span> adj: <br>
+		&emsp; <span class="keyword">for</span> y <span class="keyword">in</span> colores: <br>
+		&emsp; &emsp; <span class="print">print</span>(x, y) <br>
+	</div>	
+<h3>Declaración pass</h3>
+		<p>
+			Los bucles <span class="print">for</span> no pueden estar vacíos, 
+			pero si por alguna razón tienes un bucle <span class="print">for</span>  sin contenido, ingresa la declaración <span class="print">pass</span>  para evitar recibir un error.
+		</p>
+
+<div class="py-code">
+		<span class="keyword">for</span> x <span class="keyword">in</span> [<span class="integer">0</span> , <span class="integer">1</span> , <span class="integer">2</span>]: <br>
+		&emsp; <span class="keyword">pass</span>
+	</div>	
+
+		
+		
 	</div>
 	<div id="Section12-v" class="tabcontent">
       <h3>Video 12</h3>
@@ -2812,7 +2918,101 @@ Una "declaración if" se escribe utilizando la palabra clave <span class="print"
 	   <!-- Contenido de la seccion 13 -->
    
    	<div id="Section13-t" class="tabcontent">
-		<p> Heres is going to go the theory</p>
+		<h3>Funciones</h3>
+		<p>Una función es un bloque de código que sólo se ejecuta cuando se llama.
+
+Puede pasar datos, conocidos como parámetros, a una función.
+
+Una función puede devolver datos como resultado.</p>
+	<h3>Creando una función</h3>
+<p>En Python una función se define usando la palabra clave <span class="print">def</span>:</p>
+<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(): <br>
+		&emsp; <span class="print">print</span>(<span class="string">"Hola Josh"</span>)
+	</div>	
+<h3>Llamar a una función</h3>
+<p>Para llamar a una función, use el nombre de la función seguido de paréntesis:</p>
+<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(): <br>
+		&emsp; <span class="print">print</span>(<span class="string">"Hola Josh"</span>) <br>
+		<b>mi_funcion()</b>
+	</div>	
+<h3>Argumentos</h3>
+<p>
+	La información se puede pasar a funciones como argumentos.
+
+Los argumentos se especifican después del nombre de la función, dentro del paréntesis. Puedes agregar tantos argumentos como quieras, simplemente sepáralos con una coma.
+
+El siguiente ejemplo tiene una función con un argumento (nombre). Cuando se llama a la función, pasamos un nombre, que se usa dentro de la función para imprimir el nombre completo:
+</p>
+<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(nombre): <br>
+		&emsp; <span class="print">print</span>(nombre + <span class="string">" Brown"</span>) <br>
+		<span class="print">print</span>(<span class="Natasha"></span>) <br>
+		<span class="print">print</span>(<span class="Esteban"></span>) <br>
+		<span class="print">print</span>(<span class="Rodrigo"></span>) 
+	</div>	
+	<h3>¿Parámetros o argumentos?</h3>	
+	<p>Los términos parámetro y argumento se pueden usar para lo mismo: información que se pasa a una función.</p>	
+	<div class="notas-code">
+		Desde la perspectiva de una función: <br>
+
+Un parámetro es la variable que figura entre paréntesis en la definición de la función. <br>
+
+Un argumento es el valor que se envía a la función cuando se llama.
+	</div>
+
+<h3>Número de argumentos</h3>
+<p>
+	De forma predeterminada, se debe llamar a una función con la cantidad correcta de argumentos. 
+	Lo que significa que si su función espera 2 argumentos, debe llamar a la función con 2 argumentos, ni más ni menos.
+</p>
+<p>Esta función espera 2 argumentos y obtiene 2 argumentos:</p>
+<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(nombre, apellido): <br>
+		&emsp; <span class="print">print</span>(nombre + <span class="string">" "<span class="string"> + apellido <br>
+		mi_funcion(<span class="string">"Natasha"</span>, <span class="string">"Brown"</span>) 
+	</div>
+<p>Si intenta llamar a la función con 1 o 3 argumentos, obtendrá un error:</p>
+<div class="danger-code">
+		<span class="keyword">def</span> mi_funcion(nombre, apellido): <br>
+		&emsp; <span class="print">print</span>(nombre + <span class="string">" "<span class="string"> + apellido <br>
+		mi_funcion(<span class="string">"Natasha"</span>) 
+	</div>		
+<h3>Argumentos arbitrarios, *args</h3>
+<p>Si no sabe cuántos argumentos se pasarán a su función, agregue un <span class="print">*</span> antes del nombre del parámetro en la definición de la función.
+
+De esta manera, la función recibirá una tupla de argumentos y podrá acceder a los elementos en consecuencia:</p>
+<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(*joven): <br>
+		&emsp; <span class="print">print</span>(<span class="string">"El joven más inteligente es "</span> joven[<span class="integer">2</span>] <br>
+		mi_funcion(<span class="string">"Natasha"</span>, <span class="string">"Esteban"</span>, <span class="string">"Rodrigo"</span>) 
+	</div>	
+<div class="notas-code">Los argumentos arbitrarios a menudo se abrevian a *args en la documentación de Python.</div>
+<h3>Argumentos de palabras clave</h3>
+<p>
+	También puede enviar argumentos con la sintaxis clave = valor .
+
+De esta forma no importa el orden de los argumentos
+</p>
+<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(joven1, joven2, joven3): <br>
+		&emsp; <span class="print">print</span>(<span class="string">"El joven más inteligente es "</span> joven3 <br>
+		mi_funcion(joven1 = <span class="string">"Natasha"</span>, joven2 = <span class="string">"Esteban"</span>, joven3 = <span class="string">"Rodrigo"</span>) 
+	</div>	
+<h3>Argumentos arbitrarios de palabras clave, **kwargs</h3>
+<p>
+	Si no sabe cuántos argumentos de palabras clave se pasarán a su función, agregue dos asteriscos: <span class="print">**</span> antes del nombre del parámetro en la definición de la función.
+
+De esta manera, la función recibirá un diccionario de argumentos y podrá acceder a los elementos en consecuencia:
+</p>
+<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(**joven): <br>
+		&emsp; <span class="print">print</span>(<span class="string">"Su apellido es "</span> joven[<span class="string">"apellido"</span>] <br>
+		mi_funcion(nombre = <span class="string">"Natasha"</span>, apellido = <span class="string">"Brown"</span>) 
+	</div>	
+			
+			
 	</div>
 	<div id="Section13-v" class="tabcontent">
       <h3>Video 13</h3>
