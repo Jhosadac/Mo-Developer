@@ -2948,9 +2948,9 @@ El siguiente ejemplo tiene una función con un argumento (nombre). Cuando se lla
 <div class="py-code">
 		<span class="keyword">def</span> mi_funcion(nombre): <br>
 		&emsp; <span class="print">print</span>(nombre + <span class="string">" Brown"</span>) <br>
-		<span class="print">print</span>(<span class="Natasha"></span>) <br>
-		<span class="print">print</span>(<span class="Esteban"></span>) <br>
-		<span class="print">print</span>(<span class="Rodrigo"></span>) 
+		<span class="print">mi_funcion</span>(<span class="string">"Natasha"</span>) <br>
+		<span class="print">mi_funcion</span>(<span class="string">"Esteban"</span>) <br>
+		<span class="print">mi_funcion</span>(<span class="string">"Rodrigo"</span>) 
 	</div>	
 	<h3>¿Parámetros o argumentos?</h3>	
 	<p>Los términos parámetro y argumento se pueden usar para lo mismo: información que se pasa a una función.</p>	
@@ -2970,13 +2970,13 @@ Un argumento es el valor que se envía a la función cuando se llama.
 <p>Esta función espera 2 argumentos y obtiene 2 argumentos:</p>
 <div class="py-code">
 		<span class="keyword">def</span> mi_funcion(nombre, apellido): <br>
-		&emsp; <span class="print">print</span>(nombre + <span class="string">" "<span class="string"> + apellido <br>
+		&emsp; <span class="print">print</span>(nombre + <span class="string">" "<span class="string"> + apellido) <br>
 		mi_funcion(<span class="string">"Natasha"</span>, <span class="string">"Brown"</span>) 
 	</div>
 <p>Si intenta llamar a la función con 1 o 3 argumentos, obtendrá un error:</p>
 <div class="danger-code">
 		<span class="keyword">def</span> mi_funcion(nombre, apellido): <br>
-		&emsp; <span class="print">print</span>(nombre + <span class="string">" "<span class="string"> + apellido <br>
+		&emsp; <span class="print">print</span>(nombre + <span class="string">" "<span class="string"> + apellido) <br>
 		mi_funcion(<span class="string">"Natasha"</span>) 
 	</div>		
 <h3>Argumentos arbitrarios, *args</h3>
@@ -2985,7 +2985,7 @@ Un argumento es el valor que se envía a la función cuando se llama.
 De esta manera, la función recibirá una tupla de argumentos y podrá acceder a los elementos en consecuencia:</p>
 <div class="py-code">
 		<span class="keyword">def</span> mi_funcion(*joven): <br>
-		&emsp; <span class="print">print</span>(<span class="string">"El joven más inteligente es "</span> joven[<span class="integer">2</span>] <br>
+		&emsp; <span class="print">print</span>(<span class="string">"El joven más inteligente es "</span> joven[<span class="integer">2</span>]) <br>
 		mi_funcion(<span class="string">"Natasha"</span>, <span class="string">"Esteban"</span>, <span class="string">"Rodrigo"</span>) 
 	</div>	
 <div class="notas-code">Los argumentos arbitrarios a menudo se abrevian a *args en la documentación de Python.</div>
@@ -2997,7 +2997,7 @@ De esta forma no importa el orden de los argumentos
 </p>
 <div class="py-code">
 		<span class="keyword">def</span> mi_funcion(joven1, joven2, joven3): <br>
-		&emsp; <span class="print">print</span>(<span class="string">"El joven más inteligente es "</span> joven3 <br>
+		&emsp; <span class="print">print</span>(<span class="string">"El joven más inteligente es "</span> joven3) <br>
 		mi_funcion(joven1 = <span class="string">"Natasha"</span>, joven2 = <span class="string">"Esteban"</span>, joven3 = <span class="string">"Rodrigo"</span>) 
 	</div>	
 <h3>Argumentos arbitrarios de palabras clave, **kwargs</h3>
@@ -3008,10 +3008,94 @@ De esta manera, la función recibirá un diccionario de argumentos y podrá acce
 </p>
 <div class="py-code">
 		<span class="keyword">def</span> mi_funcion(**joven): <br>
-		&emsp; <span class="print">print</span>(<span class="string">"Su apellido es "</span> joven[<span class="string">"apellido"</span>] <br>
+		&emsp; <span class="print">print</span>(<span class="string">"Su apellido es "</span> joven[<span class="string">"apellido"</span>]) <br>
 		mi_funcion(nombre = <span class="string">"Natasha"</span>, apellido = <span class="string">"Brown"</span>) 
 	</div>	
+<h3>Valor de parámetro predeterminado</h3>
+<p>
+	El siguiente ejemplo muestra cómo utilizar un valor de parámetro predeterminado.
+
+Si llamamos a la función sin argumento, usa el valor predeterminado:
+</p>
+<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(<b>country = </b> <span class="string">"Perú"</span>): <br>
+		&emsp; <span class="print">print</span>(<span class="string">"Soy de "</span> + country) <br>
+		<span class="print">mi_funcion</span>(<span class="string">"India"</span>) <br>
+		<span class="print">mi_funcion</span>(<span class="string">"China"</span>) <br>
+		<span class="print">mi_funcion</span>(<span class="string">"Rusia"</span>) 
+	</div>	
+<h3>Pasar una lista como argumento</h3>
+<p>Puede enviar cualquier tipo de argumento de datos a una función (cadena, número, lista, diccionario, etc.) y será tratado como el mismo tipo de datos dentro de la función.</p>
+<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(comida): <br>
+		&emsp; <span class="keyword">for</span> x <span class="keyword">in</span> comida:<br>
+		&emsp; &emsp; <span class="print">print</span>(x) <br>
+		colores = [<span class="string">"Rojo"</span> , <span class="string">"Azul"</span> , <span class="string">"Amarillo"</span>] <br>
+		mi_funcion(colores)
+	</div>	
+<h3>Valores de retorno</h3>
+<p>Para permitir que una función devuelva un valor, use la declaración <span class="print">return</span>:</p>
+<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(x): <br>
+		&emsp; <span class="keyword">return</span> <span class="integer">5</span> * x <br>
+		<span class="print">print</span>(mi_funcion(<span class="integer">9</span>)) <br>
+	<span class="print">print</span>(mi_funcion(<span class="integer">7</span>)) <br>
+	<span class="print">print</span>(mi_funcion(<span class="integer">3</span>)) <br>
+		
+	</div>	
+	<h3>La declaración del pass</h3>
+	<p>Las definiciones de las <span class="print">funciones</span> no pueden estar vacías, pero si por alguna razón no tienen contenido, 
+		introdúzcala en la passdeclaración para evitar recibir un error.</p>
+
+<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(x): <br>
+		&emsp; <span class="keyword">pass</span>
+		
+	</div>	
+<h3>Argumentos únicamente posicionales</h3>
+<p>
+	Puede especificar que una función pueda tener SÓLO argumentos posicionales o SÓLO argumentos de palabras clave.
+
+Para especificar que una función solo puede tener argumentos posicionales, agregue <span class="print">, /</span> después de los argumentos:
+</p>
+<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(x, /): <br>
+		&emsp; <span class="print">print</span>(x) <br>
+		mi_funcion(<span class="integer">3</span>)
+		
+	</div>	
+<p>Sin el <span class="integer">, /</span> en realidad se le permite usar argumentos de palabras clave incluso si la función espera argumentos posicionales:</p>
+
+		<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(x, /): <br>
+		&emsp; <span class="print">print</span>(x) <br>
+		mi_funcion(x = <span class="integer">3</span>)
+		
+	</div>		
+<p>Pero al agregar <span class="print">, /</span> obtendrá un error si intenta enviar un argumento de palabra clave:</p>
+<div class="danger-code">
+	<span class="keyword">def</span> mi_funcion(x, /): <br>
+		&emsp; <span class="print">print</span>(x) <br>
+		mi_funcion(x = <span class="integer">3</span>)
+</div>
+<h3>Argumentos de solo palabras clave</h3>
+<p>Para especificar que una función solo puede tener argumentos de palabras clave, agregue <span class="print">*,</span> antes de los argumentos:</p>
+<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(* , x): <br>
+		&emsp; <span class="print">print</span>(x) <br>
+		mi_funcion(x = <span class="integer">3</span>)
+	</div>	
+<p>Sin el <span class="print">*,</span> se le permite utilizar argumentos posicionales incluso si la función espera argumentos de palabras clave:</p>
+<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(x): <br>
+		&emsp; <span class="print">print</span>(x) <br>
+		mi_funcion(x = <span class="integer">3</span>)
+		
+	</div>
+
+
 			
+
 			
 	</div>
 	<div id="Section13-v" class="tabcontent">
