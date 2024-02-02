@@ -3137,10 +3137,7 @@ A un nuevo desarrollador le puede llevar algún tiempo descubrir cómo funciona 
 		<span class="print">print</span>(<span class="string">"\n\nEjemplo de Recursividad"</span>) <br>
 		tri_recursion(<span class="integer">6</span>)
 		
-	</div>	
-
-
-			
+	</div>		
 	</div>
 	<div id="Section13-v" class="tabcontent">
       <h3>Video 13</h3>
@@ -3156,7 +3153,69 @@ A un nuevo desarrollador le puede llevar algún tiempo descubrir cómo funciona 
 	   <!-- Contenido de la seccion 14 -->
    
    	<div id="Section14-t" class="tabcontent">
-		<h3></h3>
+		<h3>Lambda</h3>
+		<p>
+			Una función lambda es una pequeña función anónima.
+
+Una función lambda puede tomar cualquier número de argumentos, pero solo puede tener una expresión.
+		</p>
+		<h3>Sintaxis</h3>
+<div class="info-code">lambda arguments : expression</div>
+<p>Se ejecuta la expresión y se devuelve el resultado:</p>
+<p>Agrega 10 al argumento <span class="print">a</span> y devuelva el resultado:</p>
+<div class="py-code">
+	x = <span class="keyword">lambda</span> a : a + <span class="integer">10</span> <br>
+	<span class="print">print</span>(x(<span class="integer">5</span>))
+</div>
+<p>Las funciones Lambda pueden tomar cualquier número de argumentos:<p>
+<p>Multiplica argumento <span class="print">a</span> por argumento <span class="print">b</span> y devuelve el resultado:</p>
+<div class="py-code">
+	x = <span class="keyword">lambda</span> a, b : a * b <br>
+	<span class="print">print</span>(x(<span class="integer">5</span>, <span class="integer">6</span>))
+</div>	
+<p>Resume el argumento <span class="print">a</span>, <span class="print">b</span> y <span class="print">c</span> devuelve el resultado:</p>
+<div class="py-code">
+	x = <span class="keyword">lambda</span> a, b, c : a + b + c <br>
+	<span class="print">print</span>(x(<span class="integer">5</span>, <span class="integer">6</span>, <span class="integer">2</span>))
+</div>
+<h3>¿Por qué utilizar funciones Lambda?</h3>
+<p>
+	El poder de lambda se muestra mejor cuando los usa como una función anónima dentro de otra función.
+
+Digamos que tiene una definición de función que toma un argumento y ese argumento se multiplicará por un número desconocido:
+</p>
+<div class="py-code">
+	<span class="keyword">def</span> mi_funcion(n)<br>
+	<span class="keyword">return</span> <span class="keyword">lambda</span> a : a * n
+</div>
+<p>Utilice esa definición de función para crear una función que siempre duplique el número que envía:</p>
+<div class="py-code">
+	<span class="keyword">def</span> mi_funcion(n)<br>
+	<span class="keyword">return</span> <span class="keyword">lambda</span> a : a * n <br>
+	mi_doble = mi_funcion(<span class="integer">2</span>) <br>
+	<span class="print">print</span>(mi_doble(<span class="integer">11</span>))
+</div>
+
+<p>O use la misma definición de función para crear una función que siempre triplique el número que envía:</p>		
+<div class="py-code">
+	<span class="keyword">def</span> mi_funcion(n)<br>
+	<span class="keyword">return</span> <span class="keyword">lambda</span> a : a * n <br>
+	mi_triple = mi_funcion(<span class="integer">3</span>) <br>
+	<span class="print">print</span>(mi_triple(<span class="integer">11</span>))
+</div>
+<p>O use la misma definición de función para crear ambas funciones, en el mismo programa:</p>
+
+<div class="py-code">
+	<span class="keyword">def</span> mi_funcion(n)<br>
+	<span class="keyword">return</span> <span class="keyword">lambda</span> a : a * n <br>
+	mi_doble = mi_funcion(<span class="integer">2</span>) <br>
+	mi_triple = mi_funcion(<span class="integer">3</span>) <br>
+	<span class="print">print</span>(mi_doble(<span class="integer">11</span>)) <br>
+	<span class="print">print</span>(mi_triple(<span class="integer">11</span>))
+</div>
+<div class="notas-code">
+	Utilice funciones lambda cuando se requiera una función anónima durante un período corto de tiempo.
+</div>		
 	</div>
 	<div id="Section14-v" class="tabcontent">
       <h3>Video 14</h3>
@@ -3172,7 +3231,81 @@ A un nuevo desarrollador le puede llevar algún tiempo descubrir cómo funciona 
    <!-- Contenido de la seccion 15 -->
    
    	<div id="Section15-t" class="tabcontent">
-		<p> Heres is going to go the theory</p>
+		<h3>Arrays</h3>
+		<div class="notas-code"><b>Nota:</b> Python no tiene soporte integrado para arrays, pero en su lugar se pueden usar listas de Python .
+		Para trabajar con arrays en Python tendrá que importar una biblioteca, como la biblioteca NumPy. Esta página le mostrará cómo usar LISTAS como ARRAYS.
+		</div>
+<p>Los arrays se utilizan para almacenar múltiples valores en una sola variable:</p>
+<p>Cree un array que contenga nombres de automóviles:</p>
+<div class="py-code">
+	cars = [<span class="string">Ford</span> , <span class="string">Volvo</span> , <span class="string">BMW</span>]
+</div>
+<h3>¿Qué es un Array?</h3>
+<p>
+	Una matriz es una variable especial que puede contener más de un valor a la vez.
+
+Si tiene una lista de elementos (una lista de nombres de automóviles, por ejemplo), almacenar los automóviles en variables individuales podría verse así:
+</p>
+		<div class="info-code">
+			cars1 = <span class="string">Ford</span> <br>
+			cars2 = <span class="string">Volvo</span> <br>
+			cars3 = <span class="string">BMW</span>
+		</div>
+
+<p>
+	Sin embargo, ¿qué pasa si quieres recorrer los coches y encontrar uno específico? ¿Y si no tuvieras 3 coches, sino 300?
+
+¡La solución es una array!
+
+Una array puede contener muchos valores bajo un solo nombre y puede acceder a los valores haciendo referencia a un número de índice.
+</p>
+<h3>Acceder a los elementos de un Array</h3>
+<p>Se hace referencia a un elemento de array haciendo referencia al número de índice .</p>
+<p>Obtenga el valor del primer elemento del array:</p>
+<div class="py-code">
+			x = cars[<span class="integer">0</span>]
+		</div>
+<h3>La longitud de un Array</h3>
+<p>Utilice el método <span class="print">len()</span> para devolver la longitud de un array (la cantidad de elementos de una array).</p>
+<p>Devuelve el número de elementos del array de cars:</p>
+<div class="py-code">
+			x = <span class="keyword">len</span>(cars)
+		</div>	
+<div class="notas-code">
+	<b>Nota:</b> La longitud de un array siempre uno más que el índice del array más alto.
+</div>
+<h3>Elementos de Array en bucle</h3>
+<p>
+	Puede utilizar el bucle <span class="print">for in</span> para recorrer todos los elementos de un array.
+	Imprima cada elemento del array cars:
+</p>
+<div class="py-code">
+	<span class="keyword">for</span> x <span class="keyword">in</span> cars <br>
+	&emsp; <span class="print">print</span>(x)
+</div>
+<h3>Agregar elementos al array</h3>
+<p>Puede utilizar el método <span class="print">append()</span> para agregar un elemento a un array.</p>
+<h3>Agregue un elemento más al array cars:</h3>
+	<div class="py-code">
+	cars.append(<span class="string">"Susuki"</span>)
+	</div>
+<h3>Eliminar elementos del array</h3>
+<p>Puede utilizar el método <span class="print">pop()</span>para eliminar un elemento del array.</p>
+<div class="py-code">
+	cars.pop(<span class="integer">1</span>)
+	</div>
+
+<p>También puede utilizar el método <span class="print">remove()</span> para eliminar un elemento del array.</p>
+<p>Elimina el elemento que tiene el valor "Volvo":</p>
+<div class="py-code">
+	cars.remove(<span class="string">"Volvo"</span>)
+	</div>
+<div class="notas-code"><b>Nota:</b> El método de la lista <span class="integer">remove()</span> solo elimina la primera aparición del valor especificado.</div>
+
+
+
+		
+		
 	</div>
 	<div id="Section15-v" class="tabcontent">
       <h3>Video 15</h3>
@@ -3189,7 +3322,86 @@ A un nuevo desarrollador le puede llevar algún tiempo descubrir cómo funciona 
    <!-- Contenido de la seccion 16 -->
    
    	<div id="Section16-t" class="tabcontent">
-		<p> Heres is going to go the theory</p>
+		<h3>Clases/Objetos de Python</h3>
+	<p>
+		Python es un lenguaje de programación orientado a objetos.
+
+Casi todo en Python es un objeto, con sus propiedades y métodos.
+
+Una clase es como un constructor de objetos o un "modelo" para crear objetos.
+	</p>
+<h3>Crear una clase</h3>
+<p>Para crear una clase, use la palabra clave <span class="print">class</span>:</p>
+<p>Cree una clase llamada MiClase, con una propiedad llamada x:</p>
+<div class="py-code">
+	<span class="keyword">class</span> MiClase: <br>
+	x = <span class="integer">5</span>
+</div>	
+<h3>Crear objeto</h3>
+<p>Ahora podemos usar la clase llamada MiClase para crear objetos</p>
+<p>Cree un objeto llamado p1 e imprima el valor de x:</p>
+<div class="py-code">
+	p1 = MiClase() <br>
+	<span class="print">print</span>(p1.x)
+</div>	
+<h3>La función __init__()</h3>	
+<p>
+	Los ejemplos anteriores son clases y objetos en su forma más simple y no son realmente útiles en aplicaciones de la vida real.
+
+Para comprender el significado de las clases, debemos comprender la función __init__() incorporada.
+
+Todas las clases tienen una función llamada __init__(), que siempre se ejecuta cuando se inicia la clase.
+
+Utilice la función __init__() para asignar valores a las propiedades del objeto u otras operaciones que sean necesarias cuando se crea el objeto:
+</p>
+<p>Cree una clase llamada Persona, use la función __init__() para asignar valores para nombre y edad:</p>
+<div class="py-code">
+	<span class="keyword">class</span> Persona: <br>
+	&emsp; <span class="keyword">def</span> __init__(self, nombre, edad) <br>
+	&emsp; &emsp; self.nombre = nombre <br>
+	&emsp; &emsp; self.edad = edad <br>
+	p1 = Persona(<span class="string">"John"</span> , <span class="integer">36</span>) <br>
+	<span class="print">print</span> p1.name <br>
+	<span class="print">print</span> p2.name
+</div>	
+
+<div class="notas-code">
+	<b>Nota:</b> La función <span class="integer">__init__()</span> se llama automáticamente cada vez que se utiliza la clase para crear un nuevo objeto.
+</div>
+<h3>La función __str__()</h3>
+<p>La función __str__() controla lo que se debe devolver cuando el objeto de clase se representa como una cadena.
+
+Si la función __str__() no está configurada, se devuelve la representación de cadena del objeto:</p>
+<div class="py-code">
+	<span class="keyword">class</span> Persona: <br>
+	&emsp; <span class="keyword">def</span> __init__(self, nombre, edad) <br>
+	&emsp; &emsp; self.nombre = nombre <br>
+	&emsp; &emsp; self.edad = edad <br>
+	&emsp; <span class="keyword">def</span> __str__(self) <br>
+	&emsp; &emsp; <span class="keyword">return</span> f<span class="string">"{self.name}({self.age})"</span> <br>
+	p1 = Persona(<span class="string">"John"</span> , <span class="integer">36</span>)
+</div>	
+<h3>Métodos de objetos</h3>
+<p>Los objetos también pueden contener métodos. Los métodos en los objetos son funciones que pertenecen al objeto.
+
+Creemos un método en la clase Persona:</p>
+<p>Inserte una función que imprima un saludo y ejecútela en el objeto p1:</p>
+<div class="py-code">
+	<span class="keyword">class</span> Persona: <br>
+	&emsp; <span class="keyword">def</span> __init__(self, nombre, edad) <br>
+	&emsp; &emsp; self.nombre = nombre <br>
+	&emsp; &emsp; self.edad = edad <br>
+	&emsp; <span class="keyword">def</span> mi_funcion(self)<br>
+	&emsp; &emsp; <span class="print">print</span>(<span class="string">"Hola minombre es " + self.nombre</span>) <br>
+	p1 = Persona(<span class="string">"John"</span> , <span class="integer">36</span>) <br>
+	p1 = mi_funcion
+</div>	
+
+
+		
+		
+		
+		
 	</div>
 	<div id="Section16-v" class="tabcontent">
       <h3>Video 16</h3>
