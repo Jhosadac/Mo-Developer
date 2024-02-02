@@ -3089,12 +3089,56 @@ Para especificar que una función solo puede tener argumentos posicionales, agre
 <div class="py-code">
 		<span class="keyword">def</span> mi_funcion(x): <br>
 		&emsp; <span class="print">print</span>(x) <br>
-		mi_funcion(x = <span class="integer">3</span>)
+		mi_funcion(<span class="integer">3</span>)
 		
 	</div>
+<p>
+	Pero al agregar <span class="print">*, /</span> obtendrá un error si intenta enviar un argumento posicional:
+</p>
+<div class="danger-code">
+	<span class="keyword">def</span> mi_funcion(*, x): <br>
+		&emsp; <span class="print">print</span>(x) <br>
+		mi_funcion(x = <span class="integer">3</span>)
+</div>
+
+			<h3>Combine solo posicional y solo palabras clave</h3>
+<p>
+	Puede combinar los dos tipos de argumentos en la misma función.
+
+Cualquier argumento anterior a <span class="print">/ ,</span> es solo posicional y cualquier argumento posterior a <span class="print">*</span>, es solo de palabra clave.
+</p>
+<div class="py-code">
+		<span class="keyword">def</span> mi_funcion(a ,b ,/,* ,c ,d): <br>
+		&emsp; <span class="print">print</span>(a + b + c + d) <br>
+		mi_funcion(<span class="integer">5</span> ,<span class="integer">6</span> ,c=<span class="integer">7</span> ,d=<span class="integer">8</span>)
+	</div>	
+<h3>Recursividad</h3>
+<p>
+	Python también acepta la recursividad de funciones, lo que significa que una función definida puede llamarse a sí misma.
+
+La recursividad es un concepto matemático y de programación común. Significa que una función se llama a sí misma. Esto tiene la ventaja de que puede recorrer los datos para llegar a un resultado.
+
+El desarrollador debe tener mucho cuidado con la recursividad, ya que puede ser bastante fácil escribir una función que nunca termina, o una que utiliza cantidades excesivas de memoria o potencia del procesador. Sin embargo, cuando se escribe correctamente, la recursividad puede ser un enfoque de programación muy eficiente y matemáticamente elegante.
+
+En este ejemplo, <span class="print">tri_recursion()</span> es una función que hemos definido para llamarse a sí misma ("recurse"). Usamos la variable <span class="print">k</span> como datos, que disminuye ( <span class="print">-1</span> ) cada vez que recurrimos. La recursividad finaliza cuando la condición no es mayor que 0 (es decir, cuando es 0).
+
+A un nuevo desarrollador le puede llevar algún tiempo descubrir cómo funciona exactamente esto; la mejor manera de averiguarlo es probándolo y modificándolo.
+</p>
 
 
-			
+<div class="py-code">
+		<span class="keyword">def</span> tri_recursion(k): <br>
+		&emsp; <span class="keyword">if</span> k > <span class="integer">0</span> <br>
+		&emsp; &emsp; result = k + tri_recursion(k - <span class="integer">1</span>) <br>
+		&emsp; &emsp; <span class="print">print</span>(result) <br>
+		&emsp; <span class="keyword">else</span>: <br>
+		&emsp; &emsp; result = <span class="integer">0</span> <br>
+		&emsp; <span class="keyword">return</span> result<br> <br>
+		<span class="print">print</span>(<span class="string">"\n\nEjemplo de Recursividad"</span>) <br>
+		tri_recursion(<span class="integer">6</span>)
+		
+	</div>	
+
 
 			
 	</div>
@@ -3112,7 +3156,7 @@ Para especificar que una función solo puede tener argumentos posicionales, agre
 	   <!-- Contenido de la seccion 14 -->
    
    	<div id="Section14-t" class="tabcontent">
-		<p> Heres is going to go the theory</p>
+		<h3></h3>
 	</div>
 	<div id="Section14-v" class="tabcontent">
       <h3>Video 14</h3>
