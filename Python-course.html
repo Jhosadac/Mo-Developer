@@ -3396,11 +3396,46 @@ Creemos un método en la clase Persona:</p>
 	p1 = Persona(<span class="string">"John"</span> , <span class="integer">36</span>) <br>
 	p1 = mi_funcion
 </div>	
+<h3>EL parámetro Self</h3>
+<p>
+	El parámetro <span class="print">self</span> es una referencia a la instancia actual de la clase y se utiliza para acceder a variables que pertenecen a la clase.
 
+No es necesario que tenga nombre <span class="print">self</span>, puedes llamarlo como quieras, pero tiene que ser el primer parámetro de cualquier función de la clase:
+</p>
+<div class="py-code">
+	<span class="keyword">class</span> Persona: <br>
+	&emsp; <span class="keyword">def</span> __init__(chiste, nombre, edad) <br>
+	&emsp; &emsp; chiste.nombre = nombre <br>
+	&emsp; &emsp; chiste.edad = edad <br>
+	&emsp; <span class="keyword">def</span> mi_funcion(abc)<br>
+	&emsp; &emsp; <span class="print">print</span>(<span class="string">"Hola minombre es " + abc.nombre</span>) <br>
+	p1 = Persona(<span class="string">"John"</span> , <span class="integer">36</span>) <br>
+	p1 = mi_funcion
+</div>	
+<h3>Modificar propiedades del objeto</h3>
+<div class="py-code">
+	p1.edad = <span class="integer">40</span> 
+</div>
+<h3>Eliminar propiedades del objeto</h3>
+	<p> Puede eliminar las propiedades del objeto con <span class="print">del</span>.</p>	
+<div class="py-code">
+	<span class="keyword">del</span> p1.edad
+</div>
 
-		
-		
-		
+<h3>Eliminar objetos</h3>
+	<p> Puede eliminar objetos con <span class="print">del</span>.</p>	
+<div class="py-code">
+	<span class="keyword">del</span> p1
+</div>
+
+<h3>Declaración Pass</h3>
+	<p> Las <span class="print">class</span> no pueden estar vacías, pero si por alguna razón lo estan, 
+		incluya <span class="print">pass</span> en la declaración para evitar recibir un error.</p>	
+<div class="py-code">
+	<span class="keyword">class</span> Persona: <br>
+	&emsp; <span class="keyword">pass</span>
+</div>
+			
 		
 	</div>
 	<div id="Section16-v" class="tabcontent">
@@ -3417,7 +3452,98 @@ Creemos un método en la clase Persona:</p>
 	   <!-- Contenido de la seccion 17 -->
    
    	<div id="Section17-t" class="tabcontent">
-		<p> Heres is going to go the theory</p>
+		<h3>Herencia</h3>
+		<p>
+			La herencia nos permite definir una clase que hereda todos los métodos y propiedades de otra clase. <br>
+
+La clase principal es la clase de la que se hereda, también llamada clase base. <br>
+
+La clase hija es la clase que hereda de otra clase, también llamada clase derivada.
+		</p>
+	<h3>Crear una clase principal</h3>
+	<p>
+		Cualquier clase puede ser una clase principal, por lo que la sintaxis es la misma que la de crear cualquier otra clase:
+	</p>
+
+	<div class="py-code">
+	<span class="keyword">class</span> Persona: <br>
+	&emsp; <span class="keyword">def</span> __init__(self, nombre, apellido) <br>
+	&emsp; &emsp; self.nombre = nombre <br>
+	&emsp; &emsp; self.apellido = apellido <br>
+	&emsp; <span class="keyword">def</span> print_nombre(self)<br>
+	&emsp; &emsp; <span class="print">print</span>(self.nombre, self.apellido)<br>
+	<br>
+	x = Persona(<span class="string">"Jhosadac"</span>, <span class="string">"Molina"</span>) <br>
+	x.print_nombre()
+</div>
+	<h3>Crear una clase hija</h3>
+	<p>
+		Para crear una clase que herede la funcionalidad de otra clase, envíe la clase principal como parámetro al crear la clase secundaria:
+	</p>
+	<div class="py-code">
+	<span class="keyword">class</span> Estudiante(Persona): <br>
+	&emsp; <span class="keyword">pass</span>
+</div>
+
+<div class="notas-code">
+	<b>Nota:</b> Utilice la palabra clave <span clas="integer">pass</span> cuando no desee agregar ninguna otra propiedad o método a la clase.
+</div>
+
+<h3>Agregue la función __init__()</h3>
+<p>
+	Hasta ahora hemos creado una clase hija que hereda las propiedades y métodos de su clase padre.
+
+Queremos agregar función <span class="print">la __init__()</span> a la clase secundaria (en lugar de la palabra clave <span class="print">pass</span>).
+</p>
+<div class="notas-code">
+	<b>Nota:</b> La función <span class="integer">__init__()</span> se llama automáticamente cada vez que se utiliza la clase para crear un nuevo objeto.
+</div>
+	<div class="py-code">
+	<span class="keyword">class</span> Estudiante(Persona): <br>
+	&emsp; <span class="keyword">def</span> __init__(self, nombre, apellido): <br>
+	&emsp; &emsp; <span class="comment">#añadir propiedades</span>
+</div>	
+<p>Cuando agrega la función <span class="print">__init__()</span>, la clase secundaria ya no heredará la función <span class="print">__init__()</span> principal.</p>
+<p>Para mantener la herencia de la función principal , debe llamar a la función <span class="print">__init__()</span> principal </p>
+<div class="py-code">
+	<span class="keyword">class</span> Estudiante(Persona): <br>
+	&emsp; <span class="keyword">def</span> __init__(self, nombre, apellido): <br>
+	&emsp; &emsp; Person.__init__(self, nombre, apellido)
+</div>
+
+<h3>Utilice la función super()</h3>
+<p>
+	Python también tiene una función <span class="print">super()</span> que hará que la clase hija herede todos los métodos y propiedades de su clase padre:
+</p>
+<div class="py-code">
+	<span class="keyword">class</span> Estudiante(Persona): <br>
+	&emsp; <span class="keyword">def</span> __init__(self, nombre, apellido): <br>
+	&emsp; &emsp; <span class="keyword">super</span>().__init__(nombre, apellido)
+</div>
+<p>
+	Al usar la función <span class="print">super()</span>, no es necesario usar el nombre del elemento principal; automáticamente heredará los métodos y propiedades de su elemento principal.
+</p>
+<h3>Agregar propiedades</h3>
+<p>Agreguemos una propiedad llamada <span class="print">graduacion</span> la clase <span class="print">Estudiante</span>:</p>
+<div class="py-code">
+	<span class="keyword">class</span> Estudiante(Persona): <br>
+	&emsp; <span class="keyword">def</span> __init__(self, nombre, apellido): <br>
+	&emsp; &emsp; <span class="keyword">super</span>().__init__(nombre, apellido) <br>
+	self.graduacion = <span class="integer">2022</span>
+</div>		
+<h3>Agregar métodos</h3>
+<p> Agreguemos un método llamado <span class="print">bienvenido</span> a la clase <span class="print">Estudiante</span>:</p>
+<div class="py-code">
+	<span class="keyword">class</span> Estudiante(Persona): <br>
+	&emsp; <span class="keyword">def</span> __init__(self, nombre, apellido): <br>
+	&emsp; &emsp; <span class="keyword">super</span>().__init__(nombre, apellido) <br>
+	self.graduacion = <span class="integer">2022</span> <br>
+	<br>
+	&emsp; <span class="keyword">def</span> bienvenido(self): <br>
+	&emsp; &emsp; <span class="print">print</span>(<span class="string">"Bienvenido"</span>, self.nombre, self.apellido, <span class="string">" a la clase "</span>, self.graduacion)
+</div>
+<p>Si agrega un método en la clase secundaria con el mismo nombre que una función en la clase principal, se anulará la herencia del método principal.</p>
+		
 	</div>
 	<div id="Section17-v" class="tabcontent">
       <h3>Video 17</h3>
@@ -3433,7 +3559,108 @@ Creemos un método en la clase Persona:</p>
 	   <!-- Contenido de la seccion 18 -->
    
    	<div id="Section18-t" class="tabcontent">
-		<p> Heres is going to go the theory</p>
+		<h3>Iteradores</h3>
+		<p>
+			Un iterador es un objeto que contiene un número contable de valores. <br>
+
+Un iterador es un objeto sobre el que se puede iterar, lo que significa que puede recorrer todos los valores. <br>
+
+Técnicamente, en Python, un iterador es un objeto que implementa el protocolo del iterador, que consta de los métodos __iter__() y __next__().
+		</p>
+
+		<h3>Iterador vs Iterable</h3>
+		<p>
+			Las listas, tuplas, diccionarios y conjuntos son todos objetos iterables. Son contenedores iterables de los que puede obtener un iterador.
+
+Todos estos objetos tienen un método <span class="print">iter()</span> que se utiliza para obtener un iterador:
+		</p>
+		<div class="py-code">
+		mitupla = (<span class="string">"Manzana"</span>, <span class="string">"Plátano"</span>, <span class="string">"Fresa"</span>) <br>
+		miit = <span class="keyword">iter</span>(mitupla) <br>
+		<span class="print">print</span>(<span class="keyword">next</span>(miit)) <br>
+		<span class="print">print</span>(<span class="keyword">next</span>(miit)) <br>
+		<span class="print">print</span>(<span class="keyword">next</span>(miit))
+</div>
+<p> Incluso las cadenas son objetos iterables y pueden devolver un iterador: </p>
+<div class="py-code">
+		mistr = <span class="string">"Fresa"</span> <br>
+		miit = <span class="keyword">iter</span>(mistr) <br>
+		<span class="print">print</span>(<span class="keyword">next</span>(miit)) <br>
+		<span class="print">print</span>(<span class="keyword">next</span>(miit)) <br>
+		<span class="print">print</span>(<span class="keyword">next</span>(miit)) <br>
+		<span class="print">print</span>(<span class="keyword">next</span>(miit)) <br>
+		<span class="print">print</span>(<span class="keyword">next</span>(miit))
+</div>
+
+<h3> Recorrer un iterador</h3>
+<p> También podemos usar un bucle <span class="print">for</span> para iterar a través de un objeto iterable: </p>
+<div class="py-code">
+		mitupla = (<span class="string">"Manzana"</span>, <span class="string">"Plátano"</span>, <span class="string">"Fresa"</span>) <br>
+		<span class="keyword">for</span> x <span class="keyword">in</span> mitupla: <br>
+		&emsp; <span class="print">print</span>(x)
+</div>
+
+<h3> Crear un iterador </h3>
+<p>Para crear un objeto/clase como iterador, debe implementar los métodos <span class="print">__iter__()</span>  y <span class="print">__next__()</span>su objeto.</p>
+<p>
+	Como aprendió en el capítulo <b>Clases/Objetos</b>, todas las clases tienen una función llamada <span class="print">__init__()</span>, que le permite realizar algunas inicializaciones cuando se crea el objeto. <br>
+
+El método <span class="print">__iter__()</span> actúa de manera similar, puede realizar operaciones (inicialización, etc.), pero siempre debe devolver el objeto iterador. <br>
+
+El método <span class="print">__next__()</span> también le permite realizar operaciones y debe devolver el siguiente elemento de la secuencia. <br>
+</p>
+
+<div class="py-code">
+		<span class="keywords">class</span> MisNumeros: <br>
+		&emsp; <span class="keyword">def</span> __iter__(self): <br>
+		&emsp; &emsp; self.a = <span class="integer">1</span> <br>
+		&emsp; &emsp; <span class="keyword">return</span> self <br>
+		<br>
+		&emsp; <span class="keyword">def</span> __next__(self): <br>
+		&emsp; &emsp; x = self.a <br>
+		&emsp; &emsp; self.a += <span class="integer">1</span> <br>
+		&emsp; &emsp; <span class="keyword">return</span> x <br>
+		<br>
+		miclase = MisNumeros() <br>
+		miiter = <span class="keyword">iter</span>(miclase) <br>
+		<span class="print">print</span>(<span class="keyword">next</span>(miit)) <br>
+		<span class="print">print</span>(<span class="keyword">next</span>(miit)) <br>
+		<span class="print">print</span>(<span class="keyword">next</span>(miit)) <br>
+		<span class="print">print</span>(<span class="keyword">next</span>(miit)) <br>
+		<span class="print">print</span>(<span class="keyword">next</span>(miit))
+</div>
+
+<h3>Detener iteración</h3>
+<p>
+	El ejemplo anterior continuaría para siempre si tuviera suficientes declaraciones next() o si se usara en un bucle <span class="print">for</span> <br>
+
+Para evitar que la iteración continúe para siempre, podemos usar la declaración <span class="print">StopIteration</span>.
+
+En el método <span class="print">__next__()</span>, podemos agregar una condición final para generar un error si la iteración se realiza una cantidad específica de veces:
+</p>
+
+<div class="py-code">
+		<span class="keywords">class</span> MisNumeros: <br>
+		&emsp; <span class="keyword">def</span> __iter__(self): <br>
+		&emsp; &emsp; self.a = <span class="integer">1</span> <br>
+		&emsp; &emsp; <span class="keyword">return</span> self <br>
+		<br>
+		&emsp; <span class="keyword">def</span> __next__(self): <br>
+		&emsp; &emsp; <span class="keyword">if</span> self.a <= <span class="integer">20</span> <br>
+		&emsp; &emsp; &emsp; x = self.a <br>
+		&emsp; &emsp; &emsp; self.a += <span class="integer">1</span> <br>
+		&emsp; &emsp; &emsp; <span class="keyword">return</span> x <br>
+		&emsp; &emsp; <span class="keyword">else</span>: <br>
+		&emsp; &emsp; &emsp; <span class="keyword">raise</span> StopIteration <br>
+		<br>
+		miclase = MisNumeros <br>
+		miiter = <span class="keyword">iter</span>(miclase) <br>
+		<br>
+		<span class="keyword">for</span> x <span class="keyword">in</span> miiter: <br>
+		&emsp; <span class="print">print</span>(x)
+</div>
+		
+		
 	</div>
 	<div id="Section18-v" class="tabcontent">
       <h3>Video 18</h3>
@@ -3450,7 +3677,86 @@ Creemos un método en la clase Persona:</p>
    <!-- Contenido de la seccion 19 -->
    
    	<div id="Section19-t" class="tabcontent">
-		<p> Heres is going to go the theory</p>
+		<h3>Polimorfismo</h3>
+		<p>
+			La palabra "polimorfismo" significa "muchas formas" y en programación se refiere a 
+			métodos/funciones/operadores con el mismo nombre que se pueden ejecutar en muchos objetos o clases
+		</p>
+
+		<h3>Polimorfismo de función</h3>
+		<p>Un ejemplo de una función de Python que se puede utilizar en diferentes objetos es la función <span class="print">len()</span>.</p>
+		<h3>Cadena</h3>
+		<p>Para cadenas, <span class="print">len()</span> devuelve el número de caracteres:</p>
+		<div class="py-code">
+		x = <span class="string">"HolaMundo"</span> <br>
+		<span class="print">print</span>(<span class="keyword">len</span>(x))
+		</div>
+
+		<h3>Tupla</h3>
+		<p>Para tuplas, <span class="print">len()</span> devuelve el número de elementos de la tupla:</p>
+		<div class="py-code">
+		mitupla = (<span class="string">"Manzana"</span>, <span class="string">"Plátano"</span>, <span class="string">"Fresa"</span>) <br>
+		<span class="print">print</span>(<span class="keyword">len</span>(x))
+		</div>
+
+		<h3>Diccionario</h3>
+		<p>Para diccionarios, <span class="print">len()</span> devuelve el número de pares clave-valor en el diccionario:</p>
+		<div class="py-code">
+		estedic = { <br>
+		<span class="string">"Marca"</span>: <span class="string">"Ford"</span>, <br>
+		<span class="string">"Modelo"</span>: <span class="string">"Mustang"</span>, <br>
+		<span class="string">"Año"</span>: <span class="integer">2024</span>, <br>
+		} <br>	
+		<span class="print">print</span>(<span class="keyword">len</span>(estedic))
+		</div>
+
+		<h3>Polimorfismo de clase</h3>
+		<p>
+			El polimorfismo se usa a menudo en métodos de clase, donde podemos tener varias clases con el mismo nombre de método.
+
+Por ejemplo, digamos que tenemos tres clases: <span class="print">Carro</span>, <span class="print">Bote</span> y <span class="print">Avion</span>, y todas tienen un método llamado <span class="print">move()</span>:
+		</p>
+		
+		<div class="py-code">
+		<span class="keyword">class</span> Carro: <br>
+		&emsp; <span class="keyword">def</span> __init__(self, marca, modelo): <br>
+		&emsp; &emsp; self.marca = marca <br>
+    		&emsp; &emsp; self.modelo = modelo <br>
+		<br>
+		&emsp; <span class="keyword">def</span> move(self):
+		&emsp; &emsp; <span class="print">print</span>(<span class="string">"¡Conduce!"</span> <br>
+		<br>
+		<span class="keyword">class</span> Bote: <br>
+		&emsp; <span class="keyword">def</span> __init__(self, marca, modelo): <br>
+		&emsp; &emsp; self.marca = marca <br>
+    		&emsp; &emsp; self.modelo = modelo <br>
+		<br>
+		&emsp; <span class="keyword">def</span> move(self):
+		&emsp; &emsp; <span class="print">print</span>(<span class="string">"¡Navega!"</span> <br>
+		<br>
+		<span class="keyword">class</span> Avion: <br>
+		&emsp; <span class="keyword">def</span> __init__(self, marca, modelo): <br>
+		&emsp; &emsp; self.marca = marca <br>
+    		&emsp; &emsp; self.modelo = modelo <br>
+		<br>
+		&emsp; <span class="keyword">def</span> move(self):
+		&emsp; &emsp; <span class="print">print</span>(<span class="string">"¡Vuela!"</span> <br>
+		<br>
+		carro1 = Carro(<span class="string">"Ford"</span>, <span class="string">"Mustang"</span>) <br>
+		bote1 = Bote(<span class="string">"Ibiza"</span>, <span class="string">"Touring 20"</span>) <br>
+		avion1 = Avion(<span class="string">"Boeing"</span>, <span class="string">"747"</span>) <br>
+		<br>
+		<span class="keyword">for</span> x <span class="keyword">in</span> (carro1, bote1, avion1) <br>
+		&emsp; x.move()
+		</div>
+
+		<p>Gracias al polimorfismo podemos ejecutar el mismo método para las tres clases.</p>
+
+		<h3>Polimorfismo de clase de herencia</h3>
+		
+
+		
+		
 	</div>
 	<div id="Section19-v" class="tabcontent">
       <h3>Video 19</h3>
