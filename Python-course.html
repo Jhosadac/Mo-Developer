@@ -750,8 +750,18 @@ Cualquier lista, tupla, conjunto y diccionario son <span class="print">True</spa
     </div>
     
     <div id="Section4-e" class="tabcontent">
-      <h3>Exercises 4</h3>
-      <p>Here is going to be the exercises</p>
+      <h3>Ejercicios</h3>
+      <ol>
+  <li>
+	¿Qué devuelve <span class="info-code">print(10 < 9)</span>  
+  </li>
+  <li>
+	¿Dada una variable <span class="info-code">x</span>, que sentencia utilizaría para verificar si está en el intervalo [3,7)?
+  </li>
+  <li>
+	 ¿Qué devuelve <span class="info-code">print((3==4) and bool("FIEECS") or (8 < 10)) </span> 
+  </li>
+</ol>
     </div>
 	
     <!-- Contenido de la seccion 5 -->
@@ -1182,15 +1192,19 @@ En el siguiente ejemplo, utilizamos el operador <span class="print">+</span> par
     
     <div id="Section5-e" class="tabcontent">
       <h3>Ejercicio</h3>
-<ol>
+	<ol>
   <li>
-	¿Qué devuelve <span class="info-code">print(10 < 9)</span>  
+	Quiero saber si <span class="info-code">x</span> es divisible por 5 pero no por 3 ¿Como lo sabría?
+	   
   </li>
   <li>
-	¿Dada una variable <span class="info-code">x</span>, que sentencia utilizaría para verificar si está en el intervalo [3,7)?
+	Quiero saber si el año <span class="info-code">aa</span> es bisiesto ¿Como lo sabría?
   </li>
   <li>
-	 ¿Qué devuelve <span class="info-code">print((3==4) and bool("FIEECS") or (8 < 10))</span> 
+	<span class="info-code">PC1, PC2, PC3 y PC4</span> son las prácticas calificadas de Jorge. 
+	  El profesor de Jorge asegura que en las dos primeras PC's nadie sacará menos de 16, mientras que
+	  sobre el promedio de las 2 últimas PC's nadie sacará más de 12. Jorge quiere verificar la afirmación del profesor
+	haciendo los cálculos con sus notas en python ¿Cómo lo haría?
   </li>
 </ol>
 
@@ -1664,20 +1678,17 @@ Lista1.extend(Lista2) <br>
     </div>
     
     <div id="Section6-e" class="tabcontent">
-      <h3>Ejercicio</h3>
+      <h3>Ejercicios</h3>
 <ol>
   <li>
-	Quiero saber si <span class="info-code">x</span> es divisible por 5 pero no por 3 ¿Como lo sabría?
-	   
+	Usando listas cree una matriz 2x2 y calcule su inversa (puede apoyares de variables auxialers).
   </li>
   <li>
-	Quiero saber si el año <span class="info-code">aa</span> es bisiesto ¿Como lo sabría?
+	Dada la lista <span class="info-code">milista = ["Amarillo", "Marron", "Azul"]</span>, 
+	agregue un elemento formado por las primeras letras de los elementos originales, pero en minúscula.
   </li>
   <li>
-	<span class="info-code">PC1, PC2, PC3 y PC4</span> son las prácticas calificadas de Jorge. 
-	  El profesor de Jorge asegura que en las dos primeras PC's nadie sacará menos de 16, mientras que
-	  sobre el promedio de las 2 últimas PC's nadie sacará más de 12. Jorge quiere verificar la afirmación del profesor
-	haciendo los cálculos con sus notas en python ¿Cómo lo haría?
+	Dada la lista <span class="info-code">numeros = [1970, 1990, 1992]</span>, inserte el promedio de los numeros entre las posiciones 1 y 2.   
   </li>
 </ol>
 
@@ -1966,7 +1977,19 @@ miTupla = colores * <span class="integer">2</span> <br>
     
     <div id="Section7-e" class="tabcontent">
       <h3>Ejercicios</h3>
-      <div id='variable_e1'> </div>
+	<ol>
+  <li>
+	  Jorge quiere cambiar el segundo elemento de <span class="info-code">mitupla = ("Botella", "Jarra", "Florero")</span>. ¿Qué le sugeriría?
+  </li>
+  <li>
+	  
+  </li>
+  <li>
+	  
+  </li>
+</ol>
+	    
+     
     </div>
 	
     <!-- Contenido de la seccion 8 -->
@@ -2791,8 +2814,10 @@ Una "declaración if" se escribe utilizando la palabra clave <span class="print"
     </div>
     
     <div id="Section10-e" class="tabcontent">
-      <h3>Exercises 10</h3>
-      <p>Here is going to be the exercises</p>
+      <h3>Ejercicios</h3>
+
+
+	 
     </div>
 
 
@@ -2982,7 +3007,19 @@ El "bucle interno" se ejecutará una vez por cada iteración del "bucle externo"
     
     <div id="Section12-e" class="tabcontent">
       <h3>Exercises 12</h3>
-      <p>Here is going to be the exercises</p>
+      <ol>
+  <li>
+	 Lea n elementos de un vector y muestre los valores Mayor y Menor. Además debe obtener las posiciones correspondientes. 
+  </li>
+  <li>
+	Muestre los DIVISORES de valores enteros comprendidos entre M y N, inclusive. Si son primos, debe mostrar el mensaje correspondiente.
+	  Además debe indicar, solo uno, el valor que tiene la MAYOR cantidad de divisores.
+  </li>
+  <li>
+	  Calcule un valor aproximado para PI utilizando la siguiente expresion:
+	  <div id='bucleFor_e3'> </div>
+  </li>
+</ol>
     </div>
 
 
@@ -4067,8 +4104,8 @@ Un archivo que contiene un conjunto de funciones que desea incluir en su aplicac
 
 <script>
 	window.addEventListener('DOMContentLoaded', () =>{
- 	let variable_e1 = document.querySelector('#variable_e1');
-	variable_e1.innerHTML = katex.renderToString("a = \\int_{x=0}^{x=2 \\pi + 10} f(x) \\cdot dx");
+ 	let bucleFor_e3 = document.querySelector('#bucleFor_e3');
+	bucleFor_e3.innerHTML = katex.renderToString("\\pi = \\sum_{k=0}^{\\infty}\\frac{2(-1)^{k} 3^{\\frac{1}{2} - k}}{2k+1}");
 });
 
 </script>
