@@ -157,7 +157,7 @@
 
 	    
 	    
-      <button class="accordion" onclick="togglePanel('sec20')" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">Fechas</button>
+      <button class="accordion" onclick="togglePanel('sec20')" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">Módulos</button>
       <button class="panel sec20" onclick="openCity(event, 'Section20-t')" id="defaultOpen"> <div class="sec-ico"><i class="bi bi-file-earmark-text"></i></div>Teoria</button>
       <button class="panel sec20" onclick="openCity(event, 'Section20-v')"> <div class="sec-ico"> <i class="bi bi-file-earmark-play"></i></div>Video</button>
       <button class="panel sec20" onclick="openCity(event, 'Section20-e')"> <div class="sec-ico"> <i class="bi bi-controller"></i></div>Ejercicio</button>
@@ -3348,13 +3348,13 @@ Una clase es como un constructor de objetos o un "modelo" para crear objetos.
 <p>
 	Los ejemplos anteriores son clases y objetos en su forma más simple y no son realmente útiles en aplicaciones de la vida real.
 
-Para comprender el significado de las clases, debemos comprender la función __init__() incorporada.
+Para comprender el significado de las clases, debemos comprender la función <span class="print">__init__()</span> incorporada.
 
-Todas las clases tienen una función llamada __init__(), que siempre se ejecuta cuando se inicia la clase.
+Todas las clases tienen una función llamada <span class="print">__init__()</span>, que siempre se ejecuta cuando se inicia la clase.
 
-Utilice la función __init__() para asignar valores a las propiedades del objeto u otras operaciones que sean necesarias cuando se crea el objeto:
+Utilice la función <span class="print">__init__()</span> para asignar valores a las propiedades del objeto u otras operaciones que sean necesarias cuando se crea el objeto:
 </p>
-<p>Cree una clase llamada Persona, use la función __init__() para asignar valores para nombre y edad:</p>
+<p>Cree una clase llamada Persona, use la función <span class="print">__init__()</span> para asignar valores para nombre y edad:</p>
 <div class="py-code">
 	<span class="keyword">class</span> Persona: <br>
 	&emsp; <span class="keyword">def</span> __init__(self, nombre, edad) <br>
@@ -3508,7 +3508,7 @@ Queremos agregar función <span class="print">la __init__()</span> a la clase se
 <div class="py-code">
 	<span class="keyword">class</span> Estudiante(Persona): <br>
 	&emsp; <span class="keyword">def</span> __init__(self, nombre, apellido): <br>
-	&emsp; &emsp; Person.__init__(self, nombre, apellido)
+	&emsp; &emsp; Persona.__init__(self, nombre, apellido)
 </div>
 
 <h3>Utilice la función super()</h3>
@@ -3529,7 +3529,7 @@ Queremos agregar función <span class="print">la __init__()</span> a la clase se
 	<span class="keyword">class</span> Estudiante(Persona): <br>
 	&emsp; <span class="keyword">def</span> __init__(self, nombre, apellido): <br>
 	&emsp; &emsp; <span class="keyword">super</span>().__init__(nombre, apellido) <br>
-	self.graduacion = <span class="integer">2022</span>
+	&emsp; &emsp; self.graduacion = <span class="integer">2022</span>
 </div>		
 <h3>Agregar métodos</h3>
 <p> Agreguemos un método llamado <span class="print">bienvenido</span> a la clase <span class="print">Estudiante</span>:</p>
@@ -3537,7 +3537,7 @@ Queremos agregar función <span class="print">la __init__()</span> a la clase se
 	<span class="keyword">class</span> Estudiante(Persona): <br>
 	&emsp; <span class="keyword">def</span> __init__(self, nombre, apellido): <br>
 	&emsp; &emsp; <span class="keyword">super</span>().__init__(nombre, apellido) <br>
-	self.graduacion = <span class="integer">2022</span> <br>
+	&emsp; &emsp; self.graduacion = <span class="integer">2022</span> <br>
 	<br>
 	&emsp; <span class="keyword">def</span> bienvenido(self): <br>
 	&emsp; &emsp; <span class="print">print</span>(<span class="string">"Bienvenido"</span>, self.nombre, self.apellido, <span class="string">" a la clase "</span>, self.graduacion)
@@ -3565,7 +3565,7 @@ Queremos agregar función <span class="print">la __init__()</span> a la clase se
 
 Un iterador es un objeto sobre el que se puede iterar, lo que significa que puede recorrer todos los valores. <br>
 
-Técnicamente, en Python, un iterador es un objeto que implementa el protocolo del iterador, que consta de los métodos __iter__() y __next__().
+Técnicamente, en Python, un iterador es un objeto que implementa el protocolo del iterador, que consta de los métodos <span class="print">__iter__()</span> y <span class="print">__next__()</span>.
 		</p>
 
 		<h3>Iterador vs Iterable</h3>
@@ -3723,7 +3723,7 @@ Por ejemplo, digamos que tenemos tres clases: <span class="print">Carro</span>, 
 		&emsp; &emsp; self.marca = marca <br>
     		&emsp; &emsp; self.modelo = modelo <br>
 		<br>
-		&emsp; <span class="keyword">def</span> move(self):
+		&emsp; <span class="keyword">def</span> move(self): <br>
 		&emsp; &emsp; <span class="print">print</span>(<span class="string">"¡Conduce!"</span> <br>
 		<br>
 		<span class="keyword">class</span> Bote: <br>
@@ -3731,7 +3731,7 @@ Por ejemplo, digamos que tenemos tres clases: <span class="print">Carro</span>, 
 		&emsp; &emsp; self.marca = marca <br>
     		&emsp; &emsp; self.modelo = modelo <br>
 		<br>
-		&emsp; <span class="keyword">def</span> move(self):
+		&emsp; <span class="keyword">def</span> move(self): <br>
 		&emsp; &emsp; <span class="print">print</span>(<span class="string">"¡Navega!"</span> <br>
 		<br>
 		<span class="keyword">class</span> Avion: <br>
@@ -3739,7 +3739,7 @@ Por ejemplo, digamos que tenemos tres clases: <span class="print">Carro</span>, 
 		&emsp; &emsp; self.marca = marca <br>
     		&emsp; &emsp; self.modelo = modelo <br>
 		<br>
-		&emsp; <span class="keyword">def</span> move(self):
+		&emsp; <span class="keyword">def</span> move(self): <br>
 		&emsp; &emsp; <span class="print">print</span>(<span class="string">"¡Vuela!"</span> <br>
 		<br>
 		carro1 = Carro(<span class="string">"Ford"</span>, <span class="string">"Mustang"</span>) <br>
@@ -3753,8 +3753,50 @@ Por ejemplo, digamos que tenemos tres clases: <span class="print">Carro</span>, 
 		<p>Gracias al polimorfismo podemos ejecutar el mismo método para las tres clases.</p>
 
 		<h3>Polimorfismo de clase de herencia</h3>
-		
+		<p>
+			¿Qué pasa con las clases con clases secundarias con el mismo nombre? ¿Podemos usar polimorfismo allí?
+			Sí. Si usamos el ejemplo anterior y creamos una clase principal llamada <span class="print">Vehiculo</span> y creamos 
+			<span class="print">Carro</span>, <span class="print">Bote</span>, <span class="print">Avion</span> clases hijas de de la clase principal <span class="print">Vehiculo</span>,
+			las clases hijas heredarán los métodos de <span class="print">Vehiculo</span>, pero pueden anularlas.
+		</p>
 
+		<div class="py-code">
+		<span class="keyword">class</span> Vehiculo: <br>
+		&emsp; <span class="keyword">def</span> __init__(self, marca, modelo): <br>
+		&emsp; &emsp; self.marca = marca <br>
+    		&emsp; &emsp; self.modelo = modelo <br>
+		<br>
+		&emsp; <span class="keyword">def</span> move(self): <br>
+		&emsp; &emsp; <span class="print">print</span>(<span class="string">"¡Muevase!"</span> <br>
+		<br>
+		<span class="keyword">class</span> Carro(Vehiculo): <br>
+		&emsp; <span class="keyword">pass</span> <br>
+		<br>
+		<span class="keyword">class</span> Bote(Vehiculo): <br>
+		&emsp; <span class="keyword">def</span> move(self): <br>
+		&emsp; &emsp; <span class="print">print</span>(<span class="string">"¡Navega!"</span>) <br>
+		<br>
+		<span class="keyword">class</span> Avion(Vehiculo): <br>
+		&emsp; <span class="keyword">def</span> move(self): <br>
+		&emsp; &emsp; <span class="print">print</span>(<span class="string">"¡Vuela!"</span>) <br>
+		<br>
+			
+		carro1 = Carro(<span class="string">"Ford"</span>, <span class="string">"Mustang"</span>) <br>
+		bote1 = Bote(<span class="string">"Ibiza"</span>, <span class="string">"Touring 20"</span>) <br>
+		avion1 = Avion(<span class="string">"Boeing"</span>, <span class="string">"747"</span>) <br>
+		<br>
+		<span class="keyword">for</span> x <span class="keyword">in</span> (carro1, bote1, avion1) <br>
+		&emsp; <span class="print">print</span>(x.marca) <br>
+		&emsp; <span class="print">print</span>(x.modelo) <br>
+		&emsp; x.move()
+		</div>
+		<p>
+			Las clases secundarias heredan las propiedades y métodos de la clase principal.
+
+En el ejemplo anterior puedes ver que la clase <span class="print">Carro</span> está vacía, pero hereda <span class="print">marca</span>, <span class="print">modelo</span> y <span class="print">move()</span> de <span class="print">Vehiculo</span>.
+
+Las clases <span class="print">Bote</span> y <span class="print">Avion</span> también heredan <span class="print">marca</span>, <span class="print">modelo</span> y  <span class="print">move()</span> de Vehiculo, pero ambas anulan el método <span class="print">move()</span>.
+		</p>
 		
 		
 	</div>
@@ -3772,7 +3814,103 @@ Por ejemplo, digamos que tenemos tres clases: <span class="print">Carro</span>, 
  <!-- Contenido de la seccion 20 -->
    
    	<div id="Section20-t" class="tabcontent">
-		<p> Heres is going to go the theory</p>
+		<h3>¿Qué es un módulo?</h3>
+<p>
+	Un módulo es lo mismo que una biblioteca de códigos.
+
+Un archivo que contiene un conjunto de funciones que desea incluir en su aplicación.
+</p>
+<h3>Crear un módulo</h3>
+<p>
+	Para crear un módulo simplemente guarde el código que desee en un archivo con la extensión de archivo <span class="print">.py</span>: <br>
+	Guardamos este código en un archivo llamado <span class="print">mimodulo.py</span>
+</p>	
+<div class="py-code">
+		<span class="keyword">def</span> saludar(nombre): <br>
+		&emsp; <span class="print">print</span>(<span class="string">"Hola, "</span> + nombre)
+</div>
+<h3>Utilice un módulo</h3>
+<p>
+	Ahora podemos usar el módulo que acabamos de crear, usando la declaración <span class="print">import</span>: <br>
+	Importamos el módulo y llamamos a la función de saludar:
+</p>
+<div class="py-code">
+		<span class="keyword">import</span> mimodulo <br>
+		mimodulo.saludar(<span class="string">"Josh"</span>)
+</div>
+
+<div class="notas-code"> <b>Nota:</b> Cuando utilice una función de un módulo, utilice la sintaxis: <i>nombre_módulo.nombre_función</i>. </div>
+<h3>Variables en el módulo</h3>
+<p>
+	El módulo puede contener funciones, como ya se ha descrito, pero también variables de todo tipo (matrices, diccionarios, objetos, etc.): <br>
+	Guardamos este código en el archivo <span class="print">mimodulo.py</span>
+</p>
+<div class="py-code">
+		persona1 = { <br>
+		<span class="string">"Nombre"</span>: <span class="string">"Josh"</span>, <br>
+		<span class="string">"Edad"</span>: <span class="string">"18"</span>, <br>
+		<span class="string">"País"</span>: <span class="string">"Perú"</span> <br>
+		}
+</div>
+<p>
+	Importe el módulo y acceda al diccionario persona1:
+</p>
+<div class="py-code">
+		<span class="keyword">import</span> mimodulo <br>
+		a = mimodulo.persona1[<span class="string">"Edad"</span>] <br>
+		<span class="print">print</span>(a)
+</div>
+
+<h3>Nombrar un módulo</h3>
+<p>
+	Puede nombrar el archivo del módulo como desee, pero debe tener la extensión de archivo <span class="print">.py</span>
+</p>
+<h3>Cambiar el nombre de un módulo</h3>
+<p>
+	Puedes crear un alias cuando importas un módulo, usando la palabra clave <span class="print">as</span>: <br>
+	Creamos un alias para mimodulo llamado mx: 
+</p>
+<div class="py-code">
+		<span class="keyword">import</span> mimodulo <span class="keyword">as</span> mx<br>
+		a = mx.persona1[<span class="string">"Edad"</span>] <br>
+		<span class="print">print</span>(a)
+</div>
+<h3>Módulos incorporados</h3>
+<p>
+	Hay varios módulos integrados en Python, que puedes importar cuando quieras.
+</p>
+<div class="py-code">
+		<span class="keyword">import</span> plataform<br>
+		x = plataform.system() <br>
+		<span class="print">print</span>(x)
+</div>
+
+<h3>Función dir()</h3>
+<p>
+	Hay una función incorporada para enumerar todos los nombres de funciones (o nombres de variables) en un módulo. La función <span class="print">dir()</span>:
+</p>
+<div class="py-code">
+		<span class="keyword">import</span> plataform<br>
+		x = <span class="keyword">dir</span>(plataform) <br>
+		<span class="print">print</span>(x)
+</div>
+<div class="notas-code">
+	<b>Nota:</b> La función <span class="integer">dir()</span> se puede utilizar en todos los módulos, también en los que usted mismo cree.
+</div>
+<h3>Importar desde módulo</h3>
+<p>
+	Puede optar por importar solo partes de un módulo utilizando la palabra clave <span class="print">from</span>. <br>
+	El módulo nombrado <span class="print">mimodulo</span> tiene una función y un diccionario:
+</p>
+<div class="py-code">
+		<span class="keyword">from</span> mimodulo <span class="keyword">import</span> persona1 <br>
+		<span class="print">print</span>(persona1[<span class="string">"Edad"</span>])
+</div>
+<div class="notas-code">
+	<b>Nota:</b> Al importar utilizando la palabra clave <span class="integer">from</span>, no utilice el nombre del módulo cuando haga referencia a elementos del módulo. 
+	Ejemplo: <span class="integer">persona1["age"]</span>, <b>no</b> <span class="integer">mimodulo.persona1["age"]</span>.
+</div>
+		
 	</div>
 	<div id="Section20-v" class="tabcontent">
       <h3>Video 20</h3>
