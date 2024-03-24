@@ -2815,7 +2815,82 @@ Una "declaración if" se escribe utilizando la palabra clave <span class="print"
     
     <div id="Section10-e" class="tabcontent">
       <h3>Ejercicios</h3>
+	<ol>
+		<li>	Lea las notas de un conjunto de N alumnos y muestre como resultado una Tabla de Frecuencias similar a:
+			<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Categoría</th>
+      <th scope="col">Frecuencia</th>
+      <th scope="col">Gráfica</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"> Excelente(Nota >= 17) </th>
+      <td> 6 </td>
+      <td> ****** </td>
+    </tr>
+    <tr>
+      <th scope="row"> Bueno( 13 <= Nota < 17) </th>
+      <td> 10 </td>
+      <td> ********** </td>
+    </tr>
+    <tr>
+      <th scope="row"> Regular(09 <= Nota < 13) </th>
+      <td> 4 </td>
+      <td> **** </td>
+    </tr>
 
+    <tr>
+      <th scope="row"> Deficiente(Nota < 09) </th>
+      <td> 8 </td>
+      <td> ******** </td>
+    </tr>
+  </tbody>
+</table>
+		</li>
+
+	      <li>
+		      El consultorio del Dr. Jorge tiene como política cobrar la consulta con base al número de cita de la siguiente forma:
+		      <ul>
+			      <li>
+				      Las tres primeras citas a $200.00 c/u
+			      </li>
+			      <li>
+				      Las siguientes dos siguientes citas a $150.00 c/u
+			      </li>
+			      <li>
+				      Las siguientes tres siguientes citas a $100.00 c/u
+			      </li>
+			      <li>
+				      Las restantes a $50.00 c/u, mientras dure el tratamiento.
+			      </li>
+				      
+		      </ul>
+		      Se requiere un algoritmo para determinar cuánto pagará el paciente por cita.
+	      </li>
+	      <li>
+		      El padre Jorge ha decidido darle propina en base a sus notas de Matemáticas, Físcia e Historia del Perú.
+		      <ul>
+			      <li>
+				      Si la nota de Matemáticas es mayor a 17, le dará  S/.3 de propina por cada punto;
+				      caso contrario, solo le dará S/.1 por cada punto.
+			      </li>
+			      <li>
+				      Si la nota de Física es mayor a 15, le dará S/.2 soles de propina por cada punto; 
+				      caso contrario, solo le dará S/.0.5 por cada punto.
+			      </li>
+			      <li>
+				      Si la nota de Historia del Perú es mayor a 15, le dará S/.1.5 soles de propina por cada punto; 
+				      caso contrario, solo le dará S/.0.3 por cada punto.
+			      </li>
+			      <li>
+				      Además, si la nota de Matemáticas es mayor a 17, le obsequiará un reloj; en caso contrario, le obsequiará un lapicero.
+			      </li>
+		      </ul>
+	      </li>
+	</ol>
 
 	 
     </div>
@@ -2883,8 +2958,19 @@ Una "declaración if" se escribe utilizando la palabra clave <span class="print"
     </div>
     
     <div id="Section11-e" class="tabcontent">
-      <h3>Exercises 11</h3>
-      <p>Here is going to be the exercises</p>
+      <h3>Ejercicios</h3>
+      <ol>
+	      <li>
+		      Lea un número ENTERO y muestre su descomposición en factores primos. En caso de ser primo, muestre el mensaje correspondiente.
+	      </li>
+	      <li>
+		      Escriba un programa que encuentre todos los múltiplos de 5 menores que un valor dado.
+	      </li>
+	      <li>
+		      Escriba un programa que solicite una contraseña (el texto de la contraseña no es importante) y 
+		      la vuelva a solicitar hasta que las dos contraseñas coincidan, con un límite de tres peticiones.
+	      </li>
+      </ol>
     </div>	
 
 
@@ -3253,8 +3339,14 @@ A un nuevo desarrollador le puede llevar algún tiempo descubrir cómo funciona 
     </div>
     
     <div id="Section13-e" class="tabcontent">
-      <h3>Exercises 13</h3>
-      <p>Here is going to be the exercises</p>
+      <h3>Ejercicios</h3>
+	<ol>
+		<li>
+			Usando funciones muestre la Tabla de distribución HiperGeométrica:
+			<div id="fun_e1"></div>
+		</li>
+	</ol>
+	    
     </div>
 
 
@@ -4105,7 +4197,9 @@ Un archivo que contiene un conjunto de funciones que desea incluir en su aplicac
 <script>
 	window.addEventListener('DOMContentLoaded', () =>{
  	let bucleFor_e3 = document.querySelector('#bucleFor_e3');
+	let fun_e1 = document.querySelector('#fun_e1');
 	bucleFor_e3.innerHTML = katex.renderToString("\\pi = \\sum_{k=0}^{\\infty}\\frac{2(-1)^{k} 3^{\\frac{1}{2} - k}}{2k+1}");
+	fun_e1.innerHTML = katex.renderToString("H(x, M, N, n) = P[X \\le x] = \\sum_{j=0}^{x} \\frac{{M}\\choose{j} {N}\\choose{n-j}}{{M+N}\choose{n}}");
 });
 
 </script>
