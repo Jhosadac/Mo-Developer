@@ -2314,7 +2314,21 @@ z = x.symmetric_difference(y) <br>
 			Un Heterograma es una palabra, frase o oración en el cual ninguna letra del abecedario se repite más de una vez.
 		</li>
 		<li>
-			
+			Dado un string, encuentre la longitud de la subcadena más larga sin caracteres repetidos. <br>
+			<span class="info-code"> <b>ej:</b> <br>
+			<b>input:</b> s = "abcabcbb" <br>
+			<b>output:</b> 3
+			<b>Explicación: La respuesta es "abc", con longitud 3</b>
+			</span>
+		</li>
+		<li>
+			Dado un string que contiene solo minúsculas, se necesita eliminar al menos 1 caracter de este string de tal forma
+			que la frecuencia de cada distinto caracter sea el mismo en el string. <br>
+			<span class="info-code"> <b>ej:</b> <br>
+			<b>input:</b> str = “xyyz” <br>
+			<b>output:</b> sí
+			<b>Explicación:</b> Al eliminar y, x, y, e Z tendrá igual frecuencia 1
+			</span>
 		</li>
 	</ol>
 
@@ -2671,8 +2685,26 @@ Hay formas de hacer una copia, una es utilizar el método Diccionario incorporad
     </div>
     
     <div id="Section9-e" class="tabcontent">
-      <h3>Exercises 9</h3>
-      <p>Here is going to be the exercises</p>
+      <h3>Ejercicios</h3>
+	<ol>
+		<li>
+			Dado un string y un numero N, se necesita reflejar los caracteres desde la N-ésima posición hasta el último en orden alfabético.
+			La operación es la siguiente: <span class="info-code"> <b>ej:</b> 'a' por 'z', 'b' por 'y', etc</span>
+		</li>
+		<li>
+			Dado un diccionario anidado, realice la inversion de los keys. <br>
+			<span class="info-code"> <b>ej:</b> <br>
+			<b>input:</b> test_dict = {“a” : {“b” : {}}, “d” : {“e” : {}}, “f” : {“g” : {}}  <br>
+			<b>output:</b> {‘b’: {‘a’: {}}, ‘e’: {‘d’: {}}, ‘g’: {‘f’: {}} <br>
+			<b>Explicación:</b> invertimos el key b por a, d por e, y g por f
+			</span>
+		</li>
+		<li>
+			Dado un array de nombres de candidatos en un elección, un nombre de un candidato representa un voto al candidato.
+			Imprima el nombre (solo uno) del candidato ganador.
+		</li>
+	</ol>
+	    
     </div>
 
  <!-- Contenido de la seccion 10 -->
@@ -3550,8 +3582,30 @@ Una array puede contener muchos valores bajo un solo nombre y puede acceder a lo
     </div>
     
     <div id="Section15-e" class="tabcontent">
-      <h3>Exercises 15</h3>
-      <p>Here is going to be the exercises</p>
+      <h3>Ejercicios</h3>
+
+	    <ol>
+		<li>
+			Lea los elementos de una matriz A(mxn). El programa debe mostrar: <br>
+			<ul>
+				<li>
+					Nueva matriz con las mismas filas de la original, pero con sus elementos Ordenados
+				</li>
+				<li>
+					Nuva matriz de la forma: <br>
+					<div id='arr_e1'> </div>
+				</li>
+			</ul>
+		</li>
+		<li>
+			Lea una matriz A(mxn) y muestre como resultado una nueva matriz que suprima
+aquellos valores que NO SON múltiplos de 3, dejando en las primeras posiciones de cada
+columna sólo aquellos que SI lo son. Las otras posiciones deben rellenarse con 1.
+		</li>
+		<li>
+			Cree una función que halle la inversa de una matriz cuadrada mediante el método de Gauss Jordan
+		</li>
+	</ol>
     </div>
 
 
@@ -3681,8 +3735,23 @@ No es necesario que tenga nombre <span class="print">self</span>, puedes llamarl
     </div>
     
     <div id="Section16-e" class="tabcontent">
-      <h3>Exercises 16</h3>
-      <p>Here is going to be the exercises</p>
+      <h3>Ejercicios</h3>
+	<ol>
+		<li>
+			El código de Barajar Baraja en Python se puede utilizar para barajar las cartas. El método shuffle, que es una característica
+			incorporada de la librería random, se utiliza para mezclar y aleatorizar el orden de los datos antes de imprimirlos.
+			Cree las clases Deck, ShuffleCards y Cards para crear el algoritmo.
+		</li>
+		<li>
+			Escriba un programa en Python para crear una clase que represente a un banco. 
+			Incluya métodos para gestionar las cuentas y transacciones de los clientes (ej: crear cuenta, saldo disponible, retirar, etc)
+		</li>
+		<li>
+			Escriba un programa en Python para crear una clase Calculadora que incluya métodos para operaciones aritméticas básicas.
+		</li>
+	</ol>
+
+	    
     </div>
 
 
@@ -3788,8 +3857,16 @@ Queremos agregar función <span class="print">la __init__()</span> a la clase se
     </div>
     
     <div id="Section17-e" class="tabcontent">
-      <h3>Exercises 17</h3>
-      <p>Here is going to be the exercises</p>
+      <h3>Ejercicios</h3>
+
+	    <ol>
+		    <li>
+			  Dada una clase llamada Guitarra, queremos clases para 3 tipos de guitarra(eléctrica, acústica, clásica) apoyandonos de la clase madre Guitarra ¿Cómo lo haría?  
+		    </li>
+		    <li>
+			    
+		    </li>
+	    </ol>
     </div>
 
 
@@ -4238,6 +4315,9 @@ Un archivo que contiene un conjunto de funciones que desea incluir en su aplicac
 	
 	let fun_e1 = document.querySelector('#fun_e1');
 	fun_e1.innerHTML = katex.renderToString("H(x, M, N, n) = P[X \\le x] = \\sum_{j=0}^{x} \\frac{\\binom{M}{j} \\binom{N}{n-j}}{\\binom{M + N}{n}}");
+	
+	let arr_e1 = document.querySelector('#arr_e1');
+	arr_e1.innerHTML = katex.renderToString("\\begin{pmatrix} A & I \\ I & 0\\end{pmatrix}");
 });
 
 </script>
